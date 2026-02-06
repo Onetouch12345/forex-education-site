@@ -8,21 +8,30 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Side flyers */
+    /* Sticky side flyers */
     .side-flyer-left, .side-flyer-right {
-      position: fixed;
-      top: 100px; /* distance from top of viewport */
+      position: sticky;
+      top: 100px; /* distance from top */
       width: 120px;
       height: 600px;
       z-index: 999;
     }
 
     .side-flyer-left {
-      left: 10px;
+      float: left;
+      margin-right: 20px;
     }
 
     .side-flyer-right {
-      right: 10px;
+      float: right;
+      margin-left: 20px;
+    }
+
+    /* Clearfix for main content */
+    .brokers-container::after {
+      content: "";
+      display: table;
+      clear: both;
     }
 
     /* Responsive: hide flyers on mobile */
@@ -32,25 +41,33 @@
       }
     }
 
-    /* Optional: add margin to main content so table doesn't overlap flyers */
-    .brokers-container {
-      margin-left: 150px; /* width of left flyer + some space */
-      margin-right: 150px; /* width of right flyer + some space */
+    /* Optional: table styling */
+    .broker-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .broker-table th, .broker-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .btn-green {
+      background-color: #28a745;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn-green:hover {
+      background-color: #218838;
     }
   </style>
 </head>
 
 <body>
-
-<!-- Left Flyer -->
-<a href="https://clicks.pipaffiliates.com/c?m=131252&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-  <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" alt="Left Flyer" class="side-flyer-left">
-</a>
-
-<!-- Right Flyer -->
-<a href="https://clicks.pipaffiliates.com/c?m=132382&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-  <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" alt="Right Flyer" class="side-flyer-right">
-</a>
 
 <header>
   <h1>ForexEdu</h1>
@@ -58,6 +75,16 @@
 </header>
 
 <main class="brokers-container">
+
+  <!-- Left Flyer -->
+  <a href="https://clicks.pipaffiliates.com/c?m=131252&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+    <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" alt="Left Flyer" class="side-flyer-left">
+  </a>
+
+  <!-- Right Flyer -->
+  <a href="https://clicks.pipaffiliates.com/c?m=132382&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+    <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" alt="Right Flyer" class="side-flyer-right">
+  </a>
 
   <h2>🏦 Best Forex Brokers for Beginners</h2>
 
