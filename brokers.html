@@ -11,7 +11,7 @@
     /* Sticky side flyers */
     .side-flyer-left, .side-flyer-right {
       position: sticky;
-      top: 100px; /* distance from top */
+      top: 100px;
       width: 120px;
       height: 600px;
       z-index: 999;
@@ -27,24 +27,22 @@
       margin-left: 20px;
     }
 
-    /* Clearfix for main content */
     .brokers-container::after {
       content: "";
       display: table;
       clear: both;
     }
 
-    /* Responsive: hide flyers on mobile */
     @media (max-width: 992px) {
       .side-flyer-left, .side-flyer-right {
         display: none;
       }
     }
 
-    /* Optional: table styling */
     .broker-table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 20px;
     }
 
     .broker-table th, .broker-table td {
@@ -56,13 +54,21 @@
     .btn-green {
       background-color: #28a745;
       color: white;
-      padding: 8px 12px;
+      padding: 8px 14px;
       text-decoration: none;
       border-radius: 5px;
+      font-weight: bold;
     }
 
     .btn-green:hover {
       background-color: #218838;
+    }
+
+    .trust-box, .disclaimer-box {
+      margin-top: 30px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-left: 4px solid #28a745;
     }
   </style>
 </head>
@@ -77,13 +83,23 @@
 <main class="brokers-container">
 
   <!-- Left Flyer -->
-  <a href="https://clicks.pipaffiliates.com/c?m=131252&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-    <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" alt="Left Flyer" class="side-flyer-left">
+  <a href="https://affs.click/ryTLn" 
+     id="xm_left_flyer"
+     target="_blank" 
+     referrerpolicy="no-referrer-when-downgrade">
+    <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" 
+         alt="XM Left Flyer" 
+         class="side-flyer-left">
   </a>
 
   <!-- Right Flyer -->
-  <a href="https://clicks.pipaffiliates.com/c?m=132382&amp;c=1166842" target="_blank" referrerpolicy="no-referrer-when-downgrade">
-    <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" alt="Right Flyer" class="side-flyer-right">
+  <a href="https://affs.click/ryTLn" 
+     id="xm_right_flyer"
+     target="_blank" 
+     referrerpolicy="no-referrer-when-downgrade">
+    <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" 
+         alt="XM Right Flyer" 
+         class="side-flyer-right">
   </a>
 
   <h2>🏦 Best Forex Brokers for Beginners</h2>
@@ -105,13 +121,16 @@
 
     <!-- XM Broker -->
     <tr>
-      <td>XM</td>
+      <td><strong>XM</strong></td>
       <td>ASIC / CySEC</td>
       <td>$5</td>
       <td>Low</td>
       <td>MT4 / MT5</td>
       <td>
-        <a href="YOUR_XM_AFFILIATE_LINK" class="btn btn-green" target="_blank">
+        <a href="https://affs.click/ryTLn" 
+           class="btn-green"
+           id="xm_main_button"
+           target="_blank">
           Open Account
         </a>
       </td>
@@ -125,7 +144,7 @@
       <td>Spread</td>
       <td>Platform</td>
       <td>
-        <a href="#" class="btn btn-green" target="_blank">Open Account</a>
+        <a href="#" class="btn-green" target="_blank">Open Account</a>
       </td>
     </tr>
 
@@ -137,7 +156,7 @@
       <td>Spread</td>
       <td>Platform</td>
       <td>
-        <a href="#" class="btn btn-green" target="_blank">Open Account</a>
+        <a href="#" class="btn-green" target="_blank">Open Account</a>
       </td>
     </tr>
   </table>
@@ -165,6 +184,46 @@
 <footer>
   <p>© 2026 ForexEdu | Free Forex Education Platform</p>
 </footer>
+
+<!-- CLICK TRACKING SCRIPT -->
+<script>
+function trackClick(label) {
+    console.log("Click tracked:", label);
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'affiliate_click', {
+            'event_category': 'Broker',
+            'event_label': label
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const leftFlyer = document.getElementById("xm_left_flyer");
+    const rightFlyer = document.getElementById("xm_right_flyer");
+    const xmButton = document.getElementById("xm_main_button");
+
+    if(leftFlyer){
+        leftFlyer.addEventListener("click", function(){
+            trackClick("XM Left Flyer");
+        });
+    }
+
+    if(rightFlyer){
+        rightFlyer.addEventListener("click", function(){
+            trackClick("XM Right Flyer");
+        });
+    }
+
+    if(xmButton){
+        xmButton.addEventListener("click", function(){
+            trackClick("XM Main Button");
+        });
+    }
+
+});
+</script>
 
 </body>
 </html>
