@@ -8,41 +8,39 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Sticky side flyers */
-    .side-flyer-left, .side-flyer-right {
+    /* ===== Layout System ===== */
+    .page-layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .main-content {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* ===== Side Flyers ===== */
+    .side-column {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .side-flyer {
       position: sticky;
-      top: 100px;
+      top: 120px;
       width: 120px;
       height: 600px;
-      z-index: 999;
     }
 
-    .side-flyer-left {
-      float: left;
-      margin-right: 20px;
-    }
-
-    .side-flyer-right {
-      float: right;
-      margin-left: 20px;
-    }
-
-    .brokers-container::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    @media (max-width: 992px) {
-      .side-flyer-left, .side-flyer-right {
-        display: none;
-      }
-    }
-
+    /* ===== Table ===== */
     .broker-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .broker-table th, .broker-table td {
@@ -51,6 +49,7 @@
       text-align: center;
     }
 
+    /* ===== Buttons ===== */
     .btn-green {
       background-color: #28a745;
       color: white;
@@ -58,17 +57,29 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
     }
 
     .btn-green:hover {
       background-color: #218838;
     }
 
+    /* ===== Trust & Disclaimer ===== */
     .trust-box, .disclaimer-box {
       margin-top: 30px;
       padding: 15px;
       background: #f8f9fa;
       border-left: 4px solid #28a745;
+    }
+
+    /* ===== Mobile Responsive ===== */
+    @media (max-width: 992px) {
+      .side-column {
+        display: none;
+      }
+      .page-layout {
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -80,103 +91,95 @@
   <p>Trusted Broker Reviews • Free Education • Safe Trading</p>
 </header>
 
-<main class="brokers-container">
+<main class="page-layout">
 
-  <!-- Left Flyer -->
-  <a href="https://affs.click/ryTLn" 
-     id="xm_left_flyer"
-     target="_blank" 
-     referrerpolicy="no-referrer-when-downgrade">
-    <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" 
-         alt="XM Left Flyer" 
-         class="side-flyer-left">
-  </a>
-
-  <!-- Right Flyer -->
-  <a href="https://affs.click/ryTLn" 
-     id="xm_right_flyer"
-     target="_blank" 
-     referrerpolicy="no-referrer-when-downgrade">
-    <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" 
-         alt="XM Right Flyer" 
-         class="side-flyer-right">
-  </a>
-
-  <h2>🏦 Best Forex Brokers for Beginners</h2>
-
-  <p>
-    We only list brokers that are regulated, trusted, and beginner-friendly.
-    Our mission is education, safety, and transparency.
-  </p>
-
-  <table class="broker-table">
-    <tr>
-      <th>Broker</th>
-      <th>Regulation</th>
-      <th>Min Deposit</th>
-      <th>Spread</th>
-      <th>Platform</th>
-      <th>Action</th>
-    </tr>
-
-    <!-- XM Broker -->
-    <tr>
-      <td><strong>XM</strong></td>
-      <td>ASIC / CySEC</td>
-      <td>$5</td>
-      <td>Low</td>
-      <td>MT4 / MT5</td>
-      <td>
-        <a href="https://affs.click/ryTLn" 
-           class="btn-green"
-           id="xm_main_button"
-           target="_blank">
-          Open Account
-        </a>
-      </td>
-    </tr>
-
-    <!-- Optional Broker 2 -->
-    <tr>
-      <td>Broker 2</td>
-      <td>Regulation</td>
-      <td>Min Deposit</td>
-      <td>Spread</td>
-      <td>Platform</td>
-      <td>
-        <a href="#" class="btn-green" target="_blank">Open Account</a>
-      </td>
-    </tr>
-
-    <!-- Optional Broker 3 -->
-    <tr>
-      <td>Broker 3</td>
-      <td>Regulation</td>
-      <td>Min Deposit</td>
-      <td>Spread</td>
-      <td>Platform</td>
-      <td>
-        <a href="#" class="btn-green" target="_blank">Open Account</a>
-      </td>
-    </tr>
-  </table>
-
-  <div class="trust-box">
-    <h3>🔒 Why Trust ForexEdu?</h3>
-    <ul>
-      <li>Education-first platform</li>
-      <li>No fake promises</li>
-      <li>No signals selling</li>
-      <li>No paid reviews</li>
-      <li>Transparent affiliate disclosure</li>
-    </ul>
+  <!-- LEFT FLYER COLUMN -->
+  <div class="side-column">
+    <a href="https://affs.click/ryTLn" id="xm_left_flyer" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+      <img src="https://ads.pipaffiliates.com/i/131252?c=1166842" class="side-flyer" alt="XM Left Flyer">
+    </a>
   </div>
 
-  <div class="disclaimer-box">
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <h2>🏦 Best Forex Brokers for Beginners</h2>
+
     <p>
-      ⚠️ Risk Warning: Forex trading involves risk. Only trade with money you can afford to lose.  
-      This page contains affiliate links. We may earn a commission at no extra cost to you.
+      We only list brokers that are regulated, trusted, and beginner-friendly.
+      Our mission is education, safety, and transparency.
     </p>
+
+    <table class="broker-table">
+      <tr>
+        <th>Broker</th>
+        <th>Regulation</th>
+        <th>Min Deposit</th>
+        <th>Spread</th>
+        <th>Platform</th>
+        <th>Action</th>
+      </tr>
+
+      <!-- XM Broker -->
+      <tr>
+        <td><strong>XM</strong></td>
+        <td>ASIC / CySEC</td>
+        <td>$5</td>
+        <td>Low</td>
+        <td>MT4 / MT5</td>
+        <td>
+          <a href="https://affs.click/ryTLn" class="btn-green" id="xm_main_button" target="_blank">
+            Open Account
+          </a>
+        </td>
+      </tr>
+
+      <!-- Optional Broker 2 -->
+      <tr>
+        <td>Broker 2</td>
+        <td>Regulation</td>
+        <td>Min Deposit</td>
+        <td>Spread</td>
+        <td>Platform</td>
+        <td><a href="#" class="btn-green" target="_blank">Open Account</a></td>
+      </tr>
+
+      <!-- Optional Broker 3 -->
+      <tr>
+        <td>Broker 3</td>
+        <td>Regulation</td>
+        <td>Min Deposit</td>
+        <td>Spread</td>
+        <td>Platform</td>
+        <td><a href="#" class="btn-green" target="_blank">Open Account</a></td>
+      </tr>
+    </table>
+
+    <div class="trust-box">
+      <h3>🔒 Why Trust ForexEdu?</h3>
+      <ul>
+        <li>Education-first platform</li>
+        <li>No fake promises</li>
+        <li>No signals selling</li>
+        <li>No paid reviews</li>
+        <li>Transparent affiliate disclosure</li>
+      </ul>
+    </div>
+
+    <div class="disclaimer-box">
+      <p>
+        ⚠️ Risk Warning: Forex trading involves risk. Only trade with money you can afford to lose.  
+        This page contains affiliate links. We may earn a commission at no extra cost to you.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT FLYER COLUMN -->
+  <div class="side-column">
+    <a href="https://affs.click/ryTLn" id="xm_right_flyer" target="_blank" referrerpolicy="no-referrer-when-downgrade">
+      <img src="https://ads.pipaffiliates.com/i/132382?c=1166842" class="side-flyer" alt="XM Right Flyer">
+    </a>
   </div>
 
 </main>
@@ -198,31 +201,21 @@ function trackClick(label) {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+const leftFlyer = document.getElementById("xm_left_flyer");
+const rightFlyer = document.getElementById("xm_right_flyer");
+const xmButton = document.getElementById("xm_main_button");
 
-    const leftFlyer = document.getElementById("xm_left_flyer");
-    const rightFlyer = document.getElementById("xm_right_flyer");
-    const xmButton = document.getElementById("xm_main_button");
+if(leftFlyer){
+  leftFlyer.addEventListener("click", function(){ trackClick("XM Left Flyer"); });
+}
 
-    if(leftFlyer){
-        leftFlyer.addEventListener("click", function(){
-            trackClick("XM Left Flyer");
-        });
-    }
+if(rightFlyer){
+  rightFlyer.addEventListener("click", function(){ trackClick("XM Right Flyer"); });
+}
 
-    if(rightFlyer){
-        rightFlyer.addEventListener("click", function(){
-            trackClick("XM Right Flyer");
-        });
-    }
-
-    if(xmButton){
-        xmButton.addEventListener("click", function(){
-            trackClick("XM Main Button");
-        });
-    }
-
-});
+if(xmButton){
+  xmButton.addEventListener("click", function(){ trackClick("XM Main Button"); });
+}
 </script>
 
 </body>
