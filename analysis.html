@@ -1,94 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Analysis - ForexEdu</title>
-    <meta name="description" content="Daily and weekly forex market analysis, gold and crypto insights to help traders make informed decisions.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Market Analysis | ForexEdu</title>
+  <meta name="description" content="Daily forex market analysis, live charts, economic calendar, and recommended brokers. Stay updated with ForexEdu.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header, footer {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 10px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #0d6efd;
+    }
+
+    .charts-container, .calendar-container {
+      margin: 30px 0;
+    }
+
+    /* Broker CTA buttons */
+    .broker-cta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .broker-cta a {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .broker-cta a:hover {
+      background-color: #218838;
+    }
+
+    /* Economic calendar styling */
+    .econ-calendar {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .charts-container iframe, .calendar-container iframe {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header>
-        <h1>ForexEdu - Market Analysis</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="learn.html">Learn Forex</a>
-            <a href="brokers.html">Brokers</a>
-            <a href="analysis.html">Market Analysis</a>
-            <a href="tools.html">Tools</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
 
-    <!-- Intro Section -->
-    <section id="intro">
-        <h2>Daily & Weekly Market Analysis</h2>
-        <p>Get the latest insights on forex, gold, and crypto markets. Our analysis helps you understand trends, support & resistance levels, and trade opportunities.</p>
-    </section>
+<header>
+  <h1>ForexEdu</h1>
+  <p>Daily Forex Market Analysis | Live Charts | Economic Calendar | Broker Recommendations</p>
+</header>
 
-    <!-- Daily Analysis Section -->
-    <section id="daily-analysis">
-        <h2>Daily Forex Analysis</h2>
-        <article>
-            <h3>EUR/USD</h3>
-            <ul>
-                <li>Market Trend: Bullish</li>
-                <li>Key Support: 1.0800</li>
-                <li>Key Resistance: 1.0950</li>
-                <li>Bias: Buy above support</li>
-                <li>News Impact: ECB meeting today</li>
-                <li>Educational Trade Idea: Consider long positions with tight stop-loss</li>
-            </ul>
-        </article>
-        <article>
-            <h3>GBP/USD</h3>
-            <ul>
-                <li>Market Trend: Bearish</li>
-                <li>Key Support: 1.2500</li>
-                <li>Key Resistance: 1.2650</li>
-                <li>Bias: Sell below resistance</li>
-                <li>News Impact: UK inflation data</li>
-                <li>Educational Trade Idea: Look for short entries near resistance</li>
-            </ul>
-        </article>
-    </section>
+<main>
+  <h2>📊 Daily Forex Market Analysis</h2>
+  <p>Stay updated with real-time Forex trends, live charts, and upcoming economic events. Use these insights to make informed trading decisions.</p>
 
-    <!-- Weekly Forecast Section -->
-    <section id="weekly-forecast">
-        <h2>Weekly Forex Forecast</h2>
-        <article>
-            <h3>USD/JPY</h3>
-            <ul>
-                <li>Market Trend: Sideways</li>
-                <li>Support: 135.50</li>
-                <li>Resistance: 137.20</li>
-                <li>Bias: Wait for breakout</li>
-                <li>News Impact: BOJ policy decision</li>
-                <li>Educational Tip: Use breakout strategies</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Gold (XAU/USD)</h3>
-            <ul>
-                <li>Market Trend: Bullish</li>
-                <li>Support: 1980</li>
-                <li>Resistance: 2025</li>
-                <li>Bias: Buy dips near support</li>
-                <li>News Impact: US economic reports</li>
-                <li>Educational Tip: Consider swing trades with moderate risk</li>
-            </ul>
-        </article>
-    </section>
+  <!-- Live TradingView Chart -->
+  <div class="charts-container">
+    <h3>Live EUR/USD Chart</h3>
+    <div class="tradingview-widget-container">
+      <div id="tradingview_chart"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 500,
+          "symbol": "FX:EURUSD",
+          "interval": "D",
+          "timezone": "exchange",
+          "theme": "light",
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "#f1f3f6",
+          "container_id": "tradingview_chart"
+        });
+      </script>
+    </div>
+  </div>
 
-    <!-- Crypto Analysis Section -->
-    <section id="crypto-analysis">
-        <h2>Crypto Analysis</h2>
-        <article>
-            <h3>Bitcoin (BTC/USD)</h3>
-            <ul>
-                <li>Market Trend: Bullish</li>
-                <li>Support: 27,500</li>
-                <li>Resistance: 30,000</li>
-                <li>Bias: Buy near support</li>
-                <li
+  <!-- Economic Calendar Widget -->
+  <div class="calendar-container">
+    <h3>Economic Calendar</h3>
+    <iframe src="https://www.tradingview.com/economic-calendar/" frameborder="0" width="100%" height="600"></iframe>
+  </div>
+
+  <!-- Example Analysis -->
+  <div class="market-summary">
+    <h3>Today's Market Summary</h3>
+    <ul>
+      <li><strong>EUR/USD:</strong> Trending upward, resistance at 1.1150, support at 1.1050</li>
+      <li><strong>GBP/USD:</strong> Sideways, key levels: 1.3150 – 1.3050</li>
+      <li><strong>USD/JPY:</strong> Bearish, watch 134.00 support</li>
+    </ul>
+    <p>Market sentiment is influenced by recent economic releases and geopolitical events. Always manage your risk carefully.</p>
+  </div>
+
+  <!-- Broker CTA Buttons -->
+  <div class="broker-cta">
+    <a href="https://affs.click/ryTLn" target="_blank">Open XM Account</a>
+    <a href="#" target="_blank">Open Broker 2 Account</a>
+    <a href="#" target="_blank">Open Broker 3 Account</a>
+  </div>
+
+  <p style="text-align:center; font-size:0.9em; color:#666;">
+    ⚠️ Risk Warning: Forex trading involves risk. Only trade with money you can afford to lose. This page contains affiliate links; we may earn a commission at no extra cost to you.
+  </p>
+</main>
+
+<footer>
+  <p>© 2026 ForexEdu | Free Forex Education Platform</p>
+</footer>
+
+</body>
+</html>
