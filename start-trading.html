@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+ <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MDWZ227DT4');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start Trading Forex with XM | Trusted Broker</title>
@@ -52,14 +63,30 @@ body {font-family: Arial, sans-serif; margin:0; background:#f7f7f7; color:#333;}
 footer {background:#111; color:#ccc; padding:30px 20px; font-size:13px;}
 </style>
 </head>
-
+<script>
+gtag('event', 'visit_start_trading_page', {
+  'event_category': 'conversion',
+  'event_label': 'Start Trading Page Visit'
+});
+</script>
+<script>
+function trackXMClick() {
+  gtag('event', 'xm_affiliate_click', {
+    'event_category': 'affiliate',
+    'event_label': 'XM Button Click'
+  });
+}
+</script>
 <body>
 
 <!-- HERO SECTION -->
 <div class="section hero">
     <h1>Start Trading Forex with XM Today</h1>
     <p>Low Spreads • Fast Withdrawals • Beginner Friendly</p>
-    <a href="https://affs.click/ryTLn" target="_blank" class="btn-primary">
+   <a href="https://affs.click/ryTLn" 
+   target="_blank" 
+   class="btn-primary"
+   onclick="trackXMClick()">
         Open XM Account Now
     </a>
 </div>
