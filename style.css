@@ -1,57 +1,114 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.8;
+/* ===============================
+   GLOBAL RESET
+================================= */
+* {
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: #222;
+  box-sizing: border-box;
 }
 
+/* ===============================
+   BODY
+================================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ===============================
+   CONTAINER
+================================= */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===============================
+   HEADER
+================================= */
 header {
   text-align: center;
-  padding: 30px 20px;
+  padding: 40px 20px 20px 20px;
 }
 
-h1 {
-  font-size: 28px;
+header h1 {
+  font-size: 30px;
   margin-bottom: 10px;
-}
-
-h2 {
-  margin-top: 40px;
-  font-size: 22px;
-}
-
-h3 {
-  margin-top: 25px;
-  font-size: 18px;
 }
 
 .subtitle {
   color: #666;
+  font-size: 16px;
 }
 
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+/* ===============================
+   HEADINGS
+================================= */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.4;
 }
 
+h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   PARAGRAPHS
+================================= */
 p {
   margin-bottom: 20px;
 }
 
-ul {
-  margin-bottom: 20px;
+/* ===============================
+   LINKS
+================================= */
+a {
+  color: #0056b3;
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   LISTS
+================================= */
+ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   TABLES
+================================= */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 15px;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
@@ -59,19 +116,119 @@ table th, table td {
 
 table th {
   background-color: #f4f4f4;
+  font-weight: bold;
 }
 
+/* ===============================
+   AUTHOR BOX
+================================= */
 .author-box {
   margin-top: 40px;
-  padding: 15px;
+  padding: 20px;
   background: #f9f9f9;
   border-left: 4px solid #222;
+  font-size: 14px;
 }
 
+/* ===============================
+   BADGE AREA (Sharia / Certification)
+================================= */
+.badge-area {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f4f8f4;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+}
+
+.badge-area img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* ===============================
+   DISCLAIMER SECTION
+================================= */
+#disclaimer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff8e1;
+  border-left: 4px solid #ff9800;
+}
+
+/* ===============================
+   FAQ SECTION
+================================= */
+#faq h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* ===============================
+   NAVIGATION
+================================= */
+nav {
+  background: #111;
+  padding: 12px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===============================
+   FOOTER
+================================= */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   margin-top: 40px;
+  background: #f4f4f4;
   font-size: 14px;
   color: #777;
+}
+
+/* ===============================
+   ADSENSE PLACEHOLDER AREA
+================================= */
+.ad-container {
+  margin: 30px 0;
+  text-align: center;
+  min-height: 90px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 10px;
+  }
+
+  main {
+    padding: 15px;
+  }
 }
