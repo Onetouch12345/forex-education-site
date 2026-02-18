@@ -1,43 +1,59 @@
 import os
 from datetime import datetime
 
-# ========== CONFIGURATION ==========
-site_url = "https://rainhunterforex.com"  # Your website base URL
-output_file = "sitemap.xml"              # Output file
-html_folder = "."                         # Folder to scan for HTML pages
-# ===================================
+# ---------------------------
+# CONFIGURATION
+# ---------------------------
+BASE_URL = "https://rainhunterforex.com"  # Your website
+ROOT_DIR = "."  # Root directory of HTML files
+DEFAULT_PRIORITY = "0.8"
+INDEX_PRIORITY = "1.0"
+CHANGEFREQ = "weekly"
 
-def get_html_files(folder):
+# ---------------------------
+# FUNCTION TO SCAN HTML FILES
+# ---------------------------
+def get_html_files(root_dir):
     html_files = []
-    for root, dirs, files in os.walk(folder):
+    for subdir, dirs, files in os.walk(root_dir):
         for file in files:
             if file.endswith(".html"):
-                filepath = os.path.relpath(os.path.join(root, file), folder)
-                html_files.append(filepath.replace("\\", "/"))
+                path = os.path.relpath(os.path.join(subdir, file), root_dir)
+                html_files.append(path.replace("\\", "/"))
     return html_files
 
-def generate_sitemap(url_list, output):
-    now = datetime.now().strftime("%Y-%m-%d")
-    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
-               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+# ---------------------------
+# GENERATE SITEMAP.XML
+# ---------------------------
+def generate_sitemap(html_files, base_url):
+    today = datetime.today().strftime("%Y-%m-%d")
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
 
-    for url in url_list:
-        sitemap.append("  <url>")
-        sitemap.append(f"    <loc>{site_url}/{url}</loc>")
-        sitemap.append(f"    <lastmod>{now}</lastmod>")
-        sitemap.append("    <changefreq>weekly</changefreq>")
-        sitemap.append("    <priority>0.8</priority>")
-        sitemap.append("  </url>")
+    for file in html_files:
+        priority = INDEX_PRIORITY if file.lower() in ["index.html", "./index.html"] else DEFAULT_PRIORITY
+        sitemap += "  <url>\n"
+        sitemap += f"    <loc>{base_url}/{file}</loc>\n"
+        sitemap += f"    <lastmod>{today}</lastmod>\n"
+        sitemap += f"    <changefreq>{CHANGEFREQ}</changefreq>\n"
+        sitemap += f"    <priority>{priority}</priority>\n"
+        sitemap += "  </url>\n\n"
 
-    sitemap.append("</urlset>")
+    sitemap += "</urlset>"
+    return sitemap
 
-    with open(output, "w", encoding="utf-8") as f:
-        f.write("\n".join(sitemap))
-    print(f"Sitemap generated: {output}")
+# ---------------------------
+# SAVE SITEMAP.XML
+# ---------------------------
+def save_sitemap(content, filename="sitemap.xml"):
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"{filename} generated successfully!")
 
+# ---------------------------
+# MAIN SCRIPT
+# ---------------------------
 if __name__ == "__main__":
-    html_pages = get_html_files(html_folder)
-    # Exclude hidden files or irrelevant HTML files if needed
-    html_pages = [p for p in html_pages if not p.startswith(".")]
-    
-    generate_sitemap(html_pages, output_file)
+    html_files = get_html_files(ROOT_DIR)
+    sitemap_content = generate_sitemap(html_files, BASE_URL)
+    save_sitemap(sitemap_content)
