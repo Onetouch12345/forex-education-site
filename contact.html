@@ -3,57 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Forex Education Site</title>
-<meta name="description" content="Get in touch with Forex Education Site for questions, feedback, or collaboration.">
+<title>Contact Us | ForexEdu</title>
+<meta name="description" content="Get in touch with ForexEdu for questions, feedback, or collaboration.">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Contact Form Styling */
+.contact-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+.contact-container h2 {
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-container button {
+  background-color: #0d6efd;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+  background-color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+  .contact-container { padding: 20px; margin: 20px; }
+}
+</style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="how-to-start-forex-trading.html">Start Forex Trading</a>
-  <a href="how-to-grow-a-small-forex-account.html">Grow Small Account</a>
-  <a href="islamic-forex-guide.html">Islamic Forex Guide</a>
-</nav>
-
 <header>
-<h1>Contact Us</h1>
-<p class="subtitle">We would love to hear from you</p>
+  <h1 style="text-align:center; color:#123a5c;">Contact Us</h1>
+  <p style="text-align:center; color:#555;">We would love to hear from you</p>
 </header>
 
-<main>
+<main class="main-content page-layout">
 
-<section>
-<p>
-You can contact us for questions, feedback, or partnership opportunities. Please use the form below or send an email directly.
-</p>
-</section>
+  <div class="contact-container">
 
-<section>
-<h2>Email</h2>
-<p>info@forex-education-site.com</p>
-</section>
+    <section>
+      <p>
+        For questions, feedback, or partnership opportunities, please fill out the form below or send an email directly.
+      </p>
+    </section>
 
-<section>
-<h2>Contact Form</h2>
-<form>
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-  
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="5" required></textarea><br><br>
-  
-  <button type="submit">Send Message</button>
-</form>
-</section>
+    <section>
+      <h2>Email</h2>
+      <p><a href="mailto:info@forex-education-site.com" style="color:#0d6efd;">info@forex-education-site.com</a></p>
+    </section>
 
-<footer>
-<p>© 2026 Forex Education Site | All Rights Reserved</p>
-</footer>
+    <section>
+      <h2>Contact Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
 
 </main>
+
+<footer style="text-align:center; padding:20px; background:#0d6efd; color:white;">
+  <p>© 2026 ForexEdu | Free Forex Education Platform</p>
+</footer>
+
 </body>
 </html>
