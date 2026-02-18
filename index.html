@@ -12,6 +12,9 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Chart.js Library for Interactive Chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <!-- Website Schema -->
 <script type="application/ld+json">
 {
@@ -22,6 +25,92 @@
  "description": "Free Forex education, broker reviews, strategies and Islamic Forex guidance."
 }
 </script>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #0a0a0a;
+}
+
+nav {
+  background: #0d6efd;
+  text-align: center;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+nav a:hover { text-decoration: underline; }
+
+header {
+  background: #eef2f7;
+  padding: 30px 10px;
+  text-align: center;
+}
+header h1 { color: #123a5c; margin-bottom: 5px; }
+header .subtitle { color: #555; font-size: 16px; }
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+h2 { color: #0d6efd; margin-bottom: 15px; }
+h3 { color: #123a5c; margin-bottom: 10px; }
+
+ul { padding-left: 20px; }
+ul li { margin-bottom: 8px; }
+
+a { color: #0d6efd; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.ad-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+footer {
+  background: #0d6efd;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media(max-width:768px){
+  nav a { display:block; margin: 8px 0; }
+  section { padding: 15px; }
+}
+</style>
 
 </head>
 <body>
@@ -82,6 +171,16 @@
 
 </section>
 
+<!-- INTERACTIVE GROWTH CHART -->
+<section>
+<h2>Interactive Example: $100 Account Growth</h2>
+<p>See how a $100 account can grow over 12 months using consistent compounding and 1% risk per trade.</p>
+
+<div class="chart-container">
+  <canvas id="homepageGrowthChart"></canvas>
+</div>
+</section>
+
 <!-- ISLAMIC SECTION -->
 <section>
   <h2>Islamic Forex Trading Guide</h2>
@@ -124,6 +223,46 @@
 <footer>
   <p>© 2026 Forex Education Site | All Rights Reserved</p>
 </footer>
+
+<script>
+// Interactive Account Growth Chart
+const ctxHome = document.getElementById('homepageGrowthChart').getContext('2d');
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+let balance = 100;
+const balances = months.map(() => {
+  balance *= 1.05; // 5% monthly growth example
+  return parseFloat(balance.toFixed(2));
+});
+
+new Chart(ctxHome, {
+  type: 'line',
+  data: {
+    labels: months,
+    datasets: [{
+      label: 'Account Balance ($)',
+      data: balances,
+      backgroundColor: 'rgba(13,110,253,0.2)',
+      borderColor: '#0d6efd',
+      borderWidth: 2,
+      fill: true,
+      tension: 0.3,
+      pointBackgroundColor: '#28a745',
+      pointRadius: 5
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: true },
+      tooltip: { enabled: true }
+    },
+    scales: {
+      y: { beginAtZero: false, title: { display: true, text: 'Balance ($)' } },
+      x: { title: { display: true, text: 'Month' } }
+    }
+  }
+});
+</script>
 
 </body>
 </html>
