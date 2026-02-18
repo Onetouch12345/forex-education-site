@@ -3,58 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>How to Grow a Small Forex Account (2026 Guide for Beginners)</title>
-
-<meta name="description" content="Learn how to grow a small forex account safely in 2026. Proven risk management, position sizing, compounding strategy, and Islamic trading guidance for beginners.">
-
-<meta name="keywords" content="grow small forex account, forex compounding strategy, forex risk management, islamic forex trading guide">
-
-<link rel="canonical" href="https://onetouch12345.github.io/forex-education-site/how-to-grow-a-small-forex-account.html">
-
+<title>How to Grow a Small Forex Account (2026 Guide)</title>
+<meta name="description" content="Learn how to grow a small forex account safely in 2026 with proven risk management, compounding, and trading strategies for beginners.">
 <link rel="stylesheet" href="style.css">
 
-<!-- Article Structured Data -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Article",
- "headline": "How to Grow a Small Forex Account",
- "author": {
-   "@type": "Person",
-   "name": "Abdul Waheed"
- },
- "publisher": {
-   "@type": "Organization",
-   "name": "Forex Education Site"
- },
- "datePublished": "2026-01-01",
- "description": "Step-by-step guide on growing a small forex account using risk management and compounding strategies."
-}
-</script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "Can you grow a $100 forex account?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Yes, but it requires strict risk management, patience, and consistent strategy. Avoid over-leveraging."
-   }
- },{
-   "@type": "Question",
-   "name": "What is the safest risk per trade?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "Professional traders recommend risking 1% or less per trade to protect small accounts."
-   }
- }]
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #0a0a0a;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
-</script>
+
+nav {
+  background: #0d6efd;
+  padding: 10px 20px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  padding: 25px 10px;
+  background: #eef2f7;
+}
+header h1 { color: #123a5c; }
+header .subtitle { color: #555; font-size: 16px; margin-top: 5px; }
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+section {
+  margin-bottom: 25px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+h2 { color: #0d6efd; margin-bottom: 15px; }
+h3 { color: #123a5c; margin-bottom: 10px; }
+ul { padding-left: 20px; }
+ul li { margin-bottom: 8px; }
+
+.badge-area, .author-box, #disclaimer {
+  border-left: 4px solid #28a745;
+  background: #f8f9fa;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+a { color: #0d6efd; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+footer {
+  text-align: center;
+  background: #0d6efd;
+  color: white;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.chart-container {
+  margin-top: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+@media(max-width:768px){
+  nav a { display:block; margin: 8px 0; }
+}
+</style>
 
 </head>
 <body>
@@ -80,10 +116,6 @@ The key is <strong>capital preservation first, growth second</strong>.
 </p>
 </section>
 
-<div class="ad-container">
-  <!-- Adsense Ad Unit -->
-</div>
-
 <section>
 <h2>Step 1: Focus on Risk Management</h2>
 <p>
@@ -93,11 +125,14 @@ Small accounts are fragile, and large losses are difficult to recover from.
 </section>
 
 <section>
-<h2>Step 2: Use Compounding Strategy</h2>
+<h2>Step 2: Use a Compounding Strategy</h2>
 <p>
 Instead of withdrawing profits early, reinvest gains gradually. 
 Compounding small consistent returns can grow accounts sustainably over time.
 </p>
+<div class="chart-container">
+  <canvas id="compoundingChart"></canvas>
+</div>
 </section>
 
 <section>
@@ -131,7 +166,7 @@ rather than scalping, as it reduces stress and emotional errors.
 <h2>Frequently Asked Questions</h2>
 
 <h3>Can you grow a $100 forex account?</h3>
-<p>Yes, but only with strict discipline and proper risk management.</p>
+<p>Yes, but only with strict discipline, proper risk management, and patience.</p>
 
 <h3>How long does it take to grow a small account?</h3>
 <p>It depends on consistency and risk control. Sustainable growth is gradual, not instant.</p>
@@ -140,9 +175,8 @@ rather than scalping, as it reduces stress and emotional errors.
 
 <section class="badge-area">
 <h3>Sharia Compliance Notice</h3>
-<p>This educational content is provided for informational purposes only. 
-Traders seeking Islamic compliance should ensure they use swap-free accounts 
-and consult qualified scholars where necessary.</p>
+<p>This educational content is for informational purposes only. 
+Traders seeking Islamic compliance should use swap-free accounts and consult qualified scholars when necessary.</p>
 </section>
 
 <section id="disclaimer">
@@ -167,6 +201,49 @@ Founder of Forex Education Site
 <p>© 2026 Forex Education Site | All Rights Reserved</p>
 </footer>
 
+<!-- Chart.js Script -->
+<script>
+const ctx = document.getElementById('compoundingChart').getContext('2d');
+
+// Example: $100 starting account, 2% gain per trade, 50 trades
+let initial = 100;
+let dataPoints = [];
+let labels = [];
+for(let i=1; i<=50; i++){
+  initial *= 1.02; // 2% growth per trade
+  dataPoints.push(initial.toFixed(2));
+  labels.push("Trade " + i);
+}
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: labels,
+    datasets: [{
+      label: 'Account Balance Growth ($)',
+      data: dataPoints,
+      backgroundColor: 'rgba(13,110,253,0.2)',
+      borderColor: '#0d6efd',
+      borderWidth: 2,
+      tension: 0.3,
+      fill: true,
+      pointRadius: 3,
+      pointBackgroundColor: '#0d6efd'
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: true },
+      tooltip: { enabled: true }
+    },
+    scales: {
+      x: { display: true, title: { display: true, text: 'Trade Number' } },
+      y: { display: true, title: { display: true, text: 'Account Balance ($)' }, beginAtZero: true }
+    }
+  }
+});
+</script>
+
 </body>
 </html>
-
