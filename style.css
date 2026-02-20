@@ -1,6 +1,6 @@
-/* ===========================
-   RESET & BASE STYLES
-=========================== */
+/* =========================================
+   Reset & Global
+========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +8,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.7;
   color: #333;
   background-color: #f9f9f9;
@@ -17,247 +16,246 @@ body {
 
 a {
   text-decoration: none;
-  color: #0077cc;
+  color: inherit;
 }
 
-a:hover {
-  color: #005fa3;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ===========================
-   STICKY HEADER / NAVBAR
-=========================== */
+/* =========================================
+   Header / Navigation
+========================================= */
 .sticky-header {
   position: sticky;
   top: 0;
-  z-index: 999;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: #0b3d91;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.navbar {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
+  padding: 15px 0;
 }
 
-.navbar .logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #0077cc;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .nav-links li a {
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 4px;
-}
-
-.navbar .nav-links li a.active,
-.navbar .nav-links li a:hover {
-  background-color: #0077cc;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
 }
 
-/* ===========================
-   HERO / PAGE HEADER
-=========================== */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #ffd700;
+}
+
+/* =========================================
+   Hero Section
+========================================= */
 .hero {
-  background-color: #eaf2fa;
+  padding: 80px 0;
+  text-align: center;
+  background: #0b3d91 url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero-small {
+  padding: 50px 0;
+  background-color: #0b3d91;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s;
+  margin: 5px;
+}
+
+.btn-primary {
+  background-color: #ffd700;
+  color: #0b3d91;
+}
+
+.btn-primary:hover {
+  background-color: #e6c200;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #0b3d91;
+  border: 2px solid #0b3d91;
+}
+
+.btn-secondary:hover {
+  background-color: #0b3d91;
+  color: #fff;
+}
+
+/* =========================================
+   Blog / Learn Sections
+========================================= */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+.blog-post {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.blog-post h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #0b3d91;
+}
+
+.blog-post h3 {
+  font-size: 1.3rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.blog-post p,
+.blog-post ul,
+.blog-post li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.blog-post ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.blog-post li {
+  margin-bottom: 8px;
+}
+
+/* CTA Section */
+#cta {
+  background-color: #0b3d91;
+  color: #fff;
   text-align: center;
   padding: 60px 20px;
 }
 
-.hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.hero p small {
-  color: #555;
-}
-
-/* ===========================
-   CONTAINER SECTIONS
-=========================== */
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* ===========================
-   BLOG POST STYLING
-=========================== */
-.blog-post h2 {
-  font-size: 1.8rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #0077cc;
-}
-
-.blog-post p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #444;
-}
-
-.blog-post ul,
-.blog-post ol {
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-
-.blog-post ul li,
-.blog-post ol li {
-  margin-bottom: 8px;
-}
-
-.featured-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 25px;
-}
-
-/* ===========================
-   CTA SECTION
-=========================== */
-.cta-section {
-  background-color: #0077cc;
-  color: #fff;
-  text-align: center;
-  padding: 50px 20px;
-  margin-top: 50px;
-  border-radius: 8px;
-}
-
-.cta-section h2 {
+#cta h2 {
   font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#cta .btn {
+  margin: 10px 5px;
+}
+
+/* =========================================
+   Forms
+========================================= */
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
   margin-bottom: 15px;
-}
-
-.cta-section p {
-  margin-bottom: 25px;
-  font-size: 1.1rem;
-}
-
-.btn {
-  padding: 12px 25px;
-  font-weight: 600;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 5px;
-  display: inline-block;
-  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
-.btn-primary {
-  background-color: #fff;
-  color: #0077cc;
-  border: 1px solid #fff;
-}
-
-.btn-primary:hover {
-  background-color: #005fa3;
+form button {
+  background-color: #0b3d91;
   color: #fff;
-  border: 1px solid #005fa3;
+  padding: 12px 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+form button:hover {
+  background-color: #0951c2;
 }
 
-.btn-secondary:hover {
-  background-color: #fff;
-  color: #0077cc;
-}
-
-/* ===========================
-   FOOTER
-=========================== */
+/* =========================================
+   Footer
+========================================= */
 footer {
-  background-color: #222;
+  background-color: #0b3d91;
   color: #fff;
   text-align: center;
-  padding: 25px 20px;
-  margin-top: 50px;
-  font-size: 0.9rem;
+  padding: 25px 0;
+  margin-top: 60px;
 }
 
-/* ===========================
-   BLOG GRID / BLOG LIST
-=========================== */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.blog-card {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.blog-card-content {
-  padding: 20px;
-}
-
-.blog-card-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #0077cc;
-}
-
-.blog-card-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.blog-card-content a {
-  font-weight: 600;
-  color: #0077cc;
-}
-
-/* ===========================
-   RESPONSIVE DESIGN
-=========================== */
-@media (max-width: 768px) {
-  .navbar .nav-links {
+/* =========================================
+   Responsive
+========================================= */
+@media (max-width: 992px) {
+  .header-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .cta-section h2 {
-    font-size: 1.5rem;
+  .blog-post h2 {
+    font-size: 1.6rem;
+  }
+
+  .blog-post h3 {
+    font-size: 1.1rem;
   }
 }
