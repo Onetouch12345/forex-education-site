@@ -255,3 +255,68 @@ footer {
     gap: 10px;
   }
 }
+/* ============================= */
+/* BLOG PAGE WITH SIDEBAR LAYOUT */
+/* ============================= */
+.blog-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.blog-main {
+  flex: 3;
+}
+
+.blog-sidebar {
+  flex: 1;
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #0a1f44;
+  border-bottom: 2px solid #0073e6;
+  padding-bottom: 5px;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-section ul li {
+  margin-bottom: 12px;
+}
+
+.sidebar-section ul li a {
+  text-decoration: none;
+  color: #0073e6;
+  transition: 0.3s;
+}
+
+.sidebar-section ul li a:hover {
+  color: #005bb5;
+}
+
+/* ============================= */
+/* RESPONSIVE BLOG + SIDEBAR */
+/* ============================= */
+@media (max-width: 1024px) {
+  .blog-page {
+    flex-direction: column;
+  }
+  .blog-sidebar {
+    margin-top: 40px;
+  }
+}
