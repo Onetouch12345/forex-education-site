@@ -1,6 +1,6 @@
-/* ============================= */
-/* GLOBAL STYLES & RESET */
-/* ============================= */
+/* ===========================
+   RESET & BASE STYLES
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,131 +8,137 @@
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
   color: #333;
   background-color: #f9f9f9;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #0077cc;
 }
 
-ul, ol {
-  padding-left: 20px;
+a:hover {
+  color: #005fa3;
 }
 
-/* ============================= */
-/* STICKY HEADER / NAVBAR */
-/* ============================= */
+/* ===========================
+   STICKY HEADER / NAVBAR
+=========================== */
 .sticky-header {
   position: sticky;
   top: 0;
-  width: 100%;
+  z-index: 999;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  z-index: 999;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 2%;
   max-width: 1200px;
   margin: auto;
+  padding: 15px 20px;
 }
 
 .navbar .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #0b3d91;
+  color: #0077cc;
 }
 
-.nav-links {
+.navbar .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.nav-links li a {
+.navbar .nav-links li a {
   font-weight: 500;
-  padding: 5px 10px;
-  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
+.navbar .nav-links li a.active,
+.navbar .nav-links li a:hover {
+  background-color: #0077cc;
   color: #fff;
-  background-color: #0b3d91;
-  border-radius: 5px;
 }
 
-/* ============================= */
-/* HERO SECTION */
-/* ============================= */
+/* ===========================
+   HERO / PAGE HEADER
+=========================== */
 .hero {
-  background: linear-gradient(rgba(11,61,145,0.8), rgba(11,61,145,0.8)), url('images/forex-hero.jpg') no-repeat center center/cover;
-  color: #fff;
+  background-color: #eaf2fa;
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 60px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* ============================= */
-/* CONTENT SECTIONS */
-/* ============================= */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.content-section article {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 18px rgba(0,0,0,0.08);
-}
-
-.content-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #0b3d91;
-}
-
-.content-section p, 
-.content-section li {
-  font-size: 1rem;
+  font-size: 2.4rem;
   margin-bottom: 10px;
 }
 
-.content-section ul li,
-.content-section ol li {
+.hero p small {
+  color: #555;
+}
+
+/* ===========================
+   CONTAINER SECTIONS
+=========================== */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   BLOG POST STYLING
+=========================== */
+.blog-post h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+.blog-post p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.blog-post ul li,
+.blog-post ol li {
   margin-bottom: 8px;
 }
 
-/* ============================= */
-/* CTA SECTION */
-/* ============================= */
+.featured-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   CTA SECTION
+=========================== */
 .cta-section {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #0b3d91;
+  background-color: #0077cc;
   color: #fff;
-  border-radius: 10px;
-  margin: 40px 0;
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 50px;
+  border-radius: 8px;
 }
 
 .cta-section h2 {
@@ -141,56 +147,70 @@ ul, ol {
 }
 
 .cta-section p {
-  font-size: 1.1rem;
   margin-bottom: 25px;
+  font-size: 1.1rem;
 }
 
 .btn {
-  display: inline-block;
   padding: 12px 25px;
   font-weight: 600;
-  border-radius: 6px;
-  transition: 0.3s;
-  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #ff9800;
-  color: #fff;
+  background-color: #fff;
+  color: #0077cc;
+  border: 1px solid #fff;
 }
 
 .btn-primary:hover {
-  background-color: #e68900;
+  background-color: #005fa3;
+  color: #fff;
+  border: 1px solid #005fa3;
 }
 
 .btn-secondary {
-  background-color: #fff;
-  color: #0b3d91;
-  border: 2px solid #0b3d91;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 .btn-secondary:hover {
-  background-color: #0b3d91;
-  color: #fff;
-  border: 2px solid #0b3d91;
+  background-color: #fff;
+  color: #0077cc;
 }
 
-/* ============================= */
-/* BLOG GRID / NEWS STYLE */
-/* ============================= */
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   BLOG GRID / BLOG LIST
+=========================== */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .blog-card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
 .blog-card:hover {
@@ -208,40 +228,36 @@ ul, ol {
 }
 
 .blog-card-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #0b3d91;
+  color: #0077cc;
 }
 
 .blog-card-content p {
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: 10px;
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-footer {
-  background-color: #0b3d91;
-  color: #fff;
-  padding: 25px 20px;
-  text-align: center;
-  font-size: 0.9rem;
+.blog-card-content a {
+  font-weight: 600;
+  color: #0077cc;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-  .navbar {
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+  .navbar .nav-links {
     flex-direction: column;
     gap: 10px;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .hero p {
-    font-size: 1rem;
+  .cta-section h2 {
+    font-size: 1.5rem;
   }
 }
