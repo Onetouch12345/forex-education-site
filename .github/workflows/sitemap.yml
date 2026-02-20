@@ -3,38 +3,37 @@ name: Auto Generate Sitemap
 on:
   push:
     branches:
-      - main  # run on push to main branch
+      - main   # Runs when you push to main branch
+  workflow_dispatch:   # Allows manual run from GitHub
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Set up Python
+      # 2️⃣ Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      # 3. Install dependencies (if needed)
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
+      # 3️⃣ Upgrade pip
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
 
-      # 4. Generate sitemap.xml
+      # 4️⃣ Generate sitemap.xml
       - name: Generate sitemap.xml
-        run: |
-          python generate_sitemap.py
+        run: python generate_sitemap.py
 
-      # 5. Commit and push sitemap.xml back to repo
+      # 5️⃣ Commit & push if changed
       - name: Commit and push sitemap.xml
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
-          git commit -m "Auto-update sitemap.xml" || echo "No changes to commit"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update sitemap.xml"
           git push
