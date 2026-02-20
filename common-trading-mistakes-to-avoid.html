@@ -1,83 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Forex Strategy | ForexEdu</title>
-  <meta name="description" content="Visualize the Forex Trend-Confluence Strategy with EMA, Fibonacci retracement, and candlestick patterns in an interactive chart.">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Optional: Candlestick plugin -->
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial@0.1.0/dist/chartjs-chart-financial.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common Trading Mistakes to Avoid</title>
+<meta name="description" content="Avoid these common forex trading mistakes to improve your success rate.">
+<link rel="canonical" href="https://rainhunterforex.com/common-trading-mistakes-to-avoid.html">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <h1>ForexEdu</h1>
-  <p>Interactive Forex Strategy Visualization</p>
+<header class="main-header">
+<h1>Common Trading Mistakes</h1>
 </header>
 
-<main class="main-content page-layout">
-
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:20px;">Interactive Forex Trend-Confluence Strategy</h2>
-
-    <p>This chart demonstrates an example of a Forex pair using EMA trend, Fibonacci retracement, and candlestick patterns for better trade visualization.</p>
-
-    <div class="chart-container">
-      <canvas id="forexChart"></canvas>
-    </div>
-
-    <div class="legend-box">
-      <div class="legend-item"><div class="color-box" style="background:#007bff;"></div> EMA 50</div>
-      <div class="legend-item"><div class="color-box" style="background:#28a745;"></div> EMA 200</div>
-      <div class="legend-item"><div class="color-box" style="background:#ffc107;"></div> Fibonacci Zone</div>
-      <div class="legend-item"><div class="color-box" style="background:#dc3545;"></div> Bullish Candle</div>
-    </div>
-  </div>
-
+<main class="container">
+<ul>
+<li>Overtrading</li>
+<li>No risk management</li>
+<li>Emotional trading</li>
+<li>Ignoring stop loss</li>
+<li>Trading without strategy</li>
+</ul>
 </main>
 
-<footer>
-  <p>© 2026 ForexEdu | Free Forex Education Platform</p>
+<footer class="main-footer">
+<p>© 2026 ForexEdu</p>
 </footer>
-
-<script>
-const ctx = document.getElementById('forexChart').getContext('2d');
-
-// Example candlestick data
-const forexChart = new Chart(ctx, {
-  type: 'candlestick', // requires chartjs-chart-financial plugin
-  data: {
-    labels: ['Day 1','Day 2','Day 3','Day 4','Day 5','Day 6','Day 7'],
-    datasets: [{
-      label: 'EUR/USD Example',
-      data: [
-        {o:1.100, h:1.120, l:1.095, c:1.115},
-        {o:1.115, h:1.118, l:1.110, c:1.112},
-        {o:1.112, h:1.125, l:1.110, c:1.122},
-        {o:1.122, h:1.130, l:1.120, c:1.128},
-        {o:1.128, h:1.135, l:1.125, c:1.132},
-        {o:1.132, h:1.140, l:1.130, c:1.138},
-        {o:1.138, h:1.145, l:1.135, c:1.142}
-      ]
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: true }
-    },
-    scales: {
-      x: { display: true },
-      y: { display: true }
-    }
-  }
-});
-</script>
-
 </body>
 </html>
