@@ -339,3 +339,9 @@ footer {
     align-items: center;
   }
 }
+
+.category {
+  background: #eee;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
