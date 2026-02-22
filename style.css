@@ -1,5 +1,5 @@
 /* =========================================
-   Reset & Global
+   RESET & GLOBAL
 ========================================= */
 * {
   margin: 0;
@@ -7,16 +7,27 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7;
-  color: #333;
-  background-color: #f9f9f9;
+  letter-spacing: 0.01em;
+  color: #2f3742;
+  background-color: #f4f6f9;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .container {
@@ -26,14 +37,15 @@ a {
 }
 
 /* =========================================
-   Header / Navigation
+   HEADER / NAVIGATION
 ========================================= */
-.sticky-header {
+header {
   position: sticky;
   top: 0;
+  z-index: 999;
   background-color: #0b3d91;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .header-container {
@@ -49,57 +61,33 @@ a {
   color: #fff;
 }
 
-.nav-menu {
-  list-style: none;
+nav {
   display: flex;
   gap: 25px;
+  padding: 15px;
 }
 
-.nav-menu li a {
+nav a {
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.25s ease;
 }
 
-.nav-menu li a:hover,
-.nav-menu li a.active {
+nav a:hover {
+  transform: translateY(-2px);
   color: #ffd700;
 }
 
 /* =========================================
-   Hero Section
+   BUTTONS
 ========================================= */
-.hero {
-  padding: 80px 0;
-  text-align: center;
-  background: #0b3d91 url('hero-bg.jpg') center/cover no-repeat;
-  color: #fff;
-}
-
-.hero-small {
-  padding: 50px 0;
-  background-color: #0b3d91;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* =========================================
-   Buttons
-========================================= */
-.btn {
+.btn,
+.btn-primary {
   display: inline-block;
   padding: 12px 28px;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: all 0.3s;
-  margin: 5px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -109,545 +97,74 @@ a {
 
 .btn-primary:hover {
   background-color: #e6c200;
-}
-
-.btn-secondary {
-  background-color: #fff;
-  color: #0b3d91;
-  border: 2px solid #0b3d91;
-}
-
-.btn-secondary:hover {
-  background-color: #0b3d91;
-  color: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
 /* =========================================
-   Blog / Learn Sections
+   BROKER PAGE LAYOUT (FIXED)
 ========================================= */
-.blog-container {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding: 60px 0;
-}
-
-.blog-post {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-}
-
-.blog-post h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0b3d91;
-}
-
-.blog-post h3 {
-  font-size: 1.3rem;
-  margin: 15px 0 10px;
-  color: #333;
-}
-
-.blog-post p,
-.blog-post ul,
-.blog-post li {
-  font-size: 1rem;
-  margin-bottom: 12px;
-}
-
-.blog-post ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.blog-post li {
-  margin-bottom: 8px;
-}
-
-/* CTA Section */
-#cta {
-  background-color: #0b3d91;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-#cta h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-#cta .btn {
-  margin: 10px 5px;
-}
-
-/* =========================================
-   Forms
-========================================= */
-form {
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #0b3d91;
-  color: #fff;
-  padding: 12px 20px;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0951c2;
-}
-
-/* =========================================
-   Footer
-========================================= */
-footer {
-  background-color: #0b3d91;
-  color: #fff;
-  text-align: center;
-  padding: 25px 0;
-  margin-top: 60px;
-}
-
-/* =========================================
-   Responsive
-========================================= */
-@media (max-width: 992px) {
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-menu {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .blog-post h2 {
-    font-size: 1.6rem;
-  }
-
-  .blog-post h3 {
-    font-size: 1.1rem;
-  }
-}
-/* Blog Cards Layout */
-.blog-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
-  justify-content: center;
-}
-
-.blog-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  max-width: 350px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.blog-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1rem;
-}
-
-.card-content .category {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #f39c12;
-  text-transform: uppercase;
-}
-
-.card-content h2 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0;
-  line-height: 1.4;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.card-content .date {
-  font-size: 0.8rem;
-  color: #888;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.card-content .btn-primary {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #2c3e50;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.card-content .btn-primary:hover {
-  background: #34495e;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-  .blog-cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.category {
-  background: #eee;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-/* =============================
-   Featured Blog Post
-============================= */
-
-.featured-post {
-  padding: 3rem 2rem;
-}
-
-.featured-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.featured-image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.featured-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.featured-content {
-  flex: 1;
-  padding: 2rem;
-}
-
-.featured-content h2 {
-  font-size: 1.8rem;
-  margin: 1rem 0;
-}
-
-.featured-content p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.featured-category {
-  background: #e74c3c;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-/* Responsive */
-@media(max-width: 768px){
-  .featured-container {
-    flex-direction: column;
-  }
-}
-/* ===== Magazine Layout ===== */
-
-.article-hero {
-  position: relative;
-  height: 450px;
-  overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  color: white;
-  width: 100%;
-}
-
-.category-badge {
-  background: #e74c3c;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  border-radius: 4px;
-}
-
-.mag-article {
-  max-width: 850px;
-  margin: auto;
-  padding: 3rem 1.5rem;
-  line-height: 1.8;
-  font-size: 1.1rem;
-}
-
-.mag-article h2 {
-  margin-top: 2.5rem;
-  font-size: 1.6rem;
-}
-
-.lead::first-letter {
-  font-size: 3rem;
-  float: left;
-  margin-right: 8px;
-  font-weight: bold;
-}
-
-blockquote {
-  border-left: 4px solid #2c3e50;
-  padding-left: 1rem;
-  font-style: italic;
-  margin: 2rem 0;
-  color: #444;
-}
-
-.mag-image img {
-  width: 100%;
-  margin: 2rem 0;
-  border-radius: 8px;
-}
-
-.author-box {
-  background: #f5f5f5;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 3rem;
-}
-/* =====================================
-   Premium UI Polish Layer
-   ForexEdu Final Style Enhancement
-===================================== */
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Improve body readability */
-body {
-    line-height: 1.65;
-    letter-spacing: 0.01em;
-}
-
-/* Sticky navigation bar */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* Navigation hover animation */
-nav a {
-    transition: all 0.25s ease;
-}
-
-nav a:hover {
-    transform: translateY(-2px);
-}
-
-/* Card hover professional effect */
-.feature, .blog-card, .analysis-card {
-    transition: all 0.35s ease;
-    border-radius: 14px;
-}
-
-.feature:hover,
-.blog-card:hover,
-.analysis-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* CTA Buttons premium glow */
-.btn {
-    transition: all 0.3s ease;
-    border-radius: 30px;
-}
-
-.btn:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
-}
-
-/* Blog typography readability */
-.blog-content {
-    max-width: 900px;
-    margin: auto;
-    font-size: 18px;
-    color: #2f3742;
-}
-
-/* Image polish */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    header nav {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .feature,
-    .blog-card {
-        margin: 15px 10px;
-    }
-}
-/* ===== FIXED LAYOUT ===== */
 .page-layout {
-  display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  gap: 25px;
+  display: flex;
+  gap: 30px;
   max-width: 1400px;
-  margin: 30px auto;
-  padding: 0 15px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* ===== STICKY ADS ===== */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+}
+
+/* ===== SIDEBAR ADS ===== */
+.ad-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.ad-box h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #0b3d91;
+}
+
+.ad-box a {
+  display: block;
+  background: #0b3d91;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.ad-box a:hover {
+  background: #0951c2;
+}
+
+/* Sticky ads */
 .sticky {
   position: sticky;
-  top: 20px;
+  top: 120px;
 }
 
-.banner-link {
-  display: block;
-  background: #0a58ca;
-  color: white;
-  padding: 12px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* ===== TABLE ===== */
-.table-wrapper {
-  overflow-x: auto;
-  margin-top: 20px;
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-.comparison-table th,
-.comparison-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
-}
-
-.comparison-table th {
-  background: #0a1f44;
-  color: white;
-}
-
-.comparison-table tr:nth-child(even) {
-  background: #f2f2f2;
-}
-/* =====================================
-   Professional Trading Dashboard Layout
-===================================== */
-
-.trading-dashboard {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.trading-card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
-}
-
-.trading-card h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-/* Desktop split view */
-@media (min-width: 900px) {
-    .trading-dashboard {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+/* =========================================
+   BROKER INTRO
+========================================= */
 .broker-intro {
-  padding: 60px 20px;
-  background: #f8f9fa;
+  margin-bottom: 40px;
 }
 
 .broker-intro h1 {
@@ -658,13 +175,11 @@ img {
 
 .broker-intro h2 {
   margin-top: 30px;
-  font-size: 24px;
-  color: #222;
+  font-size: 22px;
+  color: #0b3d91;
 }
 
 .broker-intro p {
-  line-height: 1.7;
-  color: #444;
   margin-bottom: 15px;
 }
 
@@ -673,13 +188,98 @@ img {
   margin-top: 15px;
 }
 
-.broker-intro ul li {
+.broker-intro li {
   margin-bottom: 8px;
-  color: #333;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+/* =========================================
+   BROKER COMPARISON TABLE
+========================================= */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #e1e1e1;
+  padding: 14px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background: #0b3d91;
+  color: white;
+  font-weight: 600;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+/* =========================================
+   BLOG CARDS
+========================================= */
+.blog-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 350px;
+  transition: 0.35s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+  background-color: #0b3d91;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 992px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .broker-intro h1 {
+    font-size: 24px;
+  }
+}
