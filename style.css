@@ -275,74 +275,103 @@ box-shadow:0 10px 40px rgba(0,0,0,0.05);
 }
 
 
-/* =====================================
-FEATURED BLOG FIXED LAYOUT
-===================================== */
+/* ======================================
+ULTRA PREMIUM FOREX MAGAZINE STYLE
+====================================== */
+
+/* Magazine Hero */
+
+.hero{
+text-align:center;
+padding:90px 20px;
+background:linear-gradient(135deg,#0a1f44,#0a58ca);
+color:white;
+border-radius:0 0 40px 40px;
+}
+
+/* Featured Post Ultra Premium */
 
 .featured-container{
 display:flex;
+gap:50px;
 align-items:center;
-gap:40px;
+padding:40px;
 background:white;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-padding:30px;
+border-radius:25px;
+box-shadow:0 15px 50px rgba(0,0,0,0.08);
 flex-wrap:wrap;
 }
 
 .featured-image{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
 .featured-image img{
 width:100%;
-height:100%;
-object-fit:cover;
-border-radius:14px;
+border-radius:20px;
 }
+
+/* Magazine Style Content */
 
 .featured-content{
 flex:1;
-min-width:300px;
+min-width:320px;
 }
 
-/* =====================================
-BLOG CARDS GRID
-===================================== */
+.featured-category{
+background:#ffd700;
+padding:6px 14px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* Magazine Blog Grid */
 
 .blog-cards-container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-padding:40px;
-justify-content:center;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+padding:60px 40px;
 }
+
+/* Premium Blog Cards */
 
 .blog-card{
 background:white;
-border-radius:14px;
+border-radius:24px;
 overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.35s ease;
+box-shadow:0 12px 40px rgba(0,0,0,0.08);
+transition:0.4s ease;
 }
 
 .blog-card:hover{
-transform:translateY(-6px);
-box-shadow:0 14px 35px rgba(0,0,0,0.12);
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 }
 
-.blog-card img{
-width:100%;
-height:220px;
-object-fit:cover;
+.category{
+background:#eef3fb;
+padding:6px 12px;
+border-radius:12px;
+font-size:13px;
 }
 
-/* Mobile Fix */
+/* Coming Soon Panel */
+
+.coming-soon-panel{
+text-align:center;
+padding:80px 30px;
+background:#f8f9fc;
+border-radius:30px;
+margin:60px 40px;
+}
+
+/* Mobile Optimization */
 
 @media(max-width:768px){
 
@@ -351,23 +380,11 @@ flex-direction:column;
 }
 
 .blog-cards-container{
-padding:20px;
+padding:30px 20px;
 }
 
+.hero{
+border-radius:0;
 }
 
-/* Remove blank image container rendering */
-
-.blog-card img{
-display:block;
-width:100%;
-height:220px;
-object-fit:cover;
-background:#f5f7fb;
-}
-
-/* Hide broken images automatically */
-
-.blog-card img:not([src]){
-display:none;
 }
