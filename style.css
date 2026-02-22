@@ -562,6 +562,58 @@ img {
         margin: 15px 10px;
     }
 }
+/* ===== FIXED LAYOUT ===== */
+.page-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* ===== STICKY ADS ===== */
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.banner-link {
+  display: block;
+  background: #0a58ca;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background: #0a1f44;
+  color: white;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
 /* =====================================
    Professional Trading Dashboard Layout
 ===================================== */
@@ -630,3 +682,4 @@ img {
   max-width: 1100px;
   margin: auto;
 }
+
