@@ -10,148 +10,145 @@
 <style>
 
 /* ===== GLOBAL ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  color: #222;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f6f9;
+  color:#222;
 }
-
-a { text-decoration: none; }
+a{text-decoration:none}
 
 /* ===== HEADER ===== */
-header {
-  background: #0a1f44;
-  color: white;
-  padding: 15px 20px;
+header{
+  background:#0a1f44;
+  color:#fff;
+  padding:15px 20px;
+}
+nav a{
+  color:#fff;
+  margin-right:15px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 22px;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: #fff;
-  margin-right: 15px;
-  font-weight: 500;
-}
-
-/* ===== PAGE LAYOUT ===== */
-.page-layout {
-  display: grid;
-  grid-template-columns: 160px 1fr 160px;
-  gap: 20px;
-  max-width: 1300px;
-  margin: 30px auto;
-  padding: 0 15px;
+/* ===== LAYOUT ===== */
+.page-layout{
+  display:flex;
+  max-width:1400px;
+  margin:30px auto;
+  padding:0 15px;
+  gap:25px;
 }
 
 /* ===== SIDEBARS ===== */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.sidebar{
+  width:200px;
+  flex-shrink:0;
 }
 
-.ad-box {
-  background: white;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.ad-box{
+  background:#ffffff;
+  padding:20px;
+  border-radius:8px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom:20px;
 }
 
-.ad-box h3 {
-  font-size: 15px;
-  margin-bottom: 10px;
+.ad-box a{
+  display:block;
+  background:#0a58ca;
+  color:#fff;
+  padding:12px;
+  border-radius:6px;
+  font-weight:bold;
 }
 
-.ad-box img {
-  max-width: 100%;
-  height: auto;
+.sticky{
+  position:sticky;
+  top:20px;
 }
 
 /* ===== MAIN CONTENT ===== */
-.main-content {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.main-content{
+  flex:1;
+  background:#ffffff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* ===== INTRO SECTION ===== */
-.broker-intro h2 {
-  margin-top: 25px;
+.broker-intro h1{
+  margin-top:0;
 }
-
-.broker-intro ul {
-  margin-left: 20px;
+.broker-intro ul{
+  margin-left:20px;
 }
-
-.broker-intro ul li {
-  margin-bottom: 8px;
+.broker-intro li{
+  margin-bottom:8px;
 }
 
 /* ===== BROKER CARDS ===== */
-.broker-card {
-  border: 1px solid #e1e1e1;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 8px;
-  background: #fafafa;
+.broker-card{
+  border:1px solid #e1e1e1;
+  padding:20px;
+  margin-top:30px;
+  border-radius:8px;
+  background:#fafafa;
 }
 
-.broker-card h2 {
-  margin-top: 0;
+.btn-blue{
+  display:inline-block;
+  background:#0a58ca;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:5px;
+  margin-top:10px;
+  font-weight:bold;
 }
 
-.btn-blue {
-  display: inline-block;
-  background: #0a58ca;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 5px;
-  margin-top: 10px;
-  font-weight: bold;
+/* ===== TABLE ===== */
+.table-wrapper{
+  overflow-x:auto;
+  margin-top:20px;
 }
-
-.btn-blue:hover {
-  background: #084298;
+.comparison-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.comparison-table th,
+.comparison-table td{
+  border:1px solid #ddd;
+  padding:12px;
+  text-align:center;
+}
+.comparison-table th{
+  background:#0a1f44;
+  color:#fff;
+}
+.comparison-table tr:nth-child(even){
+  background:#f2f2f2;
 }
 
 /* ===== FOOTER ===== */
-footer {
-  background: #0a1f44;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+footer{
+  background:#0a1f44;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .page-layout {
-    grid-template-columns: 1fr;
+@media(max-width:992px){
+  .page-layout{
+    flex-direction:column;
   }
-  .sidebar {
-    display: none;
+  .sidebar{
+    display:none;
   }
 }
 
 </style>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MDWZ227DT4');
-</script>
 </head>
 
 <body>
@@ -167,20 +164,17 @@ gtag('config', 'G-MDWZ227DT4');
 <a href="blog.html">Blog</a>
 </nav>
 </header>
+
 <div class="page-layout">
 
 <!-- LEFT SIDEBAR -->
 <aside class="sidebar">
-
-  <div class="ad-box sticky">
-    <h3>Global Deposit Bonus</h3>
-    <a href="https://clicks.pipaffiliates.com/c?c=1166842&l=en&p=5781"
-       target="_blank"
-       class="banner-link">
-       Global Deposit Bonus Promo, Feb 2026
-    </a>
-  </div>
-
+<div class="ad-box sticky">
+<h3>Global Deposit Bonus</h3>
+<a href="https://clicks.pipaffiliates.com/c?c=1166842&l=en&p=5781" target="_blank">
+Global Deposit Bonus Promo, Feb 2026
+</a>
+</div>
 </aside>
 
 <!-- MAIN CONTENT -->
@@ -189,12 +183,22 @@ gtag('config', 'G-MDWZ227DT4');
 <section class="broker-intro">
 <h1>Best Forex Brokers 2026</h1>
 <p>
-We compare trusted and regulated forex brokers based on trading costs,
-execution speed, regulation, and overall user experience.
+A forex broker provides traders access to the global currency market.
+They act as intermediaries between traders and liquidity providers.
 </p>
+
+<h2>How We Choose the Best Forex Brokers</h2>
+<ul>
+<li>✔ Regulation & Licensing</li>
+<li>✔ Trading Costs & Spreads</li>
+<li>✔ Execution Speed</li>
+<li>✔ Trading Platforms (MT4 / MT5)</li>
+<li>✔ Deposit & Withdrawal Methods</li>
+<li>✔ Customer Support</li>
+<li>✔ Reputation & Reviews</li>
+</ul>
 </section>
 
-<!-- ===== COMPARISON TABLE ===== -->
 <h2>Broker Comparison Table</h2>
 
 <div class="table-wrapper">
@@ -209,7 +213,6 @@ execution speed, regulation, and overall user experience.
 <th>Action</th>
 </tr>
 </thead>
-
 <tbody>
 
 <tr>
@@ -241,9 +244,7 @@ execution speed, regulation, and overall user experience.
 
 <div class="ad-box sticky">
 <h3>Claim Deposit Bonus</h3>
-<a href="https://clicks.pipaffiliates.com/c?c=1166842&l=en&p=5781"
-   target="_blank"
-   class="banner-link">
+<a href="https://clicks.pipaffiliates.com/c?c=1166842&l=en&p=5781" target="_blank">
 Claim Your Bonus
 </a>
 </div>
@@ -254,17 +255,19 @@ Claim Your Bonus
    target="_blank"
    referrerpolicy="no-referrer-when-downgrade">
 <img src="https://ads.pipaffiliates.com/i/131252?c=1166842"
-     alt="Get $30 Free Bonus">
+     alt="Get $30 Free Bonus"
+     style="max-width:100%;">
 </a>
 </div>
 
 </aside>
 
 </div>
+
+<footer>
 <p>© 2026 ForexEdu | Free Forex Education Platform</p>
 <p>Follow us on <a href="https://instagram.com/trust4thebest" target="_blank">Instagram</a> | YouTube | Facebook</p>
 </footer>
 
 </body>
 </html>
-
