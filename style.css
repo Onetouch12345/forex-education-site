@@ -355,3 +355,19 @@ padding:20px;
 }
 
 }
+
+/* Remove blank image container rendering */
+
+.blog-card img{
+display:block;
+width:100%;
+height:220px;
+object-fit:cover;
+background:#f5f7fb;
+}
+
+/* Hide broken images automatically */
+
+.blog-card img:not([src]){
+display:none;
+}
