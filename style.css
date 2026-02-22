@@ -199,3 +199,77 @@ footer a{
     top:0;
   }
 }
+
+/* ======================================
+INSANE ELITE AFFILIATE POLISH LAYER
+====================================== */
+
+/* Smooth interaction system */
+.main-content,
+.broker-card,
+.premium-banner{
+transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Glass financial effect */
+.main-content{
+backdrop-filter: blur(8px);
+}
+
+/* Ultra premium hover glow cards */
+.broker-card:hover{
+transform: translateY(-8px) scale(1.01);
+box-shadow:
+0 20px 40px rgba(0,0,0,0.08),
+0 0 25px rgba(10,88,202,0.08);
+}
+
+/* Trust badge glow */
+.best-badge{
+box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+/* CTA Button Elite Conversion Style */
+.btn-blue{
+background: linear-gradient(135deg,#0a58ca,#084298);
+box-shadow:0 6px 20px rgba(0,0,0,0.12);
+}
+
+.btn-blue:hover{
+transform: translateY(-3px);
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Floating CTA Elite Glow */
+.floating-cta{
+background: linear-gradient(135deg,#0a1f44,#0a58ca);
+animation: floatPulse 3s infinite;
+}
+
+@keyframes floatPulse{
+0%{
+box-shadow:0 0 0 rgba(255,215,0,0.2);
+}
+50%{
+box-shadow:0 0 25px rgba(255,215,0,0.5);
+}
+100%{
+box-shadow:0 0 0 rgba(255,215,0,0.2);
+}
+}
+
+/* Table premium feeling */
+.comparison-table th{
+letter-spacing:0.5px;
+}
+
+.comparison-table tr:hover{
+background:#eef3fb;
+transition:0.3s;
+}
+
+/* Coming soon authority panel */
+.coming-soon{
+border:1px solid #e5eaf2;
+box-shadow:0 10px 40px rgba(0,0,0,0.05);
+}
