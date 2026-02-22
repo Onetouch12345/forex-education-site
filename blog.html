@@ -6,7 +6,7 @@
 
 <title>Forex Blog | Learn Forex Trading</title>
 
-<meta name="description" content="Latest Forex trading strategies, risk management and technical analysis guides.">
+<meta name="description" content="Latest Forex trading strategies, technical analysis guides and risk management education.">
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,26 +15,32 @@
 <body>
 
 <header>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="learn.html">Learn Forex</a>
 <a href="blog.html" class="active">Blog</a>
 </nav>
+
 </header>
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
 <h1>Forex Blog</h1>
-<p>Latest trading strategies and market education</p>
+<p>Professional trading education and market insights</p>
 </section>
+
+<!-- FEATURED POST (DO NOT CHANGE CONTENT) -->
 
 <section class="featured-post">
 
 <div class="featured-container">
 
 <div class="featured-image">
-<img src="images/featured-forex.jpg" alt="Forex Blueprint">
+<img src="images/featured-forex.jpg" alt="Featured Forex Trading Guide">
 </div>
 
 <div class="featured-content">
@@ -44,9 +50,14 @@
 <h2>Forex Blueprint</h2>
 
 <p>
-Forex trading is a global decentralized financial market where traders buy and sell currency pairs
-to profit from price movements using technical and fundamental analysis.
+What is Forex trading. How Forex Market Actually Moves...The forex
+(foreign exchange) market works as a global decentralized network where
+traders buy and sell currency pairs (like EUR/USD) to profit from fluctuations
+in exchange rates, betting on one currency strengthening or weakening against
+another using brokers and trading platforms.
 </p>
+
+<span class="date">Featured Article</span>
 
 <a href="forex-blueprint.html" class="btn btn-primary">
 Read Full Guide
@@ -58,22 +69,25 @@ Read Full Guide
 
 </section>
 
-<!-- Blog Cards -->
+<!-- BLOG FEED GRID -->
 
 <section class="blog-cards-container">
 
 <div class="blog-card">
 <img src="images/risk-management.jpg">
+
 <div class="card-content">
 
 <span class="category">Risk Management</span>
 
 <h2>Top 5 Risk Management Strategies</h2>
 
-<p>Protect your capital using professional risk control techniques.</p>
+<p>
+Protect your capital using professional trading risk control methods used by experienced traders.
+</p>
 
 <a href="blog-risk-management.html" class="btn btn-primary">
-Read More
+Read Article
 </a>
 
 </div>
@@ -88,10 +102,12 @@ Read More
 
 <h2>Mastering Technical Analysis</h2>
 
-<p>Learn chart patterns and indicator trading methods.</p>
+<p>
+Understand price patterns, indicators, and market structure for better trading decisions.
+</p>
 
 <a href="blog-technical-analysis.html" class="btn btn-primary">
-Read More
+Read Article
 </a>
 
 </div>
@@ -102,14 +118,16 @@ Read More
 
 <div class="card-content">
 
-<span class="category">Advanced Strategies</span>
+<span class="category">Advanced Trading</span>
 
-<h2>Advanced Forex Trading</h2>
+<h2>Advanced Forex Trading Strategies</h2>
 
-<p>Professional scalping and breakout trading techniques.</p>
+<p>
+Professional scalping, breakout, and swing trading techniques are coming soon.
+</p>
 
-<a href="blog-advanced-strategies.html" class="btn btn-primary">
-Read More
+<a href="#" class="btn btn-primary">
+Coming Soon
 </a>
 
 </div>
@@ -117,19 +135,17 @@ Read More
 
 </section>
 
-<!-- Trading Charts Section -->
+<!-- COMING SOON READER PANEL -->
 
-<section class="trading-dashboard">
+<section class="coming-soon-panel">
 
-<div class="trading-card">
-<h3>EUR/USD Market Chart</h3>
-<div id="chart-forex"></div>
-</div>
+<h2>📚 More Expert Forex Articles Are Coming</h2>
 
-<div class="trading-card">
-<h3>Gold (XAUUSD) Market Chart</h3>
-<div id="chart-gold"></div>
-</div>
+<p>
+We are continuously publishing professional trading education content
+to help you improve your forex trading knowledge and strategy.
+Stay connected for upcoming market insights and advanced trading guides.
+</p>
 
 </section>
 
@@ -138,36 +154,6 @@ Read More
 <footer>
 <p>© 2026 Forex Education Site</p>
 </footer>
-
-<!-- TradingView Scripts (Placed at Bottom) -->
-
-<script src="https://s3.tradingview.com/tv.js"></script>
-
-<script>
-
-new TradingView.widget({
-container_id:"chart-forex",
-width:"100%",
-height:400,
-symbol:"FX:EURUSD",
-interval:"D",
-theme:"light",
-style:"1",
-locale:"en"
-});
-
-new TradingView.widget({
-container_id:"chart-gold",
-width:"100%",
-height:400,
-symbol:"OANDA:XAUUSD",
-interval:"D",
-theme:"light",
-style:"1",
-locale:"en"
-});
-
-</script>
 
 </body>
 </html>
