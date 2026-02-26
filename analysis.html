@@ -3,131 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forex Market Analysis - ForexEdu</title>
-<meta name="description" content="Daily Forex market analysis, trends, technical insights, and trading signals to help beginners and experienced traders.">
+
+<title>ForexEdu Live Market Research Dashboard</title>
+
+<meta name="description" content="ForexEdu professional live forex market research dashboard with multi chart analysis and beginner friendly indicator education.">
+
 <link rel="canonical" href="https://rainhunterforex.com/analysis.html">
-<link rel="stylesheet" href="style.css">
-
-<!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MDWZ227DT4');
-</script>
-
-<!-- AdSense -->
-<script data-ad-client="ca-pub-9420471464780576" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <style>
-body {font-family: Arial,sans-serif; margin:0; background:#f7f7f7; color:#333;}
-header {background:#0d6efd; color:white; padding:20px; text-align:center;}
-header h1 {margin-bottom:10px;}
-nav a {color:white; text-decoration:none; margin:0 12px; font-weight:bold;}
-nav a:hover {text-decoration:underline;}
-section {max-width:900px; margin:20px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.05);}
-section h2 {color:#0d6efd; margin-bottom:15px;}
-article {margin-bottom:20px;}
-article h3 {color:#123a5c; margin-bottom:8px;}
-article p {line-height:1.6;}
-article a {color:#0d6efd; font-weight:bold; text-decoration:none;}
-article a:hover {text-decoration:underline;}
-footer {background:#0d6efd; color:white; text-align:center; padding:15px 0; margin-top:20px;}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f8fbff;
+color:#1a1a1a;
+line-height:1.9;
+}
+
+/* Header */
+
+header{
+background:linear-gradient(135deg,#020024,#0a1f44);
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:70px 30px;
+}
+
+/* Research Section */
+
+section{
+background:white;
+padding:55px;
+border-radius:32px;
+box-shadow:0 20px 65px rgba(0,0,0,0.08);
+margin-top:90px;
+}
+
+/* Chart Dashboard */
+
+.chart-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:45px;
+margin-top:50px;
+}
+
+.chart-box{
+background:white;
+padding:35px;
+border-radius:26px;
+box-shadow:0 14px 50px rgba(0,0,0,0.06);
+}
+
+/* Affiliate Button */
+
+.trade-link{
+display:inline-block;
+margin-top:28px;
+padding:16px 38px;
+border-radius:42px;
+background:linear-gradient(45deg,#0a58ca,#00d4ff);
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+margin-top:160px;
+background:#0a1f44;
+color:white;
+text-align:center;
+padding:70px;
+color:white;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
-<h1>Forex Market Analysis</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="learn.html">Learn Forex</a>
-<a href="brokers.html">Brokers</a>
-<a href="analysis.html">Market Analysis</a>
-<a href="tools.html">Tools</a>
-<a href="blog.html">Blog</a>
-</nav>
+<h1>ForexEdu Live Market Research Dashboard</h1>
+<p>Educational Market Analysis Platform – No Guaranteed Signals</p>
 </header>
 
-<main>
+<div class="container">
+
 <section>
-<h2>Today's Forex Market Overview</h2>
-<p>Stay updated with the latest forex news, currency trends, and analysis. Use our insights to make informed trading decisions.</p>
 
-<article>
-<h3>Major Currency Pairs</h3>
-<p>EUR/USD, GBP/USD, USD/JPY, AUD/USD are currently showing mixed signals based on market trends.</p>
-</article>
-<section class="trading-dashboard">
+<h2>What Are Trading Indicators?</h2>
 
-<div class="trading-card">
-<h3>📊 EUR/USD Forex Market</h3>
-<div class="tradingview-widget-container">
-<div id="chart-forex"></div>
+<p>
+Trading indicators are mathematical tools that analyze historical price movement.
+
+They help traders observe market structure, trend behavior and momentum strength.
+
+Indicators should always be used as supporting tools, not as standalone trading decision systems.
+</p>
+
+<ul>
+<li>Trend indicators help identify market direction</li>
+<li>Momentum indicators measure buying and selling pressure</li>
+<li>Structure levels show important price zones</li>
+<li>Multiple indicator confirmation is recommended</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>Multi Market Live Research Charts</h2>
+
+<div class="chart-grid">
+
+<div class="chart-box">
+<h3>EUR/USD Forex Chart</h3>
+<div id="chart-eurusd"></div>
 </div>
-</div>
 
-<div class="trading-card">
-<h3>🥇 Gold (XAUUSD) Market</h3>
-<div class="tradingview-widget-container">
+<div class="chart-box">
+<h3>Gold (XAUUSD) Chart</h3>
 <div id="chart-gold"></div>
 </div>
+
+<div class="chart-box">
+<h3>Bitcoin Market Chart</h3>
+<div id="chart-btc"></div>
+</div>
+
+<div class="chart-box">
+<h3>USD/JPY Market Chart</h3>
+<div id="chart-usdjpy"></div>
+</div>
+
 </div>
 
 </section>
+
+<section>
+
+<h2>Professional Trading Platforms</h2>
+
+<p>
+You can practice trading or explore market environments using trusted brokers below.
+Account opening links are provided for educational platform access.
+</p>
+
+<p>
+XM Broker Platform:
+<br>
+<a class="trade-link" href="https://affs.click/ryTLn" target="_blank">
+Open XM Trading Account
+</a>
+</p>
+
+<p>
+HFM Broker Platform:
+<br>
+<a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">
+Open HFM Trading Account
+</a>
+</p>
+
+<p>
+PrimeXBT Multi Asset Platform:
+<br>
+<a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">
+Open PrimeXBT Account
+</a>
+</p>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 ForexEdu | Professional Forex Education Platform
+</footer>
 
 <script src="https://s3.tradingview.com/tv.js"></script>
 
 <script>
-new TradingView.widget({
-    container_id: "chart-forex",
-    width: "100%",
-    height: 400,
-    symbol: "FX:EURUSD",
-    interval: "D",
-    theme: "light",
-    style: "1",
-    locale: "en",
-    allow_symbol_change: true
-});
 
+function createChart(container,symbol){
 new TradingView.widget({
-    container_id: "chart-gold",
-    width: "100%",
-    height: 400,
-    symbol: "OANDA:XAUUSD",
-    interval: "D",
-    theme: "light",
-    style: "1",
-    locale: "en",
-    allow_symbol_change: true
+container_id:container,
+width:"100%",
+height:400,
+symbol:symbol,
+interval:"D",
+theme:"light",
+style:"1",
+locale:"en",
+allow_symbol_change:true
 });
+}
+
+createChart("chart-eurusd","FX:EURUSD");
+createChart("chart-gold","OANDA:XAUUSD");
+createChart("chart-btc","BINANCE:BTCUSDT");
+createChart("chart-usdjpy","FX:USDJPY");
+
 </script>
-<article>
-<h3>Technical Indicators</h3>
-<p>Support & resistance levels, trendlines, moving averages, and RSI help traders identify trade opportunities.</p>
-</article>
-<iframe src="https://ssltsw.investing.com?lang=1&forex=1,2,3,5,7,9,10&commodities=8830,8836,8831,8849,8833,8862,8832&indices=175,166,172,27,179,170,174&stocks=345,346,347,348,349,350,352&tabs=1,2,3,4" width="317" height="467"></iframe><div class="poweredBy" style="font-family:arial,helvetica,sans-serif; direction:ltr;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Technical Summary Widget Powered by <a href="https://www.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a></span></div>
-<article>
-<h3>Trading Signals</h3>
-<p>Check our daily trading signals and alerts for better risk management.</p>
-</article>
 
-<article>
-<h3>Recommended Brokers</h3>
-<p>Open an account with trusted brokers: <a href="https://affs.click/ryTLn" target="_blank">XM Broker</a> or <a href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">HFM Broker</a></p>
-</article>
-
-</section>
-
-<footer>
-<p>© 2026 ForexEdu | Free Forex Education</p>
-<p>Follow us: <a href="https://instagram.com/trust4thebest" target="_blank">Instagram</a> | YouTube | Facebook</p>
-</footer>
-
-</main>
 </body>
-
 </html>
-
