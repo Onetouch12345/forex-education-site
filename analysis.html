@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ForexEdu Live Market Research Dashboard</title>
+<title>Forex Market Analysis Dashboard – ForexEdu</title>
 
-<meta name="description" content="ForexEdu professional live forex market research dashboard with multi chart analysis and beginner friendly indicator education.">
+<meta name="description" content="Professional forex market analysis dashboard with live charts, technical education and beginner friendly trading research.">
 
 <link rel="canonical" href="https://rainhunterforex.com/analysis.html">
 
+<script src="https://s3.tradingview.com/tv.js"></script>
+
 <style>
+
+/* Global Style */
 
 body{
 margin:0;
@@ -20,14 +24,38 @@ color:#1a1a1a;
 line-height:1.9;
 }
 
+/* Sticky Navbar */
+
+.navbar{
+position:sticky;
+top:0;
+background:#0a1f44;
+padding:18px;
+text-align:center;
+z-index:1000;
+}
+
+.navbar a{
+color:white;
+margin:0 18px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.navbar a:hover{
+text-decoration:underline;
+}
+
 /* Header */
 
 header{
 background:linear-gradient(135deg,#020024,#0a1f44);
 color:white;
 text-align:center;
-padding:100px 20px;
+padding:90px 20px;
 }
+
+/* Container */
 
 .container{
 max-width:1200px;
@@ -35,17 +63,17 @@ margin:auto;
 padding:70px 30px;
 }
 
-/* Research Section */
+/* Sections */
 
 section{
 background:white;
 padding:55px;
 border-radius:32px;
 box-shadow:0 20px 65px rgba(0,0,0,0.08);
-margin-top:90px;
+margin-top:80px;
 }
 
-/* Chart Dashboard */
+/* Chart Grid */
 
 .chart-grid{
 display:grid;
@@ -56,9 +84,9 @@ margin-top:50px;
 
 .chart-box{
 background:white;
-padding:35px;
+padding:30px;
 border-radius:26px;
-box-shadow:0 14px 50px rgba(0,0,0,0.06);
+box-shadow:0 14px 45px rgba(0,0,0,0.06);
 }
 
 /* Affiliate Button */
@@ -75,7 +103,7 @@ font-weight:bold;
 }
 
 footer{
-margin-top:160px;
+margin-top:150px;
 background:#0a1f44;
 color:white;
 text-align:center;
@@ -89,29 +117,39 @@ color:white;
 
 <body>
 
+<!-- Sticky Navigation Menu -->
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="learn.html">Learn Forex</a>
+<a href="brokers.html">Brokers</a>
+<a href="analysis.html">Market Analysis</a>
+<a href="tools.html">Tools</a>
+<a href="blog.html">Blog</a>
+</div>
+
 <header>
-<h1>ForexEdu Live Market Research Dashboard</h1>
-<p>Educational Market Analysis Platform – No Guaranteed Signals</p>
+<h1>Forex Market Analysis Dashboard</h1>
+<p>Educational Market Research Platform – No Guaranteed Trading Signals</p>
 </header>
 
 <div class="container">
 
 <section>
 
-<h2>What Are Trading Indicators?</h2>
+<h2>What Are Forex Indicators?</h2>
 
 <p>
-Trading indicators are mathematical tools that analyze historical price movement.
+Forex indicators are mathematical tools used to analyze price movement behavior.
 
-They help traders observe market structure, trend behavior and momentum strength.
+They help traders identify trend direction, momentum strength and market structure patterns.
 
-Indicators should always be used as supporting tools, not as standalone trading decision systems.
+Indicators should always be used as supporting decision tools rather than standalone signals.
 </p>
 
 <ul>
-<li>Trend indicators help identify market direction</li>
+<li>Trend indicators show market direction</li>
 <li>Momentum indicators measure buying and selling pressure</li>
-<li>Structure levels show important price zones</li>
 <li>Multiple indicator confirmation is recommended</li>
 </ul>
 
@@ -119,17 +157,17 @@ Indicators should always be used as supporting tools, not as standalone trading 
 
 <section>
 
-<h2>Multi Market Live Research Charts</h2>
+<h2>Live Multi Market Charts</h2>
 
 <div class="chart-grid">
 
 <div class="chart-box">
-<h3>EUR/USD Forex Chart</h3>
+<h3>EUR/USD Market Chart</h3>
 <div id="chart-eurusd"></div>
 </div>
 
 <div class="chart-box">
-<h3>Gold (XAUUSD) Chart</h3>
+<h3>Gold XAUUSD Chart</h3>
 <div id="chart-gold"></div>
 </div>
 
@@ -149,34 +187,30 @@ Indicators should always be used as supporting tools, not as standalone trading 
 
 <section>
 
-<h2>Professional Trading Platforms</h2>
+<h2>Recommended Trading Platforms</h2>
 
 <p>
-You can practice trading or explore market environments using trusted brokers below.
-Account opening links are provided for educational platform access.
+If you want to practice trading, you can explore trusted broker platforms below.
 </p>
 
 <p>
-XM Broker Platform:
-<br>
+XM Broker Account:<br>
 <a class="trade-link" href="https://affs.click/ryTLn" target="_blank">
-Open XM Trading Account
+Start Trading with XM
 </a>
 </p>
 
 <p>
-HFM Broker Platform:
-<br>
+HFM Broker Account:<br>
 <a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">
-Open HFM Trading Account
+Start Trading with HFM
 </a>
 </p>
 
 <p>
-PrimeXBT Multi Asset Platform:
-<br>
+PrimeXBT Platform:<br>
 <a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">
-Open PrimeXBT Account
+Start Trading with PrimeXBT
 </a>
 </p>
 
@@ -188,9 +222,9 @@ Open PrimeXBT Account
 © 2026 ForexEdu | Professional Forex Education Platform
 </footer>
 
-<script src="https://s3.tradingview.com/tv.js"></script>
-
 <script>
+
+/* TradingView Widgets */
 
 function createChart(container,symbol){
 new TradingView.widget({
