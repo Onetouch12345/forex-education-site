@@ -8,20 +8,27 @@
 <meta name="description" content="Professional forex broker comparison based on execution quality, withdrawal reliability and trading ecosystem research.">
 
 <style>
-*{box-sizing:border-box;}
+
+/* ---------- GLOBAL RESET ---------- */
+
+*{
+box-sizing:border-box;
+margin:0;
+}
 
 body{
-margin:0;
 font-family:Arial, sans-serif;
 background:#f4f6f9;
 color:#2f3742;
 line-height:1.6;
 }
 
+/* ---------- HEADER ---------- */
+
 header{
 background:#0a1f44;
 color:white;
-padding:20px;
+padding:22px;
 }
 
 header nav a{
@@ -31,10 +38,12 @@ text-decoration:none;
 font-weight:500;
 }
 
+/* ---------- PAGE LAYOUT ---------- */
+
 .page-layout{
 display:flex;
 gap:30px;
-max-width:1600px;
+max-width:1500px;
 margin:40px auto;
 padding:0 20px;
 align-items:flex-start;
@@ -43,57 +52,51 @@ align-items:flex-start;
 .main-content{
 flex:1;
 background:white;
-padding:50px;
+padding:40px;
 border-radius:18px;
-box-shadow:0 10px 40px rgba(0,0,0,0.06);
+box-shadow:0 8px 35px rgba(0,0,0,0.05);
 }
 
 .sidebar{
 width:190px;
-flex-shrink:0;
 position:sticky;
 top:20px;
 height:fit-content;
-text-align:center;
 }
 
+/* ---------- BANNERS ---------- */
+
 .premium-banner{
-margin-bottom:25px;
+margin-bottom:28px;
 background:white;
 padding:8px;
 border-radius:14px;
 box-shadow:0 6px 20px rgba(0,0,0,0.08);
-transition:0.3s ease;
+text-align:center;
+transition:0.25s;
 }
 
 .premium-banner:hover{
-transform:translateY(-6px);
-}
-
-.premium-banner h3{
-font-size:13px;
-margin:10px 0;
-color:#0a1f44;
+transform:translateY(-5px);
 }
 
 .premium-banner img{
 max-width:100%;
-height:auto;
-display:block;
-margin:auto;
+border-radius:10px;
 }
+
+/* ---------- TABLE ---------- */
 
 .comparison-table{
 width:100%;
 border-collapse:collapse;
-margin-top:35px;
+margin-top:40px;
 }
 
 .comparison-table th,
 .comparison-table td{
-border:1px solid #ddd;
-padding:14px;
-text-align:center;
+border:1px solid #e4e6eb;
+padding:18px;
 font-size:14px;
 }
 
@@ -102,71 +105,129 @@ background:#0a1f44;
 color:white;
 }
 
+/* CTA */
+
 .cta-btn{
 display:inline-block;
 background:linear-gradient(45deg,#0a58ca,#00c6ff);
 color:white;
-padding:12px 20px;
+padding:12px 24px;
 border-radius:30px;
 font-weight:bold;
 text-decoration:none;
-transition:0.3s ease;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
+transition:0.3s;
 }
 
 .cta-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Quantum Authority Engine */
+/* ---------- DASHBOARD CARDS ---------- */
+
+.broker-dashboard{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:35px;
+margin:70px auto;
+max-width:1200px;
+}
+
+.dashboard-card{
+padding:32px;
+border-radius:26px;
+background:linear-gradient(145deg,#0f172a,#020617);
+color:white;
+text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,0.55);
+}
+
+/* Score Circle */
+
+.score-circle,
+.widget-score-circle{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:30px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:36px;
+font-weight:bold;
+background:radial-gradient(circle,#22c55e,#0f172a);
+box-shadow:0 0 30px rgba(34,197,94,0.4);
+}
+
+/* Bars */
+
+.bar,
+.widget-bar{
+height:10px;
+background:#1e293b;
+border-radius:8px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.fill,
+.widget-fill{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#22c55e,#3b82f6);
+transition:width 1s ease;
+}
+
+/* Quantum Section */
 
 .quantum-layer{
-margin-top:140px;
-padding:80px;
-border-radius:35px;
-background:linear-gradient(135deg,#020024,#000814,#0a1f44,#001d3d);
+margin-top:80px;
+padding:50px;
+border-radius:32px;
+background:linear-gradient(135deg,#020024,#0a1f44,#000814);
 color:white;
 text-align:center;
 }
 
 .quantum-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:40px;
-margin-top:70px;
-text-align:left;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin-top:50px;
 }
 
 .quantum-card{
-background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:26px;
-backdrop-filter:blur(18px);
+background:rgba(255,255,255,0.06);
+padding:28px;
+border-radius:22px;
 }
 
-.quantum-score{
-margin-top:90px;
-font-size:38px;
-font-weight:bold;
-color:#00e5ff;
-text-shadow:0 0 25px rgba(0,230,255,0.6);
-}
+/* Disclaimer */
 
 .disclaimer{
 margin-top:60px;
 padding:25px;
 background:#fff3f3;
 border-radius:12px;
-font-size:13px;
-color:#555;
 border-left:5px solid red;
+font-size:13px;
 }
 
-@media(max-width:1100px){
-.page-layout{flex-direction:column;}
-.sidebar{display:none;}
+/* Responsive */
+
+@media(max-width:900px){
+.page-layout{
+flex-direction:column;
 }
+
+.sidebar{
+display:none;
+}
+
+.broker-dashboard{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
 
@@ -187,614 +248,161 @@ border-left:5px solid red;
 
 <div class="page-layout">
 
-<!-- LEFT SIDEBAR -->
+<!-- SIDEBARS -->
 <aside class="sidebar">
 
 <div class="premium-banner">
-<h3>Weekly Free Cash Competition</h3>
-<a href="https://clicks.pipaffiliates.com/c?m=132382&c=1166842">
-<img src="https://ads.pipaffiliates.com/i/132382?c=1166842" width="120" height="600"/>
+<h4>Weekly Free Cash Competition</h4>
+<a href="#">
+<img src="https://ads.pipaffiliates.com/i/132382?c=1166842">
 </a>
 </div>
-<!-- IC MARKETS SIDEBAR BANNER -->
 
-<div class="sidebar-broker" style="margin-top:30px;text-align:center;">
-
-<h3 style="color:#0a1f44;margin-bottom:15px;">
-Top ECN Choice
-</h3>
-
+<div class="premium-banner">
+<h4>Top ECN Choice</h4>
 <a href="https://icmarkets.com/?camp=90095" target="_blank">
-<img class="img-fluid"
-src="https://promo.icmarkets.com/Banners/2021/English/EN_300x600_Cellphon_FSA.jpg"
-width="300"
-height="600"
-alt="Open IC Markets Account"
-style="max-width:100%;border-radius:12px;">
-</a>
-
-</div>
-<div class="premium-banner">
-<h3>HFM Demo Contest</h3>
-<a href="https://banner-api.grouphfm.com/link/c4cbea5c?regulator=HFSV&refid=30507342">
-<img src="https://banner-api.grouphfm.com/banner/c4cbea5c?regulator=HFSV&refid=30507342" width="120" height="600"/>
-</a>
-</div>
-
-<div class="premium-banner">
-<h3>Race is On</h3>
-<a href="https://go.primexbt.direct/visit/?bta=49772&nci=7731">
-<img src="https://primexbt.ck-cdn.com/tn/serve/?cid=650000" width="160" height="600">
+<img src="https://promo.icmarkets.com/Banners/2021/English/EN_300x600_Cellphon_FSA.jpg">
 </a>
 </div>
 
 </aside>
+
+<!-- MAIN CONTENT -->
 
 <main class="main-content">
 
 <h2>Best Forex Brokers 2026</h2>
 
-<p>
+<p style="margin-top:20px;">
 Professional broker evaluation based on execution reliability, withdrawal ecosystem stability and trading accessibility research.
 </p>
 
-<!-- TRUST SECTION -->
-<div style="margin-top:40px;padding:25px;background:#eaf2ff;border-radius:14px;border-left:5px solid #0a58ca;">
-<strong>Why Trust ForexEdu?</strong><br><br>
-Our broker comparison framework is built on execution performance assessment, liquidity behavior analysis, and long-term trading environment evaluation.
-</div>
-
-<!-- COMPARISON TABLE -->
 <table class="comparison-table">
+
 <thead>
 <tr>
-<th style="width:30%">Broker Detailed Features</th>
-<th style="width:40%">Analysis Summary</th>
-<th style="width:30%">Action</th>
+<th>Broker</th>
+<th>Analysis</th>
+<th>Action</th>
 </tr>
 </thead>
 
 <tbody>
-<!-- 1. XM -->
+
 <tr>
+<td>XM Broker</td>
+<td>Beginner friendly trading environment<br>Score: 9.0 / 10</td>
 <td>
-<strong>XM (Top Beginner Broker)</strong>
-<div style="font-size:13px;margin-top:15px;line-height:1.9;color:#444;">
-Regulation: ASIC, CySEC, IFSC<br>
-Min Deposit: $5<br>
-Spread From: 0.6 pips<br>
-Leverage: 1:1000<br>
-Execution Type: Market Maker / Hybrid<br>
-Platform: MT4, MT5<br>
-Islamic Account: Yes<br>
-</div>
-</td>
-<td>
-Execution Quality Score: <b style="color:#00c6ff;">9.0 / 10</b><br>
-Best For Beginners
-</td>
-<td>
-<a class="cta-btn" href="YOUR_XM_AFFILIATE_LINK" target="_blank">Open XM</a>
+<a class="cta-btn" href="YOUR_XM_AFFILIATE_LINK">Open XM</a>
 </td>
 </tr>
 
-<!-- 2. IC MARKETS -->
 <tr>
+<td>IC Markets</td>
+<td>True ECN liquidity execution<br>Score: 9.3 / 10</td>
 <td>
-<strong>IC Markets (Top ECN Broker)</strong>
-<div style="font-size:13px;margin-top:15px;line-height:1.9;color:#444;">
-Regulation: ASIC, CySEC, FSA<br>
-Min Deposit: $200<br>
-Spread From: 0.0 pips (Raw)<br>
-Leverage: 1:500<br>
-Execution Type: True ECN<br>
-Platform: MT4, MT5, cTrader<br>
-Islamic Account: Yes<br>
-</div>
-</td>
-<td>
-Execution Quality Score: <b style="color:#00c6ff;">9.3 / 10</b><br>
-Institutional ECN Liquidity
-</td>
-<td>
-<a class="cta-btn" href="https://icmarkets.com/?camp=90095" target="_blank">
-Open IC Markets
-</a>
+<a class="cta-btn" href="https://icmarkets.com/?camp=90095">Open IC Markets</a>
 </td>
 </tr>
 
-<!-- 3. HFM -->
 <tr>
+<td>HFM Broker</td>
+<td>High leverage trading ecosystem<br>Score: 8.9 / 10</td>
 <td>
-<strong>HFM (High Leverage Specialist)</strong>
-<div style="font-size:13px;margin-top:15px;line-height:1.9;color:#444;">
-Regulation: FCA, CySEC, FSCA<br>
-Min Deposit: $0<br>
-Spread From: 0.1 pips<br>
-Leverage: 1:2000<br>
-Platform: MT4, MT5<br>
-Islamic Account: Yes<br>
-</div>
-</td>
-<td>
-Execution Quality Score: <b style="color:#00c6ff;">8.9 / 10</b><br>
-High Leverage Advantage
-</td>
-<td>
-<a class="cta-btn" href="YOUR_HFM_AFFILIATE_LINK" target="_blank">Open HFM</a>
+<a class="cta-btn" href="YOUR_HFM_AFFILIATE_LINK">Open HFM</a>
 </td>
 </tr>
 
-<!-- 4. PRIMEXBT -->
 <tr>
+<td>PrimeXBT</td>
+<td>Crypto + CFD hybrid platform<br>Score: 8.5 / 10</td>
 <td>
-<strong>PrimeXBT (Crypto Hybrid Platform)</strong>
-<div style="font-size:13px;margin-top:15px;line-height:1.9;color:#444;">
-Regulation: Offshore<br>
-Min Deposit: $10<br>
-Spread: Variable<br>
-Leverage: 1:1000 (Crypto)<br>
-Platform: Proprietary Web<br>
-Islamic Account: No<br>
-</div>
-</td>
-<td>
-Execution Quality Score: <b style="color:#00c6ff;">8.5 / 10</b><br>
-Crypto + CFD Hybrid
-</td>
-<td>
-<a class="cta-btn" href="YOUR_PRIMEXBT_AFFILIATE_LINK" target="_blank">Open PrimeXBT</a>
+<a class="cta-btn" href="YOUR_PRIMEXBT_AFFILIATE_LINK">Open PrimeXBT</a>
 </td>
 </tr>
+
 </tbody>
 </table>
-<!-- Broker Intelligence Dashboard -->
+
+<!-- DASHBOARD -->
 
 <div class="broker-dashboard">
 
-    <!-- Algorithm Pane Card -->
-    <div class="dashboard-card">
+<div class="dashboard-card">
+<h3>Broker Intelligence Algorithm</h3>
 
-        <h3>Broker Intelligence Scoring Algorithm</h3>
+<div class="score-circle" id="brokerScore">0</div>
 
-        <div class="score-main">
-            <div class="score-circle" id="brokerScore">0</div>
-            <p>Overall Intelligence Score</p>
-        </div>
+<div style="text-align:left;max-width:350px;margin:auto;">
 
-        <div class="score-metrics">
+<div>Security</div>
+<div class="bar"><div class="fill" id="securityScore"></div></div>
 
-            <div class="metric">
-                <span>Security & Regulation</span>
-                <div class="bar"><div class="fill" id="securityScore"></div></div>
-            </div>
+<div style="margin-top:20px;">Execution</div>
+<div class="bar"><div class="fill" id="executionScore"></div></div>
 
-            <div class="metric">
-                <span>Execution Intelligence</span>
-                <div class="bar"><div class="fill" id="executionScore"></div></div>
-            </div>
+<div style="margin-top:20px;">Spread</div>
+<div class="bar"><div class="fill" id="spreadScore"></div></div>
 
-            <div class="metric">
-                <span>Spread Efficiency</span>
-                <div class="bar"><div class="fill" id="spreadScore"></div></div>
-            </div>
+<div style="margin-top:20px;">Liquidity</div>
+<div class="bar"><div class="fill" id="liquidityScore"></div></div>
 
-            <div class="metric">
-                <span>Liquidity Depth Index</span>
-                <div class="bar"><div class="fill" id="liquidityScore"></div></div>
-            </div>
+<div style="margin-top:20px;">Protection</div>
+<div class="bar"><div class="fill" id="protectionScore"></div></div>
 
-            <div class="metric">
-                <span>Trader Protection Intelligence</span>
-                <div class="bar"><div class="fill" id="protectionScore"></div></div>
-            </div>
+</div>
+</div>
 
-        </div>
-    </div>
+<div class="dashboard-card">
+<h3>Broker Intelligence Widget</h3>
 
-
-    <!-- Widget Card -->
-    <div class="dashboard-card">
-
-        <h2>Broker Intelligence Widget</h2>
-
-        <div class="widget-score-circle" id="brokerScoreWidget">0</div>
-
-        <div class="widget-bars">
-
-            <div class="widget-item">
-                <label>Security & Regulation</label>
-                <div class="widget-bar"><div class="widget-fill" id="securityScoreWidget"></div></div>
-            </div>
-
-            <div class="widget-item">
-                <label>Execution Intelligence</label>
-                <div class="widget-bar"><div class="widget-fill" id="executionScoreWidget"></div></div>
-            </div>
-
-            <div class="widget-item">
-                <label>Spread Efficiency</label>
-                <div class="widget-bar"><div class="widget-fill" id="spreadScoreWidget"></div></div>
-            </div>
-
-            <div class="widget-item">
-                <label>Liquidity Strength</label>
-                <div class="widget-bar"><div class="widget-fill" id="liquidityScoreWidget"></div></div>
-            </div>
-
-            <div class="widget-item">
-                <label>Trader Protection Index</label>
-                <div class="widget-bar"><div class="widget-fill" id="protectionScoreWidget"></div></div>
-            </div>
-
-        </div>
-    </div>
+<div class="widget-score-circle" id="brokerScoreWidget">0</div>
 
 </div>
 
+</div>
 
-<style>
-
-.broker-dashboard{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    max-width:1200px;
-    margin:60px auto;
-    padding:20px;
-}
-
-.dashboard-card{
-    padding:28px;
-    border-radius:26px;
-    background: linear-gradient(145deg,#0f172a,#020617);
-    color:white;
-    box-shadow:0 0 50px rgba(0,0,0,0.6);
-    text-align:center;
-}
-
-/* Algorithm Card */
-
-.score-circle{
-    width:110px;
-    height:110px;
-    border-radius:50%;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:32px;
-    font-weight:bold;
-    background: radial-gradient(circle,#22c55e,#0f172a);
-    box-shadow:0 0 25px rgba(34,197,94,0.4);
-}
-
-.score-metrics{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    text-align:left;
-}
-
-.metric span{
-    display:block;
-    margin-bottom:6px;
-    font-size:14px;
-}
-
-/* Widget Card */
-
-.widget-score-circle{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    margin:0 auto 30px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:38px;
-    font-weight:bold;
-    background: radial-gradient(circle,#22c55e,#0f172a);
-    box-shadow:0 0 30px rgba(34,197,94,0.4);
-}
-
-.bar,
-.widget-bar{
-    width:100%;
-    height:10px;
-    border-radius:8px;
-    background:#1e293b;
-    overflow:hidden;
-    margin-top:6px;
-}
-
-.fill,
-.widget-fill{
-    height:100%;
-    width:0%;
-    border-radius:8px;
-    background: linear-gradient(90deg,#22c55e,#3b82f6);
-    transition:width 1.2s ease;
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-    .broker-dashboard{
-        grid-template-columns:1fr;
-    }
-}
-
-</style>
-
-
-<script>
-
-/* Unified Score Engine */
-
-function updateBrokerIntelligenceDashboard(data){
-
-    const scores = {
-        security: data.security || 0,
-        execution: data.execution || 0,
-        spread: data.spread || 0,
-        liquidity: data.liquidity || 0,
-        protection: data.protection || 0
-    };
-
-    const overall = Math.round(
-        (scores.security +
-        scores.execution +
-        scores.spread +
-        scores.liquidity +
-        scores.protection) / 5
-    );
-
-    /* Algorithm Pane */
-
-    document.getElementById("brokerScore").innerText = overall;
-
-    document.getElementById("securityScore").style.width = scores.security + "%";
-    document.getElementById("executionScore").style.width = scores.execution + "%";
-    document.getElementById("spreadScore").style.width = scores.spread + "%";
-    document.getElementById("liquidityScore").style.width = scores.liquidity + "%";
-    document.getElementById("protectionScore").style.width = scores.protection + "%";
-
-    /* Widget Pane */
-
-    document.getElementById("brokerScoreWidget").innerText = overall;
-
-    document.getElementById("securityScoreWidget").style.width = scores.security + "%";
-    document.getElementById("executionScoreWidget").style.width = scores.execution + "%";
-    document.getElementById("spreadScoreWidget").style.width = scores.spread + "%";
-    document.getElementById("liquidityScoreWidget").style.width = scores.liquidity + "%";
-    document.getElementById("protectionScoreWidget").style.width = scores.protection + "%";
-}
-
-
-/* Demo Data */
-
-updateBrokerIntelligenceDashboard({
-    security: 92,
-    execution: 88,
-    spread: 85,
-    liquidity: 90,
-    protection: 94
-});
-
-</script>
-<!-- QUANTUM  AUTHORITY LAYER -->
+<!-- QUANTUM FRAMEWORK (CONSIZED) -->
 
 <div class="quantum-layer">
 
-<h1>ForexEdu Quantum Research Framework</h1>
+<h2>ForexEdu Quantum Research Framework</h2>
 
-<p style="max-width:1000px;margin:40px auto;font-size:18px;line-height:1.9;opacity:0.95;">
-The Quantum Layer represents the highest theoretical synthesis model applied to broker evaluation philosophy.
-Execution topology stability, liquidity probability mechanics and trader accessibility entropy mapping are analyzed.
+<p style="max-width:900px;margin:30px auto;font-size:16px;opacity:0.9;">
+Advanced broker research synthesis model evaluating execution stability, liquidity probability behavior and trader accessibility architecture.
 </p>
 
 <div class="quantum-grid">
 
 <div class="quantum-card">
-<h3 style="color:#00e5ff;">Execution Field Modeling</h3>
-<p style="font-size:14px;">
-Order routing probability mechanics are evaluated using synthetic volatility stress assumptions.
-</p>
+<h4>Execution Stability</h4>
+<p style="font-size:13px;">Order routing consistency and latency resilience modeling.</p>
 </div>
 
 <div class="quantum-card">
-<h3 style="color:#00e5ff;">Withdrawal Trust Architecture</h3>
-<p style="font-size:14px;">
-Settlement pathway continuity and multi-gateway redundancy signals are analyzed.
-</p>
+<h4>Withdrawal Trust Signal</h4>
+<p style="font-size:13px;">Settlement reliability and multi-channel payment verification.</p>
 </div>
 
 <div class="quantum-card">
-<h3 style="color:#00e5ff;">Trader Accessibility Vector</h3>
-<p style="font-size:14px;">
-Entry capital flexibility and platform ecosystem penetration are considered.
-</p>
-</div>
-
-<div class="quantum-card">
-<h3 style="color:#00e5ff;">Confidence Projection Index</h3>
-<p style="font-size:14px;">
-Composite synthesis of regulatory and execution stability metrics.
-</p>
+<h4>Trader Accessibility</h4>
+<p style="font-size:13px;">Capital entry flexibility and platform usability metrics.</p>
 </div>
 
 </div>
 
-<div class="quantum-score">
-Quantum Platform Index: 98 / 100
 </div>
-
-</div>
-
-<!-- MORE BROKERS REVIEW SECTION -->
-
-<div style="margin-top:80px;padding:60px;border-radius:25px;
-background:linear-gradient(135deg,#0a1f44,#1d3c7c);
-color:white;text-align:center;">
-
-<h2 style="font-size:36px;">More Brokers Are Under Research Review</h2>
-
-<p style="max-width:800px;margin:35px auto;font-size:16px;line-height:1.8;opacity:0.95;">
-Our analytical team is continuously evaluating additional regulated forex trading platforms.
-
-Future updates will include deeper execution environment research, withdrawal ecosystem verification, and trader accessibility performance assessment across multiple global brokerage infrastructures.
-</p>
-
-<div style="margin-top:40px;font-size:14px;opacity:0.9;">
-Updated Research Status: Active Monitoring Phase
-</div>
-
-</div>
-
-<!-- DISCLAIMER -->
 
 <div class="disclaimer">
-<strong>Risk Disclaimer:</strong><br>
-Trading Forex and CFDs involves significant risk. This platform is educational comparison research only.
+Risk Disclaimer: Trading Forex and CFDs involves high risk. Educational research only.
 </div>
 
 </main>
-
-<!-- RIGHT SIDEBAR -->
-<aside class="sidebar">
-
-<div class="premium-banner">
-<h3>Get $30 Free for New Clients</h3>
-<a href="https://clicks.pipaffiliates.com/c?m=131252&c=1166842">
-<img src="https://ads.pipaffiliates.com/i/131252?c=1166842" width="120" height="600"/>
-</a>
 </div>
 
-<div class="premium-banner">
-<h3>Zero Spread Account</h3>
-<a href="https://banner-api.grouphfm.com/link/fd36010c?regulator=HFSV&refid=30507342">
-<img src="https://banner-api.grouphfm.com/banner/fd36010c?regulator=HFSV&refid=30507342" width="120" height="600"/>
-</a>
-</div>
-
-<div class="premium-banner">
-<h3>TradFi Go Beyond Crypto</h3>
-<a href="https://go.primexbt.direct/visit/?bta=49772&nci=7650">
-<img src="https://primexbt.ck-cdn.com/tn/serve/?cid=650001" width="160" height="600">
-</a>
-</div>
-
-</aside>
-
-</div>
-
-<!-- FUTURE BROKER INTELLIGENCE PANEL -->
-
-<div style="margin-top:100px;padding:70px;border-radius:30px;
-background:radial-gradient(circle at top,#020024,#0a1f44,#000814);
-color:white;text-align:center;">
-
-<h1 style="font-size:38px;">Future Broker Expansion Intelligence Panel</h1>
-
-<p style="max-width:900px;margin:40px auto;font-size:17px;line-height:1.9;opacity:0.95;">
-ForexEdu maintains a continuous market surveillance framework to identify emerging regulated brokerage platforms.
-
-Upcoming review cycles will include performance validation analysis, execution topology assessment, and withdrawal ecosystem verification for selected global trading service providers.
-</p>
-
-<div style="display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;margin-top:70px;text-align:left;">
-
-<div style="background:rgba(255,255,255,0.05);
-padding:35px;border-radius:24px;">
-
-<h3 style="color:#00e5ff;">Market Entry Surveillance</h3>
-
-<p style="font-size:14px;opacity:0.9;">
-Continuous monitoring of new regulated broker market launches and liquidity infrastructure development.
-</p>
-
-</div>
-
-<div style="background:rgba(255,255,255,0.05);
-padding:35px;border-radius:24px;">
-
-<h3 style="color:#00e5ff;">Execution Ecosystem Tracking</h3>
-
-<p style="font-size:14px;opacity:0.9;">
-Assessment of order routing stability, platform architecture maturity, and trade settlement consistency.
-</p>
-
-</div>
-
-<div style="background:rgba(255,255,255,0.05);
-padding:35px;border-radius:24px;">
-
-<h3 style="color:#00e5ff;">Regulatory Integrity Screening</h3>
-
-<p style="font-size:14px;opacity:0.9;">
-Future candidates must demonstrate acceptable regulatory compliance and operational transparency signals.
-</p>
-
-</div>
-
-<div style="background:rgba(255,255,255,0.05);
-padding:35px;border-radius:24px;">
-
-<h3 style="color:#00e5ff;">Trader Accessibility Forecasting</h3>
-
-<p style="font-size:14px;opacity:0.9;">
-Entry capital flexibility, leverage structure, and platform ecosystem usability projections are analyzed.
-</p>
-
-</div>
-
-</div>
-
-<div style="margin-top:80px;font-size:30px;font-weight:bold;color:#00e5ff;">
-Future Platform Research Index: 97 / 100
-</div>
-
-</div>
-
-<!-- IC MARKETS QR SECTION -->
-
-<div style="margin-top:90px;padding:50px;background:#0a1f44;color:white;border-radius:20px;text-align:center;">
-
-<h2>Trade on Mobile Instantly</h2>
-
-<p style="max-width:700px;margin:20px auto;">
-Scan and download IC Markets platforms or open account directly from your phone.
-</p>
-
-<div style="display:flex;justify-content:center;flex-wrap:wrap;gap:40px;margin-top:40px;">
-
-<div>
-<img src="images/icm-mt4-qr.png" width="140">
-<p>MT4 Download</p>
-</div>
-
-<div>
-<img src="images/icm-mt5-qr.png" width="140">
-<p>MT5 Download</p>
-</div>
-
-<div>
-<img src="images/icm-account-qr.png" width="140">
-<p>Open Account</p>
-</div>
-
-</div>
-
-</div>
 <footer style="background:#0a1f44;color:white;text-align:center;padding:30px;margin-top:60px;">
-© 2026 ForexEdu |  Forex Education Platform
+© 2026 ForexEdu | Forex Education Platform
 </footer>
 
 </body>
 </html>
-
-
-
