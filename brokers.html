@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ForexEdu Institutional Broker Research Portal</title>
+<title>ForexEdu Ultra Institutional Portal V3</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,20 +29,19 @@ header nav a{
 color:white;
 margin-right:20px;
 text-decoration:none;
-font-weight:500;
 }
 
-/* Layout */
+/* Portal Layout */
 
 .portal-layout{
 display:flex;
-gap:30px;
-max-width:1600px;
+gap:25px;
+max-width:1700px;
 margin:auto;
 padding:40px 20px;
 }
 
-/* Sidebar */
+/* Sidebars */
 
 .sidebar{
 width:220px;
@@ -52,16 +51,11 @@ height:fit-content;
 }
 
 .banner-box{
-margin-bottom:25px;
 background:white;
 padding:10px;
 border-radius:14px;
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
-transition:0.25s;
-}
-
-.banner-box:hover{
-transform:translateY(-6px);
+margin-bottom:25px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
 .banner-box img{
@@ -84,29 +78,12 @@ box-shadow:0 10px 40px rgba(0,0,0,0.06);
 .broker-card{
 background:linear-gradient(145deg,#0f172a,#020617);
 color:white;
-padding:30px;
+padding:32px;
 border-radius:26px;
 margin-top:40px;
-box-shadow:0 0 40px rgba(0,0,0,0.5);
-}
-
-/* Widget Price Box */
-
-.widget-price{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-margin-top:35px;
-}
-
-.price-box{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:18px;
 text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,0.55);
 }
-
-/* Score Circle */
 
 .score-circle{
 width:110px;
@@ -121,17 +98,59 @@ font-weight:bold;
 background:radial-gradient(circle,#22c55e,#0f172a);
 }
 
-/* Buttons */
+/* Table */
 
-.btn{
-display:inline-block;
-padding:12px 22px;
-background:linear-gradient(45deg,#0a58ca,#00c6ff);
+.comparison-table{
+width:100%;
+border-collapse:collapse;
+margin-top:40px;
+}
+
+.comparison-table th,
+.comparison-table td{
+border:1px solid #ddd;
+padding:14px;
+font-size:14px;
+text-align:center;
+}
+
+.comparison-table th{
+background:#0a1f44;
 color:white;
-border-radius:28px;
-text-decoration:none;
-font-weight:bold;
-margin-top:20px;
+}
+
+/* Widget Price Panel */
+
+.widget-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:35px;
+}
+
+.widget-box{
+background:rgba(255,255,255,0.06);
+padding:25px;
+border-radius:18px;
+}
+
+/* QR Section */
+
+.qr-section{
+margin-top:80px;
+background:#0a1f44;
+color:white;
+padding:60px;
+border-radius:26px;
+text-align:center;
+}
+
+.qr-grid{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin-top:40px;
 }
 
 /* Footer */
@@ -146,7 +165,7 @@ margin-top:80px;
 
 /* Responsive */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 .portal-layout{
 flex-direction:column;
 }
@@ -162,8 +181,7 @@ display:none;
 <body>
 
 <header>
-<h1>ForexEdu Broker Research Portal</h1>
-
+<h1>ForexEdu Ultra Institutional Portal V3</h1>
 <nav>
 <a href="index.html">Home</a>
 <a href="brokers.html">Brokers</a>
@@ -174,7 +192,7 @@ display:none;
 
 <div class="portal-layout">
 
-<!-- SIDEBAR BANNERS -->
+<!-- LEFT SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -185,7 +203,7 @@ display:none;
 </div>
 
 <div class="banner-box">
-<a href="https://clicks.pipaffiliates.com/c?m=132382&c=1166842">
+<a href="#">
 <img src="https://ads.pipaffiliates.com/i/132382?c=1166842">
 </a>
 </div>
@@ -196,91 +214,173 @@ display:none;
 
 <main class="main-panel">
 
-<h2>Institutional Broker Comparison 2026</h2>
+<h2>Broker Institutional Research Dashboard</h2>
 
-<p>
-Research evaluation portal for professional forex trading ecosystem.
-</p>
+<p>Professional forex broker ecosystem analysis portal.</p>
 
-<!-- ================= BROKER ENTITY CARDS ================= -->
+<!-- BROKER CARDS -->
 
 <div class="broker-card">
 
-<h3>:contentReference[oaicite:0]{index=0}</h3>
+<h3>XM Broker</h3>
 
-<p>True ECN execution research model.</p>
+<div class="score-circle">90</div>
 
-<div class="score-circle">93</div>
-
-<div class="widget-price">
-
-<div class="price-box">
-Execution Score<br><b>9.3 / 10</b>
+<div class="widget-grid">
+<div class="widget-box">Beginner Friendly<br>Leverage 1:1000</div>
+<div class="widget-box">Deposit $5</div>
+<div class="widget-box">Execution Hybrid Model</div>
 </div>
 
-<div class="price-box">
-Spread Efficiency<br><b>Raw 0.0 pips</b>
-</div>
-
-<div class="price-box">
-Leverage Model<br><b>1:500</b>
-</div>
-
-</div>
-
-<a class="btn" href="https://icmarkets.com/?camp=90095">
-Open Account
+<a href="#" style="display:inline-block;margin-top:25px;padding:12px 25px;background:#0a58ca;color:white;border-radius:28px;text-decoration:none;">
+Open XM Account
 </a>
 
 </div>
 
-<!-- XM Broker -->
-
 <div class="broker-card">
 
-<h3>:contentReference[oaicite:1]{index=1}</h3>
+<h3>IC Markets</h3>
 
-<p>Beginner friendly trading environment.</p>
+<div class="score-circle">93</div>
 
-<div class="score-circle">90</div>
+<div class="widget-grid">
+<div class="widget-box">True ECN Execution</div>
+<div class="widget-box">Raw Spread 0.0</div>
+<div class="widget-box">Leverage 1:500</div>
+</div>
 
-<a class="btn" href="#">Open XM Broker</a>
+<a href="https://icmarkets.com/?camp=90095" style="display:inline-block;margin-top:25px;padding:12px 25px;background:#0a58ca;color:white;border-radius:28px;text-decoration:none;">
+Open IC Markets
+</a>
 
 </div>
 
-<!-- HFM Broker -->
-
 <div class="broker-card">
 
-<h3>:contentReference[oaicite:2]{index=2}</h3>
-
-<p>High leverage trading ecosystem.</p>
+<h3>HFM Broker</h3>
 
 <div class="score-circle">89</div>
 
-<a class="btn" href="#">Open HFM</a>
+<div class="widget-grid">
+<div class="widget-box">High Leverage</div>
+<div class="widget-box">MT4 MT5 Support</div>
+<div class="widget-box">Zero Deposit Account</div>
+</div>
+
+<a href="#" style="display:inline-block;margin-top:25px;padding:12px 25px;background:#0a58ca;color:white;border-radius:28px;text-decoration:none;">
+Open HFM
+</a>
 
 </div>
 
-<!-- PrimeXBT -->
-
 <div class="broker-card">
 
-<h3>:contentReference[oaicite:3]{index=3}</h3>
-
-<p>Crypto + CFD hybrid trading platform.</p>
+<h3>PrimeXBT</h3>
 
 <div class="score-circle">85</div>
 
-<a class="btn" href="#">Open PrimeXBT</a>
+<div class="widget-grid">
+<div class="widget-box">Crypto CFD Hybrid</div>
+<div class="widget-box">Web Platform</div>
+<div class="widget-box">High Leverage Trading</div>
+</div>
+
+<a href="#" style="display:inline-block;margin-top:25px;padding:12px 25px;background:#0a58ca;color:white;border-radius:28px;text-decoration:none;">
+Open PrimeXBT
+</a>
+
+</div>
+
+<!-- COMPARISON TABLE -->
+
+<h2 style="margin-top:80px;">Broker Comparison Research</h2>
+
+<table class="comparison-table">
+
+<tr>
+<th>Broker</th>
+<th>Score</th>
+<th>Model</th>
+</tr>
+
+<tr>
+<td>IC Markets</td>
+<td>93</td>
+<td>True ECN</td>
+</tr>
+
+<tr>
+<td>XM</td>
+<td>90</td>
+<td>Hybrid Market Maker</td>
+</tr>
+
+<tr>
+<td>HFM</td>
+<td>89</td>
+<td>High Leverage</td>
+</tr>
+
+<tr>
+<td>PrimeXBT</td>
+<td>85</td>
+<td>Crypto CFD</td>
+</tr>
+
+</table>
+
+<!-- QR SECTION -->
+
+<div class="qr-section">
+
+<h2>Trade On Mobile Instantly</h2>
+
+<div class="qr-grid">
+
+<div>
+<img src="images/icm-mt4-qr.png" width="140">
+<p>MT4 Download</p>
+</div>
+
+<div>
+<img src="images/icm-mt5-qr.png" width="140">
+<p>MT5 Download</p>
+</div>
+
+<div>
+<img src="images/icm-account-qr.png" width="140">
+<p>Open Account</p>
+</div>
+
+</div>
 
 </div>
 
 </main>
+
+<!-- RIGHT SIDEBAR -->
+
+<aside class="sidebar">
+
+<div class="banner-box">
+<a href="https://go.primexbt.direct/visit/?bta=49772&nci=7731">
+<img src="https://primexbt.ck-cdn.com/tn/serve/?cid=650000">
+</a>
+</div>
+
+<div class="banner-box">
+<a href="https://banner-api.grouphfm.com/link/c4cbea5c?regulator=HFSV&refid=30507342">
+<img src="https://banner-api.grouphfm.com/banner/c4cbea5c?regulator=HFSV&refid=30507342">
+</a>
+</div>
+
+</aside>
+
 </div>
 
 <footer>
-© 2026 ForexEdu | Institutional Research Portal
+© 2026 ForexEdu Ultra Portal
 </footer>
 
 </body>
