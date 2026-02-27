@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ForexEdu Omega Institutional God Portal</title>
+<title>ForexEdu Absolute Master Portal</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-/* ===== GLOBAL ===== */
 
 body{
 margin:0;
@@ -17,7 +15,7 @@ background:#f4f6f9;
 color:#1f2937;
 }
 
-/* HEADER */
+/* Header */
 
 header{
 background:#0a1f44;
@@ -27,11 +25,11 @@ padding:25px;
 
 header nav a{
 color:white;
-margin-right:22px;
+margin-right:20px;
 text-decoration:none;
 }
 
-/* PORTAL GRID */
+/* Layout */
 
 .portal-grid{
 display:flex;
@@ -41,26 +39,18 @@ margin:auto;
 padding:40px 25px;
 }
 
-/* SIDEBARS */
-
 .sidebar{
 width:230px;
 position:sticky;
 top:25px;
-height:fit-content;
 }
 
 .banner-card{
 background:white;
 padding:10px;
-border-radius:16px;
+border-radius:14px;
 margin-bottom:25px;
-box-shadow:0 6px 25px rgba(0,0,0,0.08);
-transition:0.25s;
-}
-
-.banner-card:hover{
-transform:translateY(-6px);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
 
 .banner-card img{
@@ -68,7 +58,7 @@ width:100%;
 border-radius:12px;
 }
 
-/* MAIN PANEL */
+/* Main Panel */
 
 .main-panel{
 flex:1;
@@ -78,59 +68,28 @@ border-radius:24px;
 box-shadow:0 12px 45px rgba(0,0,0,0.07);
 }
 
-/* BROKER CARD */
+/* Research Intro */
 
-.broker-card{
-background:linear-gradient(145deg,#0f172a,#020617);
-color:white;
-padding:35px;
-border-radius:28px;
-margin-top:45px;
-text-align:center;
-}
-
-/* SCORE VISUAL */
-
-.score-circle{
-width:120px;
-height:120px;
-border-radius:50%;
-margin:35px auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:38px;
-font-weight:bold;
-background:radial-gradient(circle,#22c55e,#0f172a);
-}
-
-/* PRICE WIDGET */
-
-.price-widget{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-margin-top:35px;
-}
-
-.price-box{
-background:rgba(255,255,255,0.06);
+.research-box{
+background:#eaf2ff;
 padding:25px;
-border-radius:20px;
+border-radius:16px;
+border-left:5px solid #0a58ca;
+margin-bottom:40px;
 }
 
-/* TABLE */
+/* Comparison Table */
 
 .compare-table{
 width:100%;
 border-collapse:collapse;
-margin-top:60px;
+margin-top:40px;
 }
 
 .compare-table th,
 .compare-table td{
 border:1px solid #ddd;
-padding:15px;
+padding:16px;
 font-size:14px;
 text-align:center;
 }
@@ -140,23 +99,27 @@ background:#0a1f44;
 color:white;
 }
 
-/* BUTTON */
+/* Widget Dashboard */
 
-.btn{
-display:inline-block;
-padding:13px 26px;
-background:linear-gradient(45deg,#0a58ca,#00c6ff);
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-margin-top:25px;
+.widget-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:60px;
 }
 
-/* QR SECTION */
+.widget-box{
+background:linear-gradient(145deg,#0f172a,#020617);
+color:white;
+padding:30px;
+border-radius:22px;
+text-align:center;
+}
 
-.qr-section{
-margin-top:90px;
+/* QR Zone */
+
+.qr-zone{
+margin-top:80px;
 background:#0a1f44;
 color:white;
 padding:70px;
@@ -167,12 +130,12 @@ text-align:center;
 .qr-grid{
 display:flex;
 justify-content:center;
-gap:70px;
+gap:60px;
 flex-wrap:wrap;
-margin-top:50px;
+margin-top:40px;
 }
 
-/* FOOTER */
+/* Footer */
 
 footer{
 background:#0a1f44;
@@ -182,7 +145,7 @@ padding:45px;
 margin-top:90px;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 
 @media(max-width:1100px){
 .portal-grid{
@@ -200,7 +163,7 @@ display:none;
 <body>
 
 <header>
-<h1>ForexEdu Omega Institutional God Portal</h1>
+<h1>ForexEdu Absolute Final Master Portal</h1>
 
 <nav>
 <a href="#">Home</a>
@@ -234,127 +197,112 @@ display:none;
 
 <main class="main-panel">
 
-<h2>Broker Comparison Research Portal</h2>
+<h2>Institutional Broker Comparison Research</h2>
 
-<p>Institutional execution quality and trading ecosystem intelligence dashboard.</p>
-
-<!-- XM CARD -->
-
-<div class="broker-card">
-
-<h2>XM Broker</h2>
-
-<div class="score-circle">90</div>
-
-<div class="price-widget">
-<div class="price-box">Beginner Friendly<br>Leverage 1:1000</div>
-<div class="price-box">Deposit $5</div>
-<div class="price-box">Hybrid Execution</div>
+<div class="research-box">
+Professional execution ecosystem evaluation focusing on liquidity behavior, regulatory trust architecture and trader accessibility probability modeling.
 </div>
 
-<a class="btn" href="YOUR_XM_AFFILIATE_LINK">
-Open XM Account
-</a>
+<!-- DASHBOARD WIDGET -->
 
+<div class="widget-grid">
+
+<div class="widget-box">
+Market Safety Index<br><br>
+92 / 100
 </div>
 
-<!-- IC MARKETS CARD -->
-
-<div class="broker-card">
-
-<h2>IC Markets</h2>
-
-<div class="score-circle">93</div>
-
-<div class="price-widget">
-<div class="price-box">True ECN</div>
-<div class="price-box">Raw Spread 0.0</div>
-<div class="price-box">Leverage 1:500</div>
+<div class="widget-box">
+Execution Stability<br><br>
+91 / 100
 </div>
 
-<a class="btn" href="https://icmarkets.com/?camp=90095">
-Open IC Markets
-</a>
+<div class="widget-box">
+Withdrawal Trust Signal<br><br>
+93 / 100
+</div>
+
+<div class="widget-box">
+Platform Ecosystem Score<br><br>
+90 / 100
+</div>
 
 </div>
 
-<!-- HFM CARD -->
+<!-- COMPARISON TABLE (CENTRALIZED) -->
 
-<div class="broker-card">
-
-<h2>HFM Broker</h2>
-
-<div class="score-circle">89</div>
-
-<div class="price-widget">
-<div class="price-box">High Leverage</div>
-<div class="price-box">MT4 MT5</div>
-<div class="price-box">Zero Deposit Offers</div>
-</div>
-
-<a class="btn" href="YOUR_HFM_AFFILIATE_LINK">
-Open HFM Account
-</a>
-
-</div>
-
-<!-- PRIMEXBT CARD -->
-
-<div class="broker-card">
-
-<h2>PrimeXBT</h2>
-
-<div class="score-circle">85</div>
-
-<div class="price-widget">
-<div class="price-box">Crypto CFD Trading</div>
-<div class="price-box">High Leverage</div>
-<div class="price-box">Web Platform</div>
-</div>
-
-<a class="btn" href="YOUR_PRIMEXBT_AFFILIATE_LINK">
-Open PrimeXBT
-</a>
-
-</div>
-
-<!-- COMPARISON TABLE -->
-
-<h2 style="margin-top:80px">Broker Comparison Table</h2>
+<h2 style="margin-top:70px">Broker Comparison Table</h2>
 
 <table class="compare-table">
 
 <tr>
 <th>Broker</th>
-<th>Execution Model</th>
+<th>Model</th>
+<th>Features</th>
 <th>Score</th>
+<th>Affiliate Action</th>
 </tr>
 
 <tr>
-<td>XM</td>
-<td>Hybrid Market Model</td>
+<td>:contentReference[oaicite:0]{index=0}</td>
+<td>Hybrid Execution</td>
+<td>Deposit $5 • Leverage 1:1000</td>
 <td>90</td>
+<td><a href="YOUR_XM_AFFILIATE_LINK">Open XM</a></td>
 </tr>
 
 <tr>
-<td>IC Markets</td>
+<td>:contentReference[oaicite:1]{index=1}</td>
 <td>True ECN</td>
+<td>Raw Spread 0.0 • Leverage 1:500</td>
 <td>93</td>
+<td><a href="https://icmarkets.com/?camp=90095">Open IC Markets</a></td>
 </tr>
 
 <tr>
-<td>HFM</td>
-<td>High Leverage Trading</td>
+<td>:contentReference[oaicite:2]{index=2}</td>
+<td>High Leverage Model</td>
+<td>MT4 MT5 • Zero Deposit Offers</td>
 <td>89</td>
+<td><a href="YOUR_HFM_AFFILIATE_LINK">Open HFM</a></td>
 </tr>
 
 <tr>
-<td>PrimeXBT</td>
-<td>Crypto CFD Platform</td>
+<td>:contentReference[oaicite:3]{index=3}</td>
+<td>Crypto CFD Hybrid</td>
+<td>Web Trading • High Leverage</td>
 <td>85</td>
+<td><a href="YOUR_PRIMEXBT_AFFILIATE_LINK">Open PrimeXBT</a></td>
 </tr>
 
 </table>
+
+<!-- QR SECTION -->
+
+<div class="qr-zone">
+
+<h2>Trade On Mobile Instantly</h2>
+
+<div class="qr-grid">
+
+<div>
+<img src="images/icm-mt4-qr.png" width="140">
+<p>MT4 Download</p>
+</div>
+
+<div>
+<img src="images/icm-mt5-qr.png" width="140">
+<p>MT5 Download</p>
+</div>
+
+<div>
+<img src="images/icm-account-qr.png" width="140">
+<p>Open Account</p>
+</div>
+
+</div>
+
+</div>
 
 </main>
 
@@ -379,7 +327,7 @@ Open PrimeXBT
 </div>
 
 <footer>
-© 2026 ForexEdu Omega Institutional Portal
+© 2026 ForexEdu | Absolute Master Research Portal
 </footer>
 
 </body>
