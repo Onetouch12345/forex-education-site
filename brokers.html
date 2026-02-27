@@ -576,7 +576,158 @@ Scan and download IC Markets platforms or open account directly from your phone.
 <footer style="background:#0a1f44;color:white;text-align:center;padding:30px;margin-top:60px;">
 © 2026 ForexEdu |  Forex Education Platform
 </footer>
+<!-- Broker Intelligence Scoring Algorithm Pane -->
+<div class="intelligence-panel">
+    <h3>Broker Intelligence Scoring Engine</h3>
 
+    <div class="score-main">
+        <div class="score-circle" id="brokerScore">0</div>
+        <p>Overall Intelligence Score</p>
+    </div>
+
+    <div class="score-metrics">
+
+        <div class="metric">
+            <span>Security & Regulation</span>
+            <div class="bar">
+                <div class="fill" id="securityScore"></div>
+            </div>
+        </div>
+
+        <div class="metric">
+            <span>Execution Speed Intelligence</span>
+            <div class="bar">
+                <div class="fill" id="executionScore"></div>
+            </div>
+        </div>
+
+        <div class="metric">
+            <span>Spread Efficiency</span>
+            <div class="bar">
+                <div class="fill" id="spreadScore"></div>
+            </div>
+        </div>
+
+        <div class="metric">
+            <span>Liquidity Depth Index</span>
+            <div class="bar">
+                <div class="fill" id="liquidityScore"></div>
+            </div>
+        </div>
+
+        <div class="metric">
+            <span>Trader Protection Intelligence</span>
+            <div class="bar">
+                <div class="fill" id="protectionScore"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+.intelligence-panel{
+    padding:25px;
+    border-radius:22px;
+    background: linear-gradient(145deg,#0f172a,#020617);
+    color:white;
+    max-width:500px;
+    margin:auto;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.intelligence-panel h3{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+.score-main{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.score-circle{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:bold;
+    background: radial-gradient(circle,#22c55e,#0f172a);
+    box-shadow:0 0 25px rgba(34,197,94,0.4);
+}
+
+.score-metrics{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.metric span{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    border-radius:8px;
+    background:#1e293b;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    width:0%;
+    border-radius:8px;
+    transition:width 1.2s ease;
+    background: linear-gradient(90deg,#22c55e,#3b82f6);
+}
+</style>
+
+<script>
+function updateBrokerIntelligenceScore(data){
+
+    const scores = {
+        security: data.security || 0,
+        execution: data.execution || 0,
+        spread: data.spread || 0,
+        liquidity: data.liquidity || 0,
+        protection: data.protection || 0
+    };
+
+    const overall = Math.round(
+        (scores.security +
+        scores.execution +
+        scores.spread +
+        scores.liquidity +
+        scores.protection) / 5
+    );
+
+    document.getElementById("brokerScore").innerText = overall;
+
+    document.getElementById("securityScore").style.width = scores.security + "%";
+    document.getElementById("executionScore").style.width = scores.execution + "%";
+    document.getElementById("spreadScore").style.width = scores.spread + "%";
+    document.getElementById("liquidityScore").style.width = scores.liquidity + "%";
+    document.getElementById("protectionScore").style.width = scores.protection + "%";
+}
+
+/* Example Test Data */
+updateBrokerIntelligenceScore({
+    security: 92,
+    execution: 88,
+    spread: 85,
+    liquidity: 90,
+    protection: 94
+});
+</script>
 </body>
 </html>
+
 
