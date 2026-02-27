@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ForexEdu Brokers</title>
+<title>ForexEdu Institutional Broker Research Portal</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
+/* ===== GLOBAL ===== */
+
 body{
 margin:0;
 font-family:Arial, sans-serif;
 background:#f4f6f9;
+color:#1f2937;
 }
 
 /* Header */
@@ -19,100 +22,265 @@ background:#f4f6f9;
 header{
 background:#0a1f44;
 color:white;
-padding:20px;
+padding:22px;
 }
 
-header a{
+header nav a{
 color:white;
 margin-right:20px;
 text-decoration:none;
+font-weight:500;
 }
 
 /* Layout */
 
-.container{
-max-width:1200px;
+.portal-layout{
+display:flex;
+gap:30px;
+max-width:1600px;
 margin:auto;
 padding:40px 20px;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:220px;
+position:sticky;
+top:20px;
+height:fit-content;
+}
+
+.banner-box{
+margin-bottom:25px;
 background:white;
-border-radius:18px;
-box-shadow:0 8px 30px rgba(0,0,0,0.06);
+padding:10px;
+border-radius:14px;
+box-shadow:0 6px 25px rgba(0,0,0,0.08);
+transition:0.25s;
 }
 
-/* Table */
+.banner-box:hover{
+transform:translateY(-6px);
+}
 
-table{
+.banner-box img{
 width:100%;
-border-collapse:collapse;
-margin-top:30px;
+border-radius:10px;
 }
 
-th,td{
-border:1px solid #ddd;
-padding:14px;
+/* Main Panel */
+
+.main-panel{
+flex:1;
+background:white;
+padding:45px;
+border-radius:22px;
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+
+/* Broker Cards */
+
+.broker-card{
+background:linear-gradient(145deg,#0f172a,#020617);
+color:white;
+padding:30px;
+border-radius:26px;
+margin-top:40px;
+box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+/* Widget Price Box */
+
+.widget-price{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:35px;
+}
+
+.price-box{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:18px;
 text-align:center;
 }
 
-th{
-background:#0a1f44;
-color:white;
+/* Score Circle */
+
+.score-circle{
+width:110px;
+height:110px;
+border-radius:50%;
+margin:30px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+font-weight:bold;
+background:radial-gradient(circle,#22c55e,#0f172a);
 }
 
 /* Buttons */
 
 .btn{
 display:inline-block;
-padding:10px 20px;
-background:#0a58ca;
+padding:12px 22px;
+background:linear-gradient(45deg,#0a58ca,#00c6ff);
 color:white;
-border-radius:25px;
+border-radius:28px;
 text-decoration:none;
+font-weight:bold;
+margin-top:20px;
+}
+
+/* Footer */
+
+footer{
+background:#0a1f44;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:80px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+.portal-layout{
+flex-direction:column;
+}
+
+.sidebar{
+display:none;
+}
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Trusted Forex Brokers 2026</h1>
+<h1>ForexEdu Broker Research Portal</h1>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="brokers.html">Brokers</a>
 <a href="analysis.html">Analysis</a>
+<a href="blog.html">Blog</a>
 </nav>
 </header>
 
-<div class="container">
+<div class="portal-layout">
 
-<h2>Best Forex Brokers</h2>
+<!-- SIDEBAR BANNERS -->
 
-<table>
+<aside class="sidebar">
 
-<tr>
-<th>Broker</th>
-<th>Score</th>
-<th>Action</th>
-</tr>
-
-<tr>
-<td>IC Markets</td>
-<td>9.3 / 10</td>
-<td>
-<a class="btn" href="https://icmarkets.com/?camp=90095">
-Open Account
+<div class="banner-box">
+<a href="https://icmarkets.com/?camp=90095">
+<img src="https://promo.icmarkets.com/Banners/2021/English/EN_300x600_Cellphon_FSA.jpg">
 </a>
-</td>
-</tr>
+</div>
 
-</table>
+<div class="banner-box">
+<a href="https://clicks.pipaffiliates.com/c?m=132382&c=1166842">
+<img src="https://ads.pipaffiliates.com/i/132382?c=1166842">
+</a>
+</div>
+
+</aside>
+
+<!-- MAIN PANEL -->
+
+<main class="main-panel">
+
+<h2>Institutional Broker Comparison 2026</h2>
+
+<p>
+Research evaluation portal for professional forex trading ecosystem.
+</p>
+
+<!-- ================= BROKER ENTITY CARDS ================= -->
+
+<div class="broker-card">
+
+<h3>:contentReference[oaicite:0]{index=0}</h3>
+
+<p>True ECN execution research model.</p>
+
+<div class="score-circle">93</div>
+
+<div class="widget-price">
+
+<div class="price-box">
+Execution Score<br><b>9.3 / 10</b>
+</div>
+
+<div class="price-box">
+Spread Efficiency<br><b>Raw 0.0 pips</b>
+</div>
+
+<div class="price-box">
+Leverage Model<br><b>1:500</b>
+</div>
 
 </div>
 
-<footer style="background:#0a1f44;color:white;text-align:center;padding:30px;margin-top:60px;">
-© 2026 ForexEdu
+<a class="btn" href="https://icmarkets.com/?camp=90095">
+Open Account
+</a>
+
+</div>
+
+<!-- XM Broker -->
+
+<div class="broker-card">
+
+<h3>:contentReference[oaicite:1]{index=1}</h3>
+
+<p>Beginner friendly trading environment.</p>
+
+<div class="score-circle">90</div>
+
+<a class="btn" href="#">Open XM Broker</a>
+
+</div>
+
+<!-- HFM Broker -->
+
+<div class="broker-card">
+
+<h3>:contentReference[oaicite:2]{index=2}</h3>
+
+<p>High leverage trading ecosystem.</p>
+
+<div class="score-circle">89</div>
+
+<a class="btn" href="#">Open HFM</a>
+
+</div>
+
+<!-- PrimeXBT -->
+
+<div class="broker-card">
+
+<h3>:contentReference[oaicite:3]{index=3}</h3>
+
+<p>Crypto + CFD hybrid trading platform.</p>
+
+<div class="score-circle">85</div>
+
+<a class="btn" href="#">Open PrimeXBT</a>
+
+</div>
+
+</main>
+</div>
+
+<footer>
+© 2026 ForexEdu | Institutional Research Portal
 </footer>
 
 </body>
