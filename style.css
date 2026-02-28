@@ -356,3 +356,53 @@ footer{
 letter-spacing:1px;
 }
 
+
+
+/* =========================================
+SINGULAR UNIVERSAL TRADING INTELLIGENCE MATRIX
+========================================= */
+
+.matrix-core{
+margin-top:140px;
+padding:110px 40px;
+border-radius:60px;
+background:radial-gradient(circle at top,#000814,#020617,#0a1f44);
+color:white;
+text-align:center;
+box-shadow:
+0 0 150px rgba(0,0,0,0.7),
+0 0 60px rgba(0,230,255,0.08);
+}
+
+.matrix-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:55px;
+margin-top:90px;
+}
+
+.matrix-card{
+background:rgba(255,255,255,0.04);
+padding:50px;
+border-radius:36px;
+backdrop-filter:blur(20px);
+transition:0.45s ease;
+}
+
+.matrix-card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 35px 90px rgba(0,0,0,0.35);
+}
+
+.matrix-card h3{
+color:#00e5ff;
+margin-bottom:28px;
+}
+
+.matrix-index{
+margin-top:100px;
+font-size:42px;
+font-weight:bold;
+color:#00e5ff;
+text-shadow:0 0 25px rgba(0,230,255,0.6);
+}
