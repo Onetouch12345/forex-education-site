@@ -23,20 +23,22 @@ text-decoration:none;
 header{
 background:#0a1f44;
 color:white;
-padding:26px;
+padding:28px;
+text-align:center;
 }
 
 header nav a{
 color:white;
-margin-right:22px;
-font-weight:500;
+margin:0 18px;
+font-weight:600;
+transition:0.3s;
 }
 
 header nav a:hover{
-text-decoration:underline;
+opacity:0.8;
 }
 
-/* ===== PORTAL CLEAN FINANCIAL LAYOUT ===== */
+/* ================= PORTAL GRID ================= */
 
 .portal-grid{
 display:grid;
@@ -54,42 +56,46 @@ width:240px;
 min-width:240px;
 }
 
-/* MAIN PANEL CENTER LOCK */
-
-.main-panel{
-background:white;
-padding:45px;
-border-radius:26px;
-box-shadow:0 12px 40px rgba(0,0,0,0.06);
-min-width:0;
-}
-
-/* STICKY SIDEBAR SAFE MODE */
-
 .sticky{
 position:sticky;
 top:25px;
 }
 
-/* MOBILE SAFE MODE */
+/* Banner Cards */
 
-@media(max-width:1250px){
-
-.portal-grid{
-grid-template-columns:1fr;
+.banner-card{
+background:white;
+padding:10px;
+border-radius:16px;
+margin-bottom:25px;
+box-shadow:0 8px 30px rgba(0,0,0,0.06);
+transition:0.35s ease;
 }
 
-.sidebar{
-display:none;
+.banner-card img{
+width:100%;
+border-radius:12px;
 }
+
+.banner-card:hover{
+transform:translateY(-6px);
+}
+
+/* ================= MAIN PANEL ================= */
 
 .main-panel{
-padding:30px;
+background:white;
+padding:50px;
+border-radius:28px;
+box-shadow:
+0 12px 45px rgba(0,0,0,0.06),
+0 0 30px rgba(10,88,202,0.03);
+
+min-width:0;
+backdrop-filter: blur(6px);
 }
 
-}
-
-/* ================= BROKER BANNERS ================= */
+/* Broker Banner Row */
 
 .broker-banner-row{
 display:grid;
@@ -109,10 +115,9 @@ transition:0.35s ease;
 
 .broker-banner:hover{
 transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
-/* ================= BUTTONS ================= */
+/* Buttons */
 
 .btn-blue{
 display:inline-block;
@@ -131,7 +136,7 @@ transform:translateY(-3px);
 box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* ================= COMPARISON TABLE ================= */
+/* Comparison Table */
 
 .table-wrapper{
 overflow-x:auto;
@@ -163,18 +168,18 @@ background:#f2f6ff;
 }
 
 .comparison-table tr:hover{
-background:#eef3fb;
-transition:0.3s;
+background:#f1f6ff;
+transition:0.25s;
 }
 
-/* ================= WIDGET PANEL ================= */
+/* Widget Panel */
 
 .widget-panel{
 margin-top:70px;
 background:linear-gradient(145deg,#0f172a,#020617);
 color:white;
 padding:40px;
-border-radius:26px;
+border-radius:28px;
 text-align:center;
 }
 
@@ -182,9 +187,10 @@ text-align:center;
 font-size:46px;
 font-weight:bold;
 margin-top:25px;
+color:#00e5ff;
 }
 
-/* ================= FOOTER ================= */
+/* Footer */
 
 footer{
 background:#0a1f44;
@@ -214,10 +220,6 @@ padding:35px;
 
 @media(max-width:768px){
 
-header{
-text-align:center;
-}
-
 header nav a{
 display:inline-block;
 margin:8px;
@@ -233,35 +235,3 @@ font-size:36px;
 }
 
 }
-/* Smooth Portal Physics Layer */
-
-.portal-grid,
-.main-panel,
-.banner-card,
-.broker-banner{
-transition:all 0.35s cubic-bezier(.25,.8,.25,1);
-}
-
-/* Banner Card Elite Polish */
-
-.banner-card{
-box-shadow:0 8px 30px rgba(0,0,0,0.06);
-}
-
-.banner-card:hover{
-transform:translateY(-6px);
-}
-
-/* Main Panel Micro Glow */
-
-.main-panel{
-backdrop-filter: blur(6px);
-}
-
-/* Table Hover Intelligence */
-
-.comparison-table tr:hover{
-background:#f1f6ff;
-transition:0.25s;
-}
-
