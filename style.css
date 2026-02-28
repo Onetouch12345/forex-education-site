@@ -536,3 +536,58 @@ font-weight:bold;
 color:#00e5ff;
 text-shadow:0 0 35px rgba(0,230,255,0.7);
 }
+
+/* =========================================
+ADDITIONAL PROFESSIONAL SECTIONS
+========================================= */
+
+.under-review-section{
+margin-top:140px;
+padding:90px 40px;
+border-radius:50px;
+background:linear-gradient(135deg,#0a1f44,#020617);
+color:white;
+text-align:center;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.review-card{
+background:rgba(255,255,255,0.07);
+padding:25px;
+border-radius:20px;
+font-size:14px;
+transition:0.3s ease;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.12);
+}
+
+.review-card strong{
+display:block;
+color:#00e5ff;
+margin-bottom:6px;
+}
+
+.risk-disclaimer{
+margin-top:120px;
+padding:60px 40px;
+background:#111827;
+color:#d1d5db;
+border-radius:30px;
+font-size:14px;
+line-height:1.8;
+}
+
+.risk-disclaimer h2{
+color:#00e5ff;
+margin-bottom:25px;
+text-align:center;
+}
