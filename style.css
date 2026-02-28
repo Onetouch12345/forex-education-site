@@ -233,4 +233,35 @@ font-size:36px;
 }
 
 }
+/* Smooth Portal Physics Layer */
+
+.portal-grid,
+.main-panel,
+.banner-card,
+.broker-banner{
+transition:all 0.35s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Banner Card Elite Polish */
+
+.banner-card{
+box-shadow:0 8px 30px rgba(0,0,0,0.06);
+}
+
+.banner-card:hover{
+transform:translateY(-6px);
+}
+
+/* Main Panel Micro Glow */
+
+.main-panel{
+backdrop-filter: blur(6px);
+}
+
+/* Table Hover Intelligence */
+
+.comparison-table tr:hover{
+background:#f1f6ff;
+transition:0.25s;
+}
 
