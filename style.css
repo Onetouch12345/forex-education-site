@@ -36,55 +36,57 @@ header nav a:hover{
 text-decoration:underline;
 }
 
-/* ================= PORTAL GRID LAYOUT ================= */
+/* ===== PORTAL CLEAN FINANCIAL LAYOUT ===== */
 
 .portal-grid{
 display:grid;
-grid-template-columns:220px 1fr 220px;
-gap:30px;
-max-width:1800px;
+grid-template-columns:240px minmax(0,1fr) 240px;
+gap:28px;
+max-width:1700px;
 margin:auto;
-padding:40px 25px;
+padding:35px 20px;
 }
 
-/* ================= SIDEBAR ================= */
+/* SIDEBAR */
 
 .sidebar{
-width:220px;
-min-width:220px;
+width:240px;
+min-width:240px;
 }
 
-.sticky{
-position:sticky;
-top:20px;
-}
-
-.banner-card{
-background:white;
-padding:10px;
-border-radius:16px;
-margin-bottom:25px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.banner-card img{
-width:100%;
-border-radius:12px;
-}
-
-.banner-card:hover{
-transform:translateY(-5px);
-}
-
-/* ================= MAIN PANEL ================= */
+/* MAIN PANEL CENTER LOCK */
 
 .main-panel{
 background:white;
-padding:50px;
+padding:45px;
 border-radius:26px;
-box-shadow:0 12px 45px rgba(0,0,0,0.08);
+box-shadow:0 12px 40px rgba(0,0,0,0.06);
 min-width:0;
+}
+
+/* STICKY SIDEBAR SAFE MODE */
+
+.sticky{
+position:sticky;
+top:25px;
+}
+
+/* MOBILE SAFE MODE */
+
+@media(max-width:1250px){
+
+.portal-grid{
+grid-template-columns:1fr;
+}
+
+.sidebar{
+display:none;
+}
+
+.main-panel{
+padding:30px;
+}
+
 }
 
 /* ================= BROKER BANNERS ================= */
@@ -231,3 +233,4 @@ font-size:36px;
 }
 
 }
+
