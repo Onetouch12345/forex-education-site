@@ -406,3 +406,52 @@ font-weight:bold;
 color:#00e5ff;
 text-shadow:0 0 25px rgba(0,230,255,0.6);
 }
+
+/* =========================================
+FOREXEDU ETERNAL INSTITUTIONAL ZENITH LAYER
+========================================= */
+
+.zenith-layer{
+margin-top:160px;
+padding:130px 40px;
+border-radius:70px;
+background:linear-gradient(135deg,#020617,#000814,#0a1f44);
+color:white;
+text-align:center;
+box-shadow:
+0 0 160px rgba(0,0,0,0.8),
+0 0 80px rgba(0,230,255,0.05);
+}
+
+.zenith-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:60px;
+margin-top:100px;
+}
+
+.zenith-card{
+background:rgba(255,255,255,0.04);
+padding:55px;
+border-radius:40px;
+backdrop-filter:blur(22px);
+transition:0.5s ease;
+}
+
+.zenith-card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 40px 100px rgba(0,0,0,0.4);
+}
+
+.zenith-card h3{
+color:#00e5ff;
+margin-bottom:30px;
+}
+
+.zenith-index{
+margin-top:110px;
+font-size:46px;
+font-weight:bold;
+color:#00e5ff;
+text-shadow:0 0 30px rgba(0,230,255,0.7);
+}
