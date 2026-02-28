@@ -1,149 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>ForexEdu Singular God Portal</title>
+<title>ForexEdu Institutional Brokers Portal</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+<link rel="stylesheet" href="stylee.css">
 
-/* ================= GLOBAL ================= */
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f4f6f9;
-color:#1f2937;
-}
-
-/* HEADER */
-
-header{
-background:#0a1f44;
-color:white;
-padding:26px;
-}
-
-header nav a{
-color:white;
-margin-right:22px;
-text-decoration:none;
-}
-
-/* MAIN GRID */
-
-.portal-grid{
-display:grid;
-grid-template-columns:220px 1fr 220px;
-gap:30px;
-max-width:1800px;
-margin:auto;
-padding:40px 25px;
-}
-
-/* BANNER CARD */
-
-.banner-card{
-background:white;
-padding:10px;
-border-radius:16px;
-margin-bottom:25px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
-}
-
-.banner-card img{
-width:100%;
-border-radius:12px;
-}
-
-/* MAIN PANEL */
-
-.main-panel{
-background:white;
-padding:50px;
-border-radius:26px;
-box-shadow:0 12px 45px rgba(0,0,0,0.08);
-}
-
-/* BROKER BANNER ROW */
-
-.broker-banner-row{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.broker-banner{
-background:linear-gradient(145deg,#0f172a,#020617);
-color:white;
-padding:25px;
-border-radius:22px;
-text-align:center;
-}
-
-/* COMPARISON TABLE */
-
-.compare-table{
-width:100%;
-border-collapse:collapse;
-margin-top:60px;
-}
-
-.compare-table th,
-.compare-table td{
-border:1px solid #ddd;
-padding:16px;
-font-size:14px;
-text-align:center;
-}
-
-.compare-table th{
-background:#0a1f44;
-color:white;
-}
-
-/* LIVE WIDGET */
-
-.widget-panel{
-margin-top:70px;
-background:linear-gradient(145deg,#0f172a,#020617);
-color:white;
-padding:40px;
-border-radius:26px;
-text-align:center;
-}
-
-.widget-value{
-font-size:46px;
-font-weight:bold;
-margin-top:25px;
-}
-
-/* FOOTER */
-
-footer{
-background:#0a1f44;
-color:white;
-text-align:center;
-padding:45px;
-margin-top:90px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1200px){
-.portal-grid{
-grid-template-columns:1fr;
-}
-
-.sidebar{
-display:none;
-}
-}
-
-</style>
 </head>
 
 <body>
@@ -152,21 +18,21 @@ display:none;
 <h1>ForexEdu Singular God Portal</h1>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Brokers</a>
-<a href="#">Analysis</a>
-<a href="#">Blog</a>
+<a href="index.html">Home</a>
+<a href="brokers.html">Brokers</a>
+<a href="analysis.html">Analysis</a>
+<a href="blog.html">Blog</a>
 </nav>
+
 </header>
 
 <div class="portal-grid">
 
-<!-- LEFT BANNER SIDEBAR -->
-
-<div class="sidebar">
+<!-- LEFT SIDEBAR -->
+<div class="sidebar sticky">
 
 <div class="banner-card">
-<a href="YOUR_XM_AFFILIATE_LINK">
+<a href="https://affs.click/ryTLn">
 <img src="https://promo.xm.com/banners/xm-banner.jpg">
 </a>
 </div>
@@ -180,105 +46,153 @@ display:none;
 </div>
 
 <!-- MAIN PANEL -->
-
 <div class="main-panel">
 
-<h2>Institutional Broker Comparison Research</h2>
+<section class="broker-intro">
+
+<h1>Institutional Broker Comparison Research</h1>
 
 <p>
-Professional trading ecosystem evaluation portal.
+Professional execution environment evaluation and trading ecosystem research portal.
 </p>
 
-<!-- BROKER BANNER SEQUENCE -->
+</section>
+
+<!-- BROKER SEQUENCE BANNERS -->
 
 <div class="broker-banner-row">
 
 <div class="broker-banner">
-XM Broker<br><br>
-Score 90 / 100
+XM Global<br>
+Score 90 / 100<br><br>
+
+<a class="btn-blue" href="https://affs.click/ryTLn">
+Open XM Account
+</a>
+
 </div>
 
 <div class="broker-banner">
-IC Markets<br><br>
-Score 93 / 100
+IC Markets<br>
+Score 93 / 100<br><br>
+
+<a class="btn-blue" href="https://icmarkets.com/?camp=90095">
+Open IC Markets
+</a>
+
 </div>
 
 <div class="broker-banner">
-HFM Broker<br><br>
-Score 89 / 100
+HFM Broker<br>
+Score 89 / 100<br><br>
+
+<a class="btn-blue" href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342">
+Open HFM
+</a>
+
 </div>
 
 <div class="broker-banner">
-PrimeXBT<br><br>
-Score 85 / 100
+PrimeXBT<br>
+Score 85 / 100<br><br>
+
+<a class="btn-blue" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt">
+Open PrimeXBT
+</a>
+
 </div>
 
 </div>
 
 <!-- COMPARISON TABLE -->
 
-<h2 style="margin-top:80px">Detailed Broker Feature Comparison</h2>
+<h2 style="margin-top:80px">
+Detailed Broker Feature Comparison
+</h2>
 
-<table class="compare-table">
+<div class="table-wrapper">
+
+<table class="comparison-table">
 
 <tr>
 <th>Broker Name</th>
 <th>Execution Model</th>
-<th>Deposit</th>
+<th>Deposit / Withdrawal</th>
 <th>Leverage</th>
 <th>Platform</th>
+<th>Islamic Account</th>
 <th>Affiliate Action</th>
 </tr>
 
 <tr>
-<td>XM Broker</td>
+<td>XM Global</td>
 <td>Hybrid Market Execution</td>
-<td>$5</td>
+<td>Card, Bank, Wallets — $5 Min</td>
 <td>1:1000</td>
-<td>MT4 MT5</td>
-<td><a href="YOUR_XM_AFFILIATE_LINK">Open XM</a></td>
+<td>MT4 | MT5</td>
+<td>Yes</td>
+<td>
+<a class="btn-blue" href="https://affs.click/ryTLn">
+Open XM
+</a>
+</td>
 </tr>
 
 <tr>
 <td>IC Markets</td>
-<td>True ECN Raw Spread Execution</td>
-<td>$200</td>
+<td>True ECN Raw Spread</td>
+<td>Bank, Card, Crypto — $200</td>
 <td>1:500</td>
-<td>MT4 MT5 cTrader</td>
-<td><a href="https://icmarkets.com/?camp=90095">Open IC Markets</a></td>
+<td>MT4 | MT5 | cTrader</td>
+<td>Yes</td>
+<td>
+<a class="btn-blue" href="https://icmarkets.com/?camp=90095">
+Open IC Markets
+</a>
+</td>
 </tr>
 
 <tr>
 <td>HFM</td>
 <td>High Leverage Market Model</td>
-<td>Zero Deposit Option</td>
+<td>Multiple Methods — $0 Option</td>
 <td>1:2000</td>
-<td>MT4 MT5</td>
-<td><a href="YOUR_HFM_AFFILIATE_LINK">Open HFM</a></td>
+<td>MT4 | MT5</td>
+<td>Yes</td>
+<td>
+<a class="btn-blue" href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342">
+Open HFM
+</a>
+</td>
 </tr>
 
 <tr>
 <td>PrimeXBT</td>
-<td>Crypto CFD Hybrid Trading</td>
-<td>$10</td>
+<td>Crypto CFD Hybrid</td>
+<td>Crypto Only — $10</td>
 <td>1:1000</td>
 <td>Web Platform</td>
-<td><a href="YOUR_PRIMEXBT_AFFILIATE_LINK">Open PrimeXBT</a></td>
+<td>No</td>
+<td>
+<a class="btn-blue" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt">
+Open PrimeXBT
+</a>
+</td>
 </tr>
 
 </table>
 
-<!-- LIVE WIDGET PANEL -->
+</div>
+
+<!-- LIVE WIDGET -->
 
 <div class="widget-panel">
 
-<h2>Live Market Research Widget</h2>
+<h2>Institutional Execution Research Widget</h2>
 
-<div>Institutional Execution Index</div>
+<div>Market Intelligence Score</div>
 
-<div class="widget-value" id="liveWidgetValue">
-92
-</div>
+<div class="widget-value" id="liveWidgetValue">92</div>
 
 </div>
 
@@ -286,7 +200,7 @@ Score 85 / 100
 
 <!-- RIGHT SIDEBAR -->
 
-<div class="sidebar">
+<div class="sidebar sticky">
 
 <div class="banner-card">
 <a href="https://go.primexbt.direct/visit/?bta=49772&nci=7731">
@@ -295,8 +209,8 @@ Score 85 / 100
 </div>
 
 <div class="banner-card">
-<a href="https://banner-api.grouphfm.com/link/c4cbea5c">
-<img src="https://banner-api.grouphfm.com/banner/c4cbea5c">
+<a href="https://banner-api.grouphfm.com/link/c4cbea5c?refid=30507342">
+<img src="https://banner-api.grouphfm.com/banner/c4cbea5c?refid=30507342">
 </a>
 </div>
 
@@ -305,16 +219,18 @@ Score 85 / 100
 </div>
 
 <footer>
-© 2026 ForexEdu Singular God Portal
+© 2026 ForexEdu Institutional Portal
 </footer>
 
 <script>
 
-/* Live Widget Simulation Engine */
+/* Live Widget Engine */
 
 setInterval(()=>{
-let value = 88 + Math.floor(Math.random()*8);
+
+let value = 89 + Math.floor(Math.random()*7);
 document.getElementById("liveWidgetValue").innerText = value;
+
 },3000);
 
 </script>
