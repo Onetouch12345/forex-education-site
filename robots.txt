@@ -1,14 +1,9 @@
 User-agent: *
 Allow: /
 
-# Important Pages
-Allow: /index.html
-Allow: /learn.html
-Allow: /brokers.html
-Allow: /analysis.html
-Allow: /tools.html
-Allow: /blog.html
-Allow: /disclaimer.html
+# Block unnecessary system paths (future safe)
+Disallow: /assets/
+Disallow: /cgi-bin/
 
 # Sitemap Location
 Sitemap: https://onetouch12345.github.io/forex-education-site/sitemap.xml
