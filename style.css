@@ -1,266 +1,163 @@
-/* ===== GLOBAL ===== */
+/* ================= GLOBAL RESET ================= */
+
 *{
-  box-sizing:border-box;
+box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f4f6f9;
-  color:#222;
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f6f9;
+color:#1f2937;
+line-height:1.6;
 }
+
+/* Links */
 
 a{
-  text-decoration:none;
+text-decoration:none;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER ================= */
+
 header{
-  background:#0a1f44;
-  color:#fff;
-  padding:15px 20px;
+background:#0a1f44;
+color:white;
+padding:26px;
 }
 
-header h1{
-  margin:0 0 10px 0;
+header nav a{
+color:white;
+margin-right:22px;
+font-weight:500;
 }
 
-nav a{
-  color:#fff;
-  margin-right:15px;
-  font-weight:500;
+header nav a:hover{
+text-decoration:underline;
 }
 
-nav a:hover{
-  text-decoration:underline;
+/* ================= PORTAL GRID LAYOUT ================= */
+
+.portal-grid{
+display:grid;
+grid-template-columns:220px 1fr 220px;
+gap:30px;
+max-width:1800px;
+margin:auto;
+padding:40px 25px;
 }
 
-/* ===== LAYOUT ===== */
-.page-layout{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  max-width:1400px;
-  margin:30px auto;
-  padding:0 15px;
-  gap:25px;
-}
+/* ================= SIDEBAR ================= */
 
-/* ===== SIDEBARS ===== */
 .sidebar{
-  width:220px;
-  min-width:220px;
-  flex-shrink:0;
-}
-
-.ad-box{
-  background:#ffffff;
-  padding:20px;
-  border-radius:8px;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-  margin-bottom:20px;
-}
-
-.ad-box h3{
-  margin-top:0;
-}
-
-.ad-box a{
-  display:block;
-  background:#0a58ca;
-  color:#fff;
-  padding:12px;
-  border-radius:6px;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.ad-box a:hover{
-  background:#084298;
+width:220px;
+min-width:220px;
 }
 
 .sticky{
-  position:sticky;
-  top:20px;
+position:sticky;
+top:20px;
 }
 
-/* ===== MAIN CONTENT ===== */
-.main-content{
-  flex:1;
-  min-width:0;
-  background:#ffffff;
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.banner-card{
+background:white;
+padding:10px;
+border-radius:16px;
+margin-bottom:25px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.4s;
 }
 
-/* ===== INTRO SECTION ===== */
-.broker-intro h1{
-  margin-top:0;
+.banner-card img{
+width:100%;
+border-radius:12px;
 }
 
-.broker-intro ul{
-  margin-left:20px;
+.banner-card:hover{
+transform:translateY(-5px);
 }
 
-.broker-intro li{
-  margin-bottom:8px;
+/* ================= MAIN PANEL ================= */
+
+.main-panel{
+background:white;
+padding:50px;
+border-radius:26px;
+box-shadow:0 12px 45px rgba(0,0,0,0.08);
+min-width:0;
 }
 
-/* ===== BROKER CARDS ===== */
-.broker-card{
-  border:1px solid #e1e1e1;
-  padding:20px;
-  margin-top:30px;
-  border-radius:8px;
-  background:#fafafa;
+/* ================= BROKER BANNERS ================= */
+
+.broker-banner-row{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-/* ===== BUTTON ===== */
+.broker-banner{
+background:linear-gradient(145deg,#0f172a,#020617);
+color:white;
+padding:25px;
+border-radius:22px;
+text-align:center;
+transition:0.35s ease;
+}
+
+.broker-banner:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ================= BUTTONS ================= */
+
 .btn-blue{
-  display:inline-block;
-  background:#0a58ca;
-  color:#fff;
-  padding:8px 14px;
-  border-radius:5px;
-  font-weight:bold;
-  font-size:14px;
-  transition:0.3s;
-}
-
-.btn-blue:hover{
-  background:#084298;
-}
-
-/* ===== TABLE ===== */
-.table-wrapper{
-  overflow-x:auto;
-  margin-top:20px;
-}
-
-.comparison-table{
-  width:100%;
-  border-collapse:collapse;
-  min-width:700px;
-}
-
-.comparison-table th,
-.comparison-table td{
-  border:1px solid #ddd;
-  padding:12px;
-  text-align:center;
-  font-size:14px;
-}
-
-.comparison-table th{
-  background:#0a1f44;
-  color:#fff;
-}
-
-.comparison-table tr:nth-child(even){
-  background:#f2f2f2;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  background:#0a1f44;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
-}
-
-footer a{
-  color:#fff;
-  text-decoration:underline;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:1200px){
-  .sidebar{
-    width:180px;
-    min-width:180px;
-  }
-}
-
-@media(max-width:992px){
-  .page-layout{
-    flex-direction:column;
-  }
-
-  .sidebar{
-    display:block;
-    width:100%;
-  }
-
-  .sticky{
-    position:relative;
-    top:0;
-  }
-}
-
-/* ======================================
-INSANE ELITE AFFILIATE POLISH LAYER
-====================================== */
-
-/* Smooth interaction system */
-.main-content,
-.broker-card,
-.premium-banner{
-transition: all 0.4s cubic-bezier(.25,.8,.25,1);
-}
-
-/* Glass financial effect */
-.main-content{
-backdrop-filter: blur(8px);
-}
-
-/* Ultra premium hover glow cards */
-.broker-card:hover{
-transform: translateY(-8px) scale(1.01);
-box-shadow:
-0 20px 40px rgba(0,0,0,0.08),
-0 0 25px rgba(10,88,202,0.08);
-}
-
-/* Trust badge glow */
-.best-badge{
-box-shadow:0 0 20px rgba(255,215,0,0.4);
-}
-
-/* CTA Button Elite Conversion Style */
-.btn-blue{
-background: linear-gradient(135deg,#0a58ca,#084298);
+display:inline-block;
+background:linear-gradient(135deg,#0a58ca,#084298);
+color:white;
+padding:10px 18px;
+border-radius:25px;
+font-weight:bold;
+font-size:14px;
+transition:0.3s;
 box-shadow:0 6px 20px rgba(0,0,0,0.12);
 }
 
 .btn-blue:hover{
-transform: translateY(-3px);
+transform:translateY(-3px);
 box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* Floating CTA Elite Glow */
-.floating-cta{
-background: linear-gradient(135deg,#0a1f44,#0a58ca);
-animation: floatPulse 3s infinite;
+/* ================= COMPARISON TABLE ================= */
+
+.table-wrapper{
+overflow-x:auto;
+margin-top:30px;
 }
 
-@keyframes floatPulse{
-0%{
-box-shadow:0 0 0 rgba(255,215,0,0.2);
-}
-50%{
-box-shadow:0 0 25px rgba(255,215,0,0.5);
-}
-100%{
-box-shadow:0 0 0 rgba(255,215,0,0.2);
-}
+.comparison-table{
+width:100%;
+border-collapse:collapse;
+min-width:700px;
 }
 
-/* Table premium feeling */
+.comparison-table th,
+.comparison-table td{
+border:1px solid #ddd;
+padding:16px;
+font-size:14px;
+text-align:center;
+}
+
 .comparison-table th{
+background:#0a1f44;
+color:white;
 letter-spacing:0.5px;
+}
+
+.comparison-table tr:nth-child(even){
+background:#f2f6ff;
 }
 
 .comparison-table tr:hover{
@@ -268,123 +165,69 @@ background:#eef3fb;
 transition:0.3s;
 }
 
-/* Coming soon authority panel */
-.coming-soon{
-border:1px solid #e5eaf2;
-box-shadow:0 10px 40px rgba(0,0,0,0.05);
-}
+/* ================= WIDGET PANEL ================= */
 
-
-/* ======================================
-ULTRA PREMIUM FOREX MAGAZINE STYLE
-====================================== */
-
-/* Magazine Hero */
-
-.hero{
-text-align:center;
-padding:90px 20px;
-background:linear-gradient(135deg,#0a1f44,#0a58ca);
+.widget-panel{
+margin-top:70px;
+background:linear-gradient(145deg,#0f172a,#020617);
 color:white;
-border-radius:0 0 40px 40px;
-}
-
-/* Featured Post Ultra Premium */
-
-.featured-container{
-display:flex;
-gap:50px;
-align-items:center;
 padding:40px;
-background:white;
-border-radius:25px;
-box-shadow:0 15px 50px rgba(0,0,0,0.08);
-flex-wrap:wrap;
-}
-
-.featured-image{
-flex:1;
-min-width:320px;
-}
-
-.featured-image img{
-width:100%;
-border-radius:20px;
-}
-
-/* Magazine Style Content */
-
-.featured-content{
-flex:1;
-min-width:320px;
-}
-
-.featured-category{
-background:#ffd700;
-padding:6px 14px;
-border-radius:20px;
-font-weight:bold;
-}
-
-/* Magazine Blog Grid */
-
-.blog-cards-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:40px;
-padding:60px 40px;
-}
-
-/* Premium Blog Cards */
-
-.blog-card{
-background:white;
-border-radius:24px;
-overflow:hidden;
-box-shadow:0 12px 40px rgba(0,0,0,0.08);
-transition:0.4s ease;
-}
-
-.blog-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,0.12);
-}
-
-.card-content{
-padding:25px;
-}
-
-.category{
-background:#eef3fb;
-padding:6px 12px;
-border-radius:12px;
-font-size:13px;
-}
-
-/* Coming Soon Panel */
-
-.coming-soon-panel{
+border-radius:26px;
 text-align:center;
-padding:80px 30px;
-background:#f8f9fc;
-border-radius:30px;
-margin:60px 40px;
 }
 
-/* Mobile Optimization */
+.widget-value{
+font-size:46px;
+font-weight:bold;
+margin-top:25px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#0a1f44;
+color:white;
+text-align:center;
+padding:45px;
+margin-top:90px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+.portal-grid{
+grid-template-columns:1fr;
+}
+
+.sidebar{
+display:none;
+}
+
+.main-panel{
+padding:35px;
+}
+
+}
 
 @media(max-width:768px){
 
-.featured-container{
-flex-direction:column;
+header{
+text-align:center;
 }
 
-.blog-cards-container{
-padding:30px 20px;
+header nav a{
+display:inline-block;
+margin:8px;
 }
 
-.hero{
-border-radius:0;
+.main-panel{
+padding:25px;
+border-radius:18px;
+}
+
+.widget-value{
+font-size:36px;
 }
 
 }
