@@ -307,6 +307,52 @@ background:radial-gradient(circle at top,#0f172a,#020617);
 
 /* Footer Apex Layer */
 
+/* =========================================
+COSMIC INSTITUTIONAL INTELLIGENCE CORE
+========================================= */
+
+.cosmic-core{
+margin-top:120px;
+padding:90px 40px;
+border-radius:50px;
+background:radial-gradient(circle at top,#020617,#000814,#0a1f44);
+color:white;
+text-align:center;
+box-shadow:0 0 120px rgba(0,0,0,0.6);
+}
+
+.cosmic-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:50px;
+margin-top:80px;
+}
+
+.cosmic-card{
+background:rgba(255,255,255,0.04);
+padding:45px;
+border-radius:30px;
+backdrop-filter:blur(18px);
+transition:0.4s ease;
+}
+
+.cosmic-card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 80px rgba(0,0,0,0.35);
+}
+
+.cosmic-card h3{
+color:#00e5ff;
+margin-bottom:25px;
+}
+
+.cosmic-index{
+margin-top:90px;
+font-size:38px;
+font-weight:bold;
+color:#00e5ff;
+}
 footer{
 letter-spacing:1px;
 }
+
