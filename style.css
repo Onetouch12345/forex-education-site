@@ -235,3 +235,78 @@ font-size:36px;
 }
 
 }
+/* ============================================
+FOREXEDU LEGENDARY APEX INSTITUTIONAL LAYER
+============================================ */
+
+.apex-nav{
+text-align:center;
+margin-top:12px;
+}
+
+.apex-nav a{
+color:white;
+margin:0 18px;
+font-weight:600;
+transition:0.3s;
+}
+
+.apex-nav a:hover{
+color:#00e5ff;
+}
+
+/* Institutional Research Branding Strip */
+
+.apex-brand-strip{
+background:linear-gradient(135deg,#020617,#0a1f44,#000814);
+color:white;
+text-align:center;
+padding:70px 30px;
+border-radius:40px;
+margin:90px auto;
+max-width:1400px;
+}
+
+.apex-brand-strip h1{
+font-size:42px;
+margin-bottom:35px;
+}
+
+/* Authority Research Grid */
+
+.apex-research-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:45px;
+margin-top:70px;
+}
+
+.apex-research-card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:28px;
+backdrop-filter:blur(12px);
+transition:0.4s;
+}
+
+.apex-research-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+.apex-research-card h3{
+color:#00e5ff;
+margin-bottom:20px;
+}
+
+/* Quantum Intelligence Score Upgrade */
+
+.widget-panel{
+background:radial-gradient(circle at top,#0f172a,#020617);
+}
+
+/* Footer Apex Layer */
+
+footer{
+letter-spacing:1px;
+}
