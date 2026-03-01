@@ -175,12 +175,8 @@ transition:0.25s;
 /* Widget Panel */
 
 .widget-panel{
-margin-top:70px;
-background:linear-gradient(145deg,#0f172a,#020617);
-color:white;
-padding:40px;
-border-radius:28px;
-text-align:center;
+margin-top:40px;
+margin-bottom:40px;
 }
 
 .widget-value{
@@ -412,15 +408,8 @@ FOREXEDU ETERNAL INSTITUTIONAL ZENITH LAYER
 ========================================= */
 
 .zenith-layer{
-margin-top:160px;
-padding:130px 40px;
-border-radius:70px;
-background:linear-gradient(135deg,#020617,#000814,#0a1f44);
-color:white;
-text-align:center;
-box-shadow:
-0 0 160px rgba(0,0,0,0.8),
-0 0 80px rgba(0,230,255,0.05);
+margin-top:40px;
+padding-top:60px;
 }
 
 .zenith-grid{
@@ -591,3 +580,4 @@ color:#00e5ff;
 margin-bottom:25px;
 text-align:center;
 }
+
