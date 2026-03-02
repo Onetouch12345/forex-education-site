@@ -379,4 +379,23 @@ z-index: 2;
 .main-panel > section{
 position: relative;
 }
+/* ================= FIX: REDUCE EXTRA GAP BETWEEN WIDGET AND LAYERS ================= */
+
+.widget-panel {
+    margin-bottom: 25px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.zenith-layer {
+    margin-top: 30px !important;
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+}
+
+.singularity-layer {
+    margin-top: 40px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
 
