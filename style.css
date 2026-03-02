@@ -249,7 +249,7 @@ color:#00e5ff;
 /* ================= ZENITH LAYER ================= */
 
 .zenith-layer{
-margin-top:40px;
+margin-top:60px;
 padding:60px 40px;
 border-radius:50px;
 background:radial-gradient(circle at top,#020617,#000814,#0a1f44);
@@ -294,7 +294,7 @@ color:#00e5ff;
 /* ================= SINGULARITY LAYER ================= */
 
 .singularity-layer{
-margin-top:40px;
+margin-top:60px;
 padding:70px 40px;
 border-radius:60px;
 background:radial-gradient(circle at center,#000814,#020617,#0a1f44);
@@ -329,7 +329,7 @@ margin-bottom:6px;
 /* ================= UNDER REVIEW ================= */
 
 .under-review-section{
-margin-top:80px;
+margin-top:60px;
 padding:70px 40px;
 border-radius:40px;
 background:linear-gradient(135deg,#0a1f44,#020617);
@@ -760,4 +760,5 @@ z-index: 2;
 .main-panel > section{
 position: relative;
 }
+
 
