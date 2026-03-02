@@ -1,4 +1,8 @@
-/* ================= GLOBAL RESET ================= */
+/* =========================================
+FOREXEDU FINAL PREMIUM PORTAL LAYOUT
+DO NOT REMOVE CONTENTS
+JUST FIX SPACING + AUTHORITY STACKING
+========================================= */
 
 *{
 box-sizing:border-box;
@@ -10,8 +14,10 @@ body{
 font-family:Arial, sans-serif;
 background:#f4f6f9;
 color:#1f2937;
-line-height:1.6;
+line-height:1.65;
 }
+
+/* Links */
 
 a{
 text-decoration:none;
@@ -22,19 +28,19 @@ text-decoration:none;
 header{
 background:#0a1f44;
 color:white;
-padding:28px;
+padding:30px;
 text-align:center;
 }
 
 .apex-nav{
-margin-top:12px;
+margin-top:15px;
 }
 
 .apex-nav a{
 color:white;
-margin:0 18px;
+margin:0 16px;
 font-weight:600;
-transition:0.3s;
+transition:0.3s ease;
 }
 
 .apex-nav a:hover{
@@ -46,14 +52,15 @@ color:#00e5ff;
 .portal-grid{
 display:grid;
 grid-template-columns:240px minmax(0,1fr) 240px;
-gap:30px;
+gap:28px;
 max-width:1700px;
 margin:auto;
-padding:35px 20px;
-align-items:start; /* prevents grid stretch */
+padding:30px 18px;
+align-items:start;
+position:relative;
 }
 
-/* ================= SIDEBARS ================= */
+/* SIDEBAR */
 
 .sidebar{
 width:240px;
@@ -61,7 +68,7 @@ width:240px;
 
 .sticky{
 position:sticky;
-top:25px;
+top:20px;
 }
 
 /* Banner Cards */
@@ -70,8 +77,8 @@ top:25px;
 background:white;
 padding:12px;
 border-radius:16px;
-margin-bottom:25px;
-box-shadow:0 8px 30px rgba(0,0,0,0.06);
+margin-bottom:22px;
+box-shadow:0 6px 25px rgba(0,0,0,0.05);
 transition:0.3s ease;
 }
 
@@ -79,23 +86,30 @@ transition:0.3s ease;
 width:100%;
 height:auto;
 display:block;
-object-fit:contain;   /* ensures QR codes show fully */
+object-fit:contain;
 border-radius:12px;
 }
 
 .banner-card:hover{
-transform:translateY(-5px);
+transform:translateY(-4px);
 }
 
 /* ================= MAIN PANEL ================= */
 
 .main-panel{
 background:white;
-padding:50px;
+padding:45px;
 border-radius:28px;
-box-shadow:
-0 12px 45px rgba(0,0,0,0.06);
+box-shadow:0 12px 45px rgba(0,0,0,0.06);
 min-width:0;
+position:relative;
+z-index:2;
+}
+
+/* Compact Paragraph Rhythm */
+
+.main-panel p{
+margin:14px 0;
 }
 
 /* ================= BROKER CARDS ================= */
@@ -103,17 +117,17 @@ min-width:0;
 .broker-banner-row{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
+gap:22px;
+margin-top:35px;
 }
 
 .broker-banner{
 background:linear-gradient(145deg,#0f172a,#020617);
 color:white;
-padding:25px;
+padding:24px;
 border-radius:22px;
 text-align:center;
-transition:0.3s ease;
+transition:0.35s ease;
 }
 
 .broker-banner:hover{
@@ -127,10 +141,10 @@ display:inline-block;
 background:linear-gradient(135deg,#0a58ca,#084298);
 color:white;
 padding:10px 18px;
-border-radius:25px;
+border-radius:26px;
 font-weight:bold;
 font-size:14px;
-transition:0.3s;
+transition:0.3s ease;
 box-shadow:0 6px 20px rgba(0,0,0,0.12);
 }
 
@@ -143,7 +157,7 @@ box-shadow:0 12px 30px rgba(0,0,0,0.2);
 
 .table-wrapper{
 overflow-x:auto;
-margin-top:40px;
+margin-top:35px;
 }
 
 .comparison-table{
@@ -154,8 +168,8 @@ min-width:700px;
 
 .comparison-table th,
 .comparison-table td{
-border:1px solid #ddd;
-padding:16px;
+border:1px solid #e5e7eb;
+padding:15px;
 font-size:14px;
 text-align:center;
 }
@@ -177,42 +191,45 @@ background:#eef4ff;
 
 .widget-panel{
 margin:40px 0;
-padding:35px 20px;
+padding:35px 0;
 text-align:center;
 background:radial-gradient(circle at top,#0f172a,#020617);
 color:white;
-border-radius:30px;
+border-radius:32px;
 }
 
 .widget-value{
-font-size:46px;
+font-size:44px;
 font-weight:bold;
-margin-top:20px;
+margin-top:18px;
 color:#00e5ff;
 }
 
 /* ================= ZENITH LAYER ================= */
+
 .zenith-layer{
-margin-top:40px;
-padding:70px 40px;
+margin-top:50px;
+padding:60px 40px;
 border-radius:50px;
 background:radial-gradient(circle at top,#020617,#000814,#0a1f44);
 color:white;
 text-align:center;
 position:relative;
+z-index:2;
 }
+
 .zenith-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:40px;
-margin-top:40px;
+margin-top:45px;
 }
 
 .zenith-card{
 background:rgba(255,255,255,0.05);
-padding:40px;
+padding:38px;
 border-radius:28px;
-transition:0.3s ease;
+transition:0.35s ease;
 }
 
 .zenith-card:hover{
@@ -226,38 +243,44 @@ margin-bottom:15px;
 }
 
 .zenith-index{
-margin-top:40px;
+margin-top:50px;
 font-size:36px;
 font-weight:bold;
 color:#00e5ff;
 }
 
-
 /* ================= SINGULARITY LAYER ================= */
 
 .singularity-layer{
-margin-top:80px;
-padding:100px 40px;
+margin-top:60px;
+padding:70px 40px;
 border-radius:60px;
 background:radial-gradient(circle at center,#000814,#020617,#0a1f44);
 color:white;
 text-align:center;
 position:relative;
+z-index:2;
 }
+
 .update-cards-row{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+gap:22px;
 margin-top:40px;
 }
 
 .update-card{
 background:rgba(255,255,255,0.06);
-padding:20px;
+padding:22px;
 border-radius:16px;
 font-size:14px;
 line-height:1.6;
 text-align:left;
+transition:0.3s ease;
+}
+
+.update-card:hover{
+transform:translateY(-4px);
 }
 
 .update-card strong{
@@ -269,9 +292,9 @@ margin-bottom:6px;
 /* ================= UNDER REVIEW ================= */
 
 .under-review-section{
-margin-top:80px;
+margin-top:90px;
 padding:70px 40px;
-border-radius:40px;
+border-radius:42px;
 background:linear-gradient(135deg,#0a1f44,#020617);
 color:white;
 text-align:center;
@@ -280,13 +303,13 @@ text-align:center;
 .review-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+gap:24px;
 margin-top:40px;
 }
 
 .review-card{
 background:rgba(255,255,255,0.07);
-padding:20px;
+padding:22px;
 border-radius:18px;
 font-size:14px;
 }
@@ -299,20 +322,16 @@ margin-bottom:6px;
 
 /* ================= RISK DISCLAIMER ================= */
 
-.main-panel > section{
-position: relative;
-}
-
 .risk-disclaimer{
-margin-top:50px;
+margin-top:80px;
 padding:50px 30px;
 background:#111827;
 color:#d1d5db;
-border-radius:25px;
+border-radius:28px;
 font-size:14px;
 line-height:1.8;
-position: relative;
-z-index: 2;
+position:relative;
+z-index:2;
 }
 
 .risk-disclaimer h2{
@@ -320,6 +339,7 @@ color:#00e5ff;
 margin-bottom:20px;
 text-align:center;
 }
+
 /* ================= FOOTER ================= */
 
 footer{
@@ -361,73 +381,11 @@ border-radius:18px;
 }
 
 .widget-value{
-font-size:36px;
-}
-}
-.portal-grid{
-align-items: start;
-position: relative;
-}
-.portal-grid{
-align-items: start;
-position: relative;
-}
-.main-panel{
-position: relative;
-z-index: 2;
-}
-.main-panel > section{
-position: relative;
-}
-/* ================= FIX: REDUCE EXTRA GAP BETWEEN WIDGET AND LAYERS ================= */
-
-.widget-panel {
-    margin-bottom: 25px !important;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+font-size:34px;
 }
 
-.zenith-layer {
-    margin-top: 30px !important;
-    padding-top: 45px !important;
-    padding-bottom: 45px !important;
-}
-
-.singularity-layer {
-    margin-top: 40px !important;
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
-}
-/* ===== FORCE COMPACT STACKING LAYOUT ===== */
-
-.widget-panel,
 .zenith-layer,
-.singularity-layer,
-.under-review-section,
-.risk-disclaimer{
-    margin-top:0 !important;
-}
-
-/* Remove large inline paragraph spacing inheritance */
-.main-panel p{
-    margin-top:12px;
-    margin-bottom:12px;
-}
-
-/* Control layer spacing globally */
-.zenith-layer{
-    padding-top:40px !important;
-}
-
 .singularity-layer{
-    padding-top:50px !important;
+padding:40px 25px;
 }
-.portal-text{
-max-width:1100px;
-margin:25px auto;
-font-size:19px;
-line-height:2;
-opacity:0.95;
 }
-
-
