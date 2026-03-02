@@ -389,3 +389,39 @@ font-size:34px;
 padding:40px 25px;
 }
 }
+
+/* =========================================
+FINAL SPACING CONTROL AUTHORITY ENGINE
+Fixes excessive portal whitespace stacking
+========================================= */
+
+.zenith-layer,
+.singularity-layer,
+.under-review-section,
+.risk-disclaimer{
+margin-top:50px;
+}
+
+.main-panel section{
+margin-top:35px;
+}
+
+.portal-grid{
+row-gap:25px;
+}
+
+/* Prevent ghost whitespace expansion */
+.main-panel > div{
+margin-top:40px;
+}
+
+/* Widget layer tightening */
+.widget-panel{
+margin-top:30px;
+margin-bottom:30px;
+}
+
+/* Force sidebar independence */
+.sidebar{
+align-self:start;
+}
