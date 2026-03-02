@@ -134,3 +134,28 @@ th {
         display: none;
     }
 }
+
+
+/* ================= GAP OPTIMIZATION FIX ================= */
+
+/* Remove excessive vertical spacing between widget and layers */
+.widget-panel{
+    margin-bottom:20px !important;
+}
+
+/* Zenith layer should start closer after widget */
+.zenith-layer{
+    margin-top:30px !important;
+    padding-top:60px;
+}
+
+/* Singularity layer spacing normalization */
+.singularity-layer{
+    margin-top:60px !important;
+    padding-top:80px;
+}
+
+/* Prevent section stacking gap inflation */
+.main-panel section{
+    margin-bottom:40px;
+}
