@@ -176,8 +176,8 @@ background:#eef4ff;
 /* ================= WIDGET PANEL ================= */
 
 .widget-panel{
-margin:50px 0 40px 0;   /* FIXED GAP */
-padding:30px 0;
+margin:40px 0;
+padding:35px 20px;
 text-align:center;
 background:radial-gradient(circle at top,#0f172a,#020617);
 color:white;
@@ -192,18 +192,15 @@ color:#00e5ff;
 }
 
 /* ================= ZENITH LAYER ================= */
-
 .zenith-layer{
 margin-top:40px;
-padding:60px 40px;
+padding:70px 40px;
 border-radius:50px;
 background:radial-gradient(circle at top,#020617,#000814,#0a1f44);
 color:white;
 text-align:center;
-position: relative;
-z-index: 2;
+position:relative;
 }
-
 .zenith-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -239,16 +236,14 @@ color:#00e5ff;
 /* ================= SINGULARITY LAYER ================= */
 
 .singularity-layer{
-margin-top:40px;
-padding:70px 40px;
+margin-top:80px;
+padding:100px 40px;
 border-radius:60px;
 background:radial-gradient(circle at center,#000814,#020617,#0a1f44);
 color:white;
 text-align:center;
-position: relative;
-z-index: 2;
+position:relative;
 }
-
 .update-cards-row{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -384,3 +379,4 @@ z-index: 2;
 .main-panel > section{
 position: relative;
 }
+
