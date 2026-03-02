@@ -398,4 +398,29 @@ position: relative;
     padding-top: 60px !important;
     padding-bottom: 60px !important;
 }
+/* ===== FORCE COMPACT STACKING LAYOUT ===== */
+
+.widget-panel,
+.zenith-layer,
+.singularity-layer,
+.under-review-section,
+.risk-disclaimer{
+    margin-top:0 !important;
+}
+
+/* Remove large inline paragraph spacing inheritance */
+.main-panel p{
+    margin-top:12px;
+    margin-bottom:12px;
+}
+
+/* Control layer spacing globally */
+.zenith-layer{
+    padding-top:40px !important;
+}
+
+.singularity-layer{
+    padding-top:50px !important;
+}
+
 
