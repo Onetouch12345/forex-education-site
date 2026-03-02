@@ -390,38 +390,70 @@ padding:40px 25px;
 }
 }
 
-/* =========================================
-FINAL SPACING CONTROL AUTHORITY ENGINE
-Fixes excessive portal whitespace stacking
-========================================= */
+/* =========================================================
+FOREXEDU ULTRA DEEP PORTAL LAYOUT ENGINE
+Hard controls vertical whitespace propagation
+========================================================= */
 
+/* Main Portal Flow Control */
+.portal-grid{
+align-items:start;
+}
+
+/* Main Panel Physics Lock */
+.main-panel{
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+/* Layer Sections Compact Mode */
 .zenith-layer,
 .singularity-layer,
 .under-review-section,
 .risk-disclaimer{
-margin-top:50px;
+margin-top:40px !important;
+padding-top:50px;
+padding-bottom:50px;
 }
 
-.main-panel section{
-margin-top:35px;
-}
-
-.portal-grid{
-row-gap:25px;
-}
-
-/* Prevent ghost whitespace expansion */
-.main-panel > div{
-margin-top:40px;
-}
-
-/* Widget layer tightening */
+/* Widget Isolation */
 .widget-panel{
-margin-top:30px;
-margin-bottom:30px;
+margin:30px 0 !important;
 }
 
-/* Force sidebar independence */
+/* Paragraph Rhythm Control */
+.main-panel p{
+margin-top:12px;
+margin-bottom:12px;
+}
+
+/* Sidebar Absolute Stability */
 .sidebar{
-align-self:start;
+position:sticky;
+top:25px;
+height:fit-content;
+}
+
+/* Banner Physics */
+.banner-card{
+contain:layout paint;
+}
+
+/* Prevent Grid Stretch Explosion */
+.portal-grid > div{
+min-height:0;
+}
+
+/* Force Layer Boundary Rendering */
+.zenith-layer,
+.singularity-layer{
+overflow:hidden;
+}
+
+/* Responsive Safety */
+@media(max-width:1200px){
+.main-panel{
+gap:25px;
+}
 }
