@@ -687,3 +687,22 @@ justify-content:center;
 }
 
 }
+
+/* =============================
+   QUANTUM AUTHORITY TRUST BAR
+============================= */
+
+.quantum-trust-bar{
+background:#020617;
+color:#cbd5e1;
+font-size:14px;
+padding:14px 0;
+}
+
+.quantum-trust-grid{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+text-align:center;
+}
