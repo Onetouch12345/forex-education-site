@@ -736,3 +736,47 @@ text-decoration:none;
 color:#2563eb;
 font-weight:600;
 }
+
+
+/* ===== QUANTUM HUB TEXT VISIBILITY FIX ===== */
+
+.quantum-learning-hub{
+text-align:center;
+padding:100px 20px;
+}
+
+.quantum-title{
+font-size:32px;
+margin-bottom:40px;
+color:#0f172a;
+}
+
+.quantum-trust-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-bottom:50px;
+font-weight:600;
+color:#0f172a;
+}
+
+.quantum-trust-item{
+background:white;
+padding:14px 20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.quantum-description{
+max-width:900px;
+margin:auto;
+line-height:1.7;
+font-size:18px;
+color:#334155;
+}
+
+.quantum-description h3{
+font-size:28px;
+margin-bottom:25px;
+}
