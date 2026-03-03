@@ -977,3 +977,43 @@ transition:0.3s ease;
 background:#00b4d8;
 transform:translateY(-2px);
 }
+.portal-nav-row{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:15px;
+width:100%;
+}
+
+.portal-nav-row a{
+flex:1;
+min-width:140px;
+text-align:center;
+padding:14px;
+background:rgba(255,255,255,0.08);
+color:white;
+border-radius:10px;
+font-weight:600;
+font-size:16px;
+}
+
+.portal-nav-row a:hover{
+background:#00e5ff;
+color:black;
+}
+
+.portal-logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.portal-logo img{
+height:60px;
+}
+
+.portal-platform-title{
+text-align:center;
+color:#cbd5e1;
+font-size:18px;
+margin-bottom:30px;
+}
