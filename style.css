@@ -924,3 +924,56 @@ background:#00b4d8;
 color:white;
 transform:translateY(-2px);
 }
+
+/* ===== RESET PORTAL HEADER ===== */
+
+.portal-header{
+background:#0d1b2a;
+padding:25px 0 30px 0;
+text-align:center;
+}
+
+/* Logo */
+
+.portal-logo img{
+height:60px;
+width:auto;
+border-radius:8px;
+}
+
+/* Platform Title */
+
+.portal-platform-title{
+color:#cbd5e1;
+font-size:18px;
+margin-top:15px;
+margin-bottom:25px;
+letter-spacing:1px;
+}
+
+/* Navigation Big Button Cards */
+
+.portal-nav-row{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.portal-nav-row a{
+display:inline-block;
+min-width:150px;
+padding:14px 26px;
+background:rgba(255,255,255,0.08);
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+font-size:16px;
+transition:0.3s ease;
+}
+
+.portal-nav-row a:hover{
+background:#00b4d8;
+transform:translateY(-2px);
+}
