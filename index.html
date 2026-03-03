@@ -433,9 +433,19 @@ at no additional cost to users.
 </p>
 
 </footer>
-
+<script>
+window.addEventListener("scroll", function(){
+let header = document.querySelector(".elite-header");
+if(window.scrollY > 40){
+header.classList.add("shrink");
+}else{
+header.classList.remove("shrink");
+}
+});
+</script>
 </body>
 </html>
+
 
 
 
