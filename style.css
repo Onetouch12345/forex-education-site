@@ -410,3 +410,34 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 }
+
+/* ===== FOREXEDU HEADER FIX ===== */
+
+header{
+background:#0d1b2a;
+padding:12px 0;
+}
+
+header .container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+header img{
+height:50px;
+width:auto;
+display:block;
+}
+
+header h1{
+font-size:28px;
+margin:0;
+color:white;
+}
+
+header p{
+margin:0;
+font-size:13px;
+color:#9ca3af;
+}
