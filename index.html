@@ -3,221 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ForexEdu - Free Forex Education, Brokers & Market Analysis</title>
-<meta name="description" content="ForexEdu offers free Forex education, broker reviews, market analysis, tools, and trading strategies for beginners to advanced traders.">
-<meta name="keywords" content="forex education, forex brokers, market analysis, trading tools, forex guide, XM broker, HFM broker">
 
-<link rel="canonical" href="https://rainhunterforex.com/index.html">
+<title>ForexEdu | Professional Forex Education & Trusted Broker Reviews</title>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MDWZ227DT4');
-</script>
+<meta name="description" content="Professional Forex education platform offering free trading guides, broker reviews, market analysis, and tools for serious traders.">
+<meta name="keywords" content="forex education, forex brokers, market analysis, trading tools, XM, IC Markets, HFM, PrimeXBT">
 
-<!-- AdSense Placeholder -->
-<script data-ad-client="ca-pub-9420471464780576" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link rel="canonical" href="https://rainhunterforex.com/">
 
 <link rel="stylesheet" href="style.css">
+
 <style>
-/* ====== HOMEPAGE CUSTOM ====== */
-body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#333;}
-header {background:#0d1b2a; color:#fff; padding:20px 0; text-align:center;}
-header h1 {font-size:36px; margin-bottom:10px;}
-nav a {color:#fff; text-decoration:none; margin:0 15px; font-weight:bold;}
+
+/* ===== GLOBAL ===== */
+body {margin:0; font-family: 'Segoe UI', sans-serif; background:#f4f6f9; color:#222;}
+h1,h2,h3 {margin-bottom:15px;}
+section {padding:80px 20px; text-align:center;}
+.container {max-width:1200px; margin:auto;}
+
+/* ===== HEADER ===== */
+header {background:#0d1b2a; padding:20px 0;}
+header h1 {color:white; margin:0;}
+nav {margin-top:10px;}
+nav a {color:#ccc; margin:0 15px; text-decoration:none; font-weight:600;}
 nav a:hover {color:#00b4d8;}
-#hero {background:linear-gradient(90deg,#0d6efd,#00b4d8); color:white; padding:100px 20px; text-align:center;}
-#hero h2 {font-size:36px; margin-bottom:15px;}
-#hero p {font-size:18px; margin-bottom:25px;}
-.btn {padding:14px 25px; border-radius:6px; font-weight:bold; display:inline-block; margin:10px; text-decoration:none; transition:0.3s;}
+
+/* ===== HERO ===== */
+#hero {
+  background:linear-gradient(120deg,#0d6efd,#001f3f);
+  color:white;
+  padding:120px 20px;
+}
+#hero h2 {font-size:42px; font-weight:700;}
+#hero p {font-size:18px; max-width:700px; margin:20px auto;}
+
+.btn {
+  padding:14px 28px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  margin:10px;
+  transition:0.3s;
+}
 .btn-primary {background:#28a745; color:white;}
-.btn-primary:hover {background:#218838;}
-.btn-secondary {background:#ffc107; color:black;}
-.btn-secondary:hover {background:#e0a800;}
-.btn-affiliate {background:#ff5a5f; color:white;}
-.btn-affiliate:hover {background:#e04c50;}
-section {padding:60px 20px; text-align:center;}
-#features {display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;}
-.feature-card {background:white; padding:25px; border-radius:10px; width:280px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
-.feature-card h3 {margin-bottom:10px;}
-.blog-preview {background:white; padding:20px; margin:15px; border-radius:10px; box-shadow:0 0 8px rgba(0,0,0,0.05); text-align:left;}
-.blog-preview h4 {margin-bottom:10px;}
-.blog-preview p {font-size:15px; color:#555;}
-footer {background:#111; color:#ccc; padding:30px 20px; font-size:13px; text-align:center;}
+.btn-primary:hover {background:#1e7e34;}
+.btn-outline {border:2px solid white; color:white;}
+.btn-outline:hover {background:white; color:#001f3f;}
+
+/* ===== BROKER SECTION ===== */
+.recommended-brokers {background:white;}
+.broker-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.broker-card {
+  background:#fff;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+.broker-card:hover {transform:translateY(-6px);}
+.broker-card h3 {margin-bottom:10px;}
+.broker-btn {
+  margin-top:20px;
+  display:inline-block;
+  padding:12px 22px;
+  background:#0d6efd;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+.broker-btn:hover {background:#084298;}
+
+/* ===== FEATURES ===== */
+#features {background:#f4f6f9;}
+.feature-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.feature-card {
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== BLOG ===== */
+.blog-preview {
+  background:white;
+  padding:25px;
+  margin:20px auto;
+  max-width:800px;
+  border-radius:10px;
+  text-align:left;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+.blog-preview a {color:#0d6efd; text-decoration:none;}
+.blog-preview a:hover {text-decoration:underline;}
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+  background:#001f3f;
+  color:white;
+  padding:20px;
+  font-size:14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background:#111;
+  color:#bbb;
+  padding:40px 20px;
+  font-size:14px;
+}
 footer a {color:#ffc107; text-decoration:none;}
 footer a:hover {text-decoration:underline;}
-.social-links a {margin:0 10px; color:#fff; text-decoration:none;}
-.social-links a:hover {color:#00b4d8;}
-</style>
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "ForexEdu",
-  "url": "https://rainhunterforex.com",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://rainhunterforex.com/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+</style>
 </head>
+
 <body>
 
-<!-- Header / Navigation -->
 <header>
-  <h1>ForexEdu</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="learn.html">Learn Forex</a>
-    <a href="brokers.html">Brokers</a>
-    <a href="analysis.html">Market Analysis</a>
-    <a href="tools.html">Tools</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+  <div class="container">
+    <h1>ForexEdu</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn Forex</a>
+      <a href="brokers.html">Brokers</a>
+      <a href="analysis.html">Market Analysis</a>
+      <a href="tools.html">Tools</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section id="hero">
-  <h2>Learn Forex Trading – Free Education & Market Insights</h2>
-  <p>Start your trading journey with professional guides, daily market analysis, and trusted broker reviews.</p>
-  <a href="learn.html" class="btn btn-primary">Start Learning Forex</a>
-  <a href="brokers.html" class="btn btn-secondary">View Brokers</a>
-  <a href="analysis.html" class="btn btn-secondary">Market Analysis</a>
-  <br>
-  <!-- Affiliate Buttons -->
-  <a href="https://affs.click/ryTLn" target="_blank" class="btn btn-affiliate">Open XM Account</a>
-  <a href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank" class="btn btn-affiliate">Open HFM Account</a>
-</section>
-
-  <section class="recommended-brokers">
-  <h2>Top Recommended Forex Brokers</h2>
-  <p>We independently review and recommend regulated brokers based on spreads, execution speed, and reliability.</p>
-
-  <div class="broker-grid">
-
-    <!-- XM Global -->
-    <div class="broker-card">
-      <h3>XM Global</h3>
-      <p>Competitive spreads, flexible leverage, and strong global presence.</p>
-      <a href="https://affs.click/ryTLn"
-         target="_blank"
-         rel="nofollow sponsored"
-         class="broker-btn">
-         Open Account
-      </a>
-    </div>
-
-    <!-- IC Markets -->
-    <div class="broker-card">
-      <h3>IC Markets</h3>
-      <p>Raw spread trading, ultra-fast execution, and professional-grade platforms.</p>
-      <a href="https://icmarkets.com/?camp=90095"
-         id="referalLink"
-         target="_blank"
-         rel="nofollow sponsored"
-         class="broker-btn">
-         Open Account
-      </a>
-    </div>
-
-    <!-- HFM -->
-    <div class="broker-card">
-      <h3>HFM</h3>
-      <p>Multi-asset broker offering flexible account types and strong security.</p>
-      <a href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342"
-         target="_blank"
-         rel="nofollow sponsored"
-         class="broker-btn">
-         Open Account
-      </a>
-    </div>
-
-    <!-- PrimeXBT -->
-    <div class="broker-card">
-      <h3>PrimeXBT</h3>
-      <p>Crypto & CFD trading platform with advanced tools and high liquidity.</p>
-      <a href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt"
-         target="_blank"
-         rel="nofollow sponsored"
-         class="broker-btn">
-         Open Account
-      </a>
-    </div>
-
+  <div class="container">
+    <h2>Professional Forex Education & Trusted Broker Reviews</h2>
+    <p>Structured learning, in-depth market analysis, and carefully reviewed brokers — built for serious traders.</p>
+    <a href="learn.html" class="btn btn-primary">Start Learning</a>
+    <a href="brokers.html" class="btn btn-outline">Compare Brokers</a>
   </div>
 </section>
-  
-<!-- Features Section -->
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  Independent educational platform. Transparent broker partnerships. No unrealistic profit promises.
+</div>
+
+<!-- BROKER SECTION -->
+<section class="recommended-brokers">
+  <div class="container">
+    <h2>Top Recommended Brokers</h2>
+    <p>Regulated brokers reviewed based on spreads, execution quality, and platform reliability.</p>
+
+    <div class="broker-grid">
+
+      <div class="broker-card">
+        <h3>XM Global</h3>
+        <p>Strong global presence with competitive spreads and flexible leverage.</p>
+        <a href="https://affs.click/ryTLn" target="_blank" rel="nofollow sponsored" class="broker-btn">Open Account</a>
+      </div>
+
+      <div class="broker-card">
+        <h3>IC Markets</h3>
+        <p>Raw spread accounts with ultra-fast execution and professional trading platforms.</p>
+        <a href="https://icmarkets.com/?camp=90095" target="_blank" rel="nofollow sponsored" class="broker-btn">Open Account</a>
+      </div>
+
+      <div class="broker-card">
+        <h3>HFM</h3>
+        <p>Multi-asset broker offering diverse account types and solid regulatory background.</p>
+        <a href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342" target="_blank" rel="nofollow sponsored" class="broker-btn">Open Account</a>
+      </div>
+
+      <div class="broker-card">
+        <h3>PrimeXBT</h3>
+        <p>Advanced crypto & CFD trading platform with modern tools and liquidity access.</p>
+        <a href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank" rel="nofollow sponsored" class="broker-btn">Open Account</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
 <section id="features">
-  <h2>Our Platform</h2>
-  <div class="feature-card">
-    <h3>Free Education</h3>
-    <p>Learn Forex from beginner to advanced levels with tutorials, guides, and strategies.
-    <br><a href="https://docs.google.com/forms/d/e/1FAIpQLSeU7JfXa-lncMYWiUkgg_Xn9DCR-EzlV3YoCr2I7biBIZEq6g/viewform" target="_blank" class="btn btn-primary">Download Free Forex Guide</a></p>
-  </div>
-  <div class="feature-card">
-    <h3>Market Analysis</h3>
-    <p>Daily updates and insights for Forex, Gold, and Crypto markets.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Broker Reviews</h3>
-    <p>Compare regulated and trusted brokers like XM and HFM to choose your best trading platform.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Trading Tools</h3>
-    <p>Access pip calculators, lot calculators, risk management tools, and interactive charts.</p>
-  </div>
-</section>
-
-<!-- Latest Blog Previews -->
-<section id="latest-blog">
-  <h2>Latest Articles</h2>
-  <div class="blog-preview">
-    <h4><a href="blog/best-forex-broker-2026.html">Best Forex Broker 2026 – Trusted Brokers Reviewed</a></h4>
-    <p>Discover the top regulated forex brokers for 2026 with detailed comparison, account types, and features.</p>
-  </div>
-  <div class="blog-preview">
-    <h4><a href="common-trading-mistakes-to-avoid.html">Common Forex Trading Mistakes to Avoid</a></h4>
-    <p>Learn the most common mistakes traders make and how to avoid them to protect your capital.</p>
-  </div>
-  <div class="blog-preview">
-    <h4><a href="best-indicators-for-forex-trading.html">Best Forex Indicators for 2026</a></h4>
-    <p>Check out the most effective technical indicators used by professional traders for better entry and exit points.</p>
+  <div class="container">
+    <h2>What We Offer</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Free Structured Education</h3>
+        <p>Beginner to advanced trading lessons designed for real market conditions.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Market Analysis</h3>
+        <p>Regular insights on Forex, Gold, and major global assets.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Broker Reviews</h3>
+        <p>Transparent broker comparisons to help you choose wisely.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Trading Tools</h3>
+        <p>Risk management calculators and educational resources.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section id="cta">
-  <h2>Ready to Start Trading Forex?</h2>
-  <a href="learn.html" class="btn btn-primary">Start Learning Forex</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU7JfXa-lncMYWiUkgg_Xn9DCR-EzlV3YoCr2I7biBIZEq6g/viewform" target="_blank" class="btn btn-secondary">Download Free Forex Guide</a>
+<!-- BLOG -->
+<section>
+  <div class="container">
+    <h2>Latest Articles</h2>
+
+    <div class="blog-preview">
+      <h4><a href="blog/best-forex-broker-2026.html">Best Forex Broker 2026 – Trusted Brokers Reviewed</a></h4>
+      <p>Detailed comparison of top regulated brokers for serious traders.</p>
+    </div>
+
+    <div class="blog-preview">
+      <h4><a href="common-trading-mistakes-to-avoid.html">Common Forex Trading Mistakes to Avoid</a></h4>
+      <p>Protect your capital by avoiding the most common beginner mistakes.</p>
+    </div>
+
+  </div>
 </section>
 
-  <p class="affiliate-disclosure">
-  Disclosure: ForexEdu may receive a commission from broker partners at no additional cost to you.
-</p>
-  
-<!-- Footer -->
 <footer>
-  <div class="social-links">
-    <a href="https://instagram.com/trust4thebest" target="_blank">Instagram</a>
-    <a href="#">YouTube</a>
-    <a href="#">Facebook</a>
-  </div>
-  <p>&copy; 2026 ForexEdu | All rights reserved.</p>
-  <p><a href="sitemap.xml">Sitemap</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-and-conditions.html">Terms & Conditions</a></p>
+  <p>Disclosure: ForexEdu may receive compensation from broker partners at no additional cost to users.</p>
+  <p>&copy; 2026 ForexEdu | All Rights Reserved</p>
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms-and-conditions.html">Terms & Conditions</a>
+  </p>
 </footer>
 
 </body>
 </html>
-
-
-
-
