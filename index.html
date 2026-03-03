@@ -3,321 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ForexEdu | Professional Forex Education & Trusted Broker Reviews</title>
 
-<meta name="description" content="Professional forex education platform providing advanced trading guides, broker reviews, and market insights. Learn forex trading the smart way.">
+<title>ForexEdu | Free Forex Education, Broker Reviews & Market Analysis</title>
+
+<meta name="description" content="ForexEdu provides free professional forex education, broker research, trading strategies, and market analysis resources for beginner and advanced traders.">
+
+<link rel="canonical" href="https://rainhunterforex.com/">
 
 <style>
 
 /* ===== GLOBAL ===== */
-body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f5f7fa;
-    color:#111827;
-    transition:0.3s;
+
+body{
+margin:0;
+font-family:Segoe UI, sans-serif;
+background:#f4f6f9;
+color:#222;
 }
 
-.dark-mode {
-    background:#0f172a;
-    color:#e2e8f0;
-}
-
-.container {
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
 
 /* ===== HEADER ===== */
-header {
-    position:sticky;
-    top:0;
-    background:white;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
-    z-index:1000;
+
+header{
+background:#0d1b2a;
+padding:20px 0;
 }
 
-.dark-mode header {
-    background:#111827;
+header h1{
+color:white;
+margin:0;
 }
 
-nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
+nav{
+margin-top:10px;
 }
 
-nav ul {
-    list-style:none;
-    display:flex;
-    gap:25px;
-    padding:0;
+nav a{
+color:#ccc;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
 }
 
-nav a {
-    text-decoration:none;
-    color:inherit;
-    font-weight:600;
-}
-
-.dark-toggle {
-    cursor:pointer;
+nav a:hover{
+color:#00b4d8;
 }
 
 /* ===== HERO ===== */
-.hero {
-    padding:100px 0;
-    text-align:center;
+
+#hero{
+background:linear-gradient(120deg,#0d6efd,#001f3f);
+color:white;
+padding:110px 20px;
+text-align:center;
 }
 
-.hero h1 {
-    font-size:40px;
-    margin-bottom:20px;
+#hero h2{
+font-size:42px;
+font-weight:700;
 }
 
-.cta-button {
-    display:inline-block;
-    background:linear-gradient(135deg,#1d4ed8,#2563eb);
-    color:white;
-    padding:14px 30px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-top:20px;
-    transition:0.3s;
+#hero p{
+max-width:700px;
+margin:25px auto;
+font-size:18px;
 }
 
-.cta-button:hover {
-    opacity:0.85;
+.btn{
+display:inline-block;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin:10px;
+transition:.3s;
 }
 
-/* ===== STATS ===== */
-.stats {
-    display:flex;
-    justify-content:space-around;
-    padding:60px 0;
-    background:#e2e8f0;
+.btn-primary{
+background:#28a745;
+color:white;
 }
 
-.dark-mode .stats {
-    background:#1e293b;
+.btn-primary:hover{
+background:#1e7e34;
 }
 
-.stat h2 {
-    font-size:34px;
-    margin:0;
+.btn-outline{
+border:2px solid white;
+color:white;
 }
 
-/* ===== BROKER ===== */
-.brokers {
-    padding:80px 0;
+.btn-outline:hover{
+background:white;
+color:#001f3f;
 }
 
-.broker-card {
-    border:1px solid #e5e7eb;
-    padding:30px;
-    border-radius:10px;
+/* ===== TRUST BAR ===== */
+
+.trust-bar{
+background:#001f3f;
+color:white;
+padding:18px;
+text-align:center;
+font-size:14px;
 }
 
-.dark-mode .broker-card {
-    background:#1e293b;
-    border:1px solid #334155;
+/* ===== EDUCATION FEATURES ===== */
+
+#features{
+padding:80px 0;
+background:#f4f6f9;
 }
 
-.rating {
-    color:#facc15;
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
-.badge {
-    display:inline-block;
-    background:#10b981;
-    color:white;
-    padding:5px 10px;
-    margin:5px 5px 0 0;
-    border-radius:4px;
-    font-size:12px;
+.feature-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== BROKER SECTION ===== */
+
+.recommended-brokers{
+background:white;
+padding:90px 0;
+}
+
+.broker-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.broker-card{
+background:white;
+padding:32px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:.3s;
+}
+
+.broker-card:hover{
+transform:translateY(-6px);
+}
+
+.broker-btn{
+margin-top:22px;
+display:inline-block;
+padding:12px 24px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+}
+
+.broker-btn:hover{
+background:#084298;
 }
 
 /* ===== BLOG ===== */
-.blog-preview {
-    padding:80px 0;
+
+.blog-section{
+padding:80px 0;
 }
 
-.blog-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    margin-top:40px;
+.blog-preview{
+max-width:800px;
+margin:25px auto;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+text-align:left;
 }
 
-.blog-card {
-    padding:25px;
-    border-radius:10px;
-    border:1px solid #e5e7eb;
-    background:white;
-    transition:0.3s;
-}
-
-.dark-mode .blog-card {
-    background:#1e293b;
-    border:1px solid #334155;
-}
-
-.blog-card:hover {
-    transform:translateY(-5px);
-}
-
-.blog-card a {
-    text-decoration:none;
-    font-weight:600;
-    color:#2563eb;
-}
-
-/* ===== FINAL CTA ===== */
-.final-cta {
-    text-align:center;
-    padding:80px 0;
+.blog-preview a{
+color:#0d6efd;
+text-decoration:none;
 }
 
 /* ===== FOOTER ===== */
-footer {
-    background:#111827;
-    color:#9ca3af;
-    padding:40px 0;
-    font-size:14px;
+
+footer{
+background:#111;
+color:#bbb;
+padding:40px 20px;
+text-align:center;
+font-size:14px;
+}
+
+footer a{
+color:#ffc107;
+text-decoration:none;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 <div class="container">
+<h1>ForexEdu</h1>
+
 <nav>
-<h2>ForexEdu</h2>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="learn.html">Learn Forex</a></li>
-<li><a href="brokers.html">Brokers</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-<div class="dark-toggle" onclick="toggleDarkMode()">🌙</div>
+<a href="index.html">Home</a>
+<a href="learn.html">Learn Forex</a>
+<a href="brokers.html">Brokers</a>
+<a href="analysis.html">Market Analysis</a>
+<a href="tools.html">Tools</a>
+<a href="blog.html">Blog</a>
 </nav>
+
 </div>
 </header>
 
-<section class="hero container">
-<h1>Professional Forex Trading Education</h1>
-<p>Advanced strategies, broker reviews, and real market insights.</p>
-<a href="https://icmarkets.com/?camp=90095" class="cta-button">Open Live Trading Account</a>
-</section>
+<!-- HERO -->
 
-<section class="stats">
-<div class="stat">
-<h2 class="counter" data-target="50000">0</h2>
-<p>Monthly Readers</p>
-</div>
-<div class="stat">
-<h2 class="counter" data-target="12">0</h2>
-<p>Educational Articles</p>
-</div>
-<div class="stat">
-<h2 class="counter" data-target="10">0</h2>
-<p>Broker Reviews</p>
+<section id="hero">
+<div class="container">
+
+<h2>Professional Forex Education Platform</h2>
+
+<p>
+Learn forex trading with structured guides, market insights,
+and independent broker research designed for real traders.
+</p>
+
+<a href="learn.html" class="btn btn-primary">Start Learning Forex</a>
+<a href="brokers.html" class="btn btn-outline">Compare Brokers</a>
+
 </div>
 </section>
 
-<section class="brokers container">
-<h2>Top Recommended Broker</h2>
+<div class="trust-bar">
+Independent educational platform — no unrealistic profit claims.
+</div>
+
+<!-- EDUCATION FEATURES -->
+
+<section id="features">
+<div class="container">
+
+<h2>What ForexEdu Provides</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Free Forex Education</h3>
+<p>Beginner to advanced trading concepts explained professionally.</p>
+</div>
+
+<div class="feature-card">
+<h3>Market Analysis</h3>
+<p>Daily or regular insights into Forex, Gold, and Crypto markets.</p>
+</div>
+
+<div class="feature-card">
+<h3>Broker Research</h3>
+<p>We review regulated brokers based on execution and reliability.</p>
+</div>
+
+<div class="feature-card">
+<h3>Trading Tools</h3>
+<p>Risk calculators and learning resources for disciplined trading.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- BROKER SECTION -->
+
+<section class="recommended-brokers">
+<div class="container">
+
+<h2>Top Recommended Brokers</h2>
+
+<div class="broker-grid">
+
+<div class="broker-card">
+<h3>XM Global</h3>
+<p>Global broker with flexible leverage and competitive spreads.</p>
+<a href="https://affs.click/ryTLn" target="_blank" class="broker-btn">Open Account</a>
+</div>
+
 <div class="broker-card">
 <h3>IC Markets</h3>
-<p class="rating">★★★★★ (4.8/5)</p>
-<span class="badge">ASIC Regulated</span>
-<span class="badge">CySEC Regulated</span>
-<span class="badge">FCA Regulated</span>
-<p>Institutional-grade execution with ultra-low spreads.</p>
-<a href="https://icmarkets.com/?camp=90095" class="cta-button">Start Trading Now</a>
+<p>Raw spread execution and institutional trading conditions.</p>
+<a href="https://icmarkets.com/?camp=90095" target="_blank" class="broker-btn">Open Account</a>
+</div>
+
+<div class="broker-card">
+<h3>HFM</h3>
+<p>Multi-asset broker offering diverse account options.</p>
+<a href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342" target="_blank" class="broker-btn">Open Account</a>
+</div>
+
+<div class="broker-card">
+<h3>PrimeXBT</h3>
+<p>Crypto & CFD trading platform with modern tools.</p>
+<a href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank" class="broker-btn">Open Account</a>
+</div>
+
+</div>
+
 </div>
 </section>
 
-<section class="blog-preview container">
-<h2>Latest Trading Articles</h2>
-<div class="blog-grid">
+<!-- BLOG -->
 
-<div class="blog-card">
-<h3>Advanced Forex Trading</h3>
-<a href="advanced-forex-trading.html">Read Article →</a>
+<section class="blog-section">
+<div class="container">
+
+<h2>Latest Educational Articles</h2>
+
+<div class="blog-preview">
+<h4><a href="blog/best-forex-broker-2026.html">Best Forex Broker 2026 – Trusted Broker Analysis</a></h4>
+<p>Detailed research-based broker comparison for serious traders.</p>
 </div>
 
-<div class="blog-card">
-<h3>Candlestick Chart Reading</h3>
-<a href="candlestick-chart-reading.html">Read Article →</a>
-</div>
-
-<div class="blog-card">
-<h3>Common Trading Mistakes</h3>
-<a href="common-trading-mistakes.html">Read Article →</a>
-</div>
-
-<div class="blog-card">
-<h3>Best Forex Indicators</h3>
-<a href="best-indicators-for-forex-trading.html">Read Article →</a>
-</div>
-
-<div class="blog-card">
-<h3>Risk Management Guide</h3>
-<a href="risk-management-guide.html">Read Article →</a>
-</div>
-
-<div class="blog-card">
-<h3>Choosing a Broker</h3>
-<a href="how-to-choose-broker.html">Read Article →</a>
+<div class="blog-preview">
+<h4><a href="common-trading-mistakes-to-avoid.html">Common Forex Trading Mistakes</a></h4>
+<p>Learn how traders lose money and how to avoid these errors.</p>
 </div>
 
 </div>
-
-<div style="text-align:center; margin-top:40px;">
-<a href="blog.html" class="cta-button">Explore All Articles →</a>
-</div>
-</section>
-
-<section class="final-cta container">
-<h2>Ready to Start Trading?</h2>
-<a href="https://icmarkets.com/?camp=90095" class="cta-button">Open Account</a>
 </section>
 
 <footer>
-<div class="container">
-<p><strong>Risk Disclosure:</strong> Trading Forex and CFDs on margin carries a high level of risk and may not be suitable for all investors. You may lose more than your initial investment.</p>
-<p>© 2026 ForexEdu. All rights reserved.</p>
-</div>
+<p>
+Disclosure: ForexEdu may receive affiliate compensation from broker partners
+at no additional cost to users.
+</p>
+
+<p>© 2026 ForexEdu | All Rights Reserved</p>
+
+<p>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms-and-conditions.html">Terms & Conditions</a>
+</p>
+
 </footer>
-
-<script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-
-const counters=document.querySelectorAll('.counter');
-counters.forEach(counter=>{
-counter.innerText='0';
-const update=()=>{
-const target=+counter.getAttribute('data-target');
-const c=+counter.innerText;
-const inc=target/200;
-if(c<target){
-counter.innerText=Math.ceil(c+inc);
-setTimeout(update,10);
-}else{
-counter.innerText=target;
-}
-};
-update();
-});
-</script>
 
 </body>
 </html>
