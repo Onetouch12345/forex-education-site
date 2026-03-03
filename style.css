@@ -780,3 +780,84 @@ color:#334155;
 font-size:28px;
 margin-bottom:25px;
 }
+
+
+/* ===== MASTER HEADER ALIGNMENT ===== */
+
+.header-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+/* Logo + Title Row */
+
+.brand-block{
+display:flex;
+align-items:center;
+gap:14px;
+flex-shrink:0;
+}
+
+.brand-block img{
+height:54px;
+width:auto;
+}
+
+.brand-text-row h1{
+margin:0;
+font-size:26px;
+color:white;
+}
+
+.brand-subtitle{
+font-size:13px;
+color:#cbd5e1;
+}
+
+/* Navigation Center */
+
+.portal-nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+flex:1;
+}
+
+.portal-nav a{
+padding:11px 20px;   /* Bigger buttons */
+border-radius:7px;
+background:rgba(255,255,255,0.08);
+color:#e2e8f0;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+transition:0.3s;
+}
+
+.portal-nav a:hover{
+background:#00b4d8;
+color:white;
+}
+
+/* Mobile Optimization */
+
+@media(max-width:768px){
+
+.header-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.portal-nav{
+justify-content:center;
+}
+
+.brand-block{
+justify-content:center;
+}
+
+}
