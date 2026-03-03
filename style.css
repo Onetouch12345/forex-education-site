@@ -860,4 +860,61 @@ justify-content:center;
 justify-content:center;
 }
 
+/* ===== PORTAL HEADER MASTER STYLE ===== */
+
+.portal-header{
+text-align:center;
+padding:18px 0 25px 0;
+}
+
+/* Brand Block */
+
+.portal-brand{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
+margin-bottom:25px;
+}
+
+.portal-brand img{
+height:60px;
+width:auto;
+border-radius:8px;
+}
+
+.brand-text h1{
+margin:0;
+font-size:30px;
+color:white;
+}
+
+.brand-text span{
+color:#cbd5e1;
+font-size:14px;
+}
+
+/* Navigation Card Style Buttons */
+
+.portal-nav-cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.portal-nav-cards a{
+padding:12px 22px;
+background:rgba(255,255,255,0.08);
+color:#e2e8f0;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+font-size:15px;
+}
+
+.portal-nav-cards a:hover{
+background:#00b4d8;
+color:white;
 }
