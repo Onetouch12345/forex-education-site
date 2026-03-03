@@ -590,3 +590,100 @@ transition:0.3s;
 background:#00b4d8;
 color:white;
 }
+
+
+/* =====================================
+   ELITE FOREXEDU MASTER HEADER
+===================================== */
+
+.elite-header{
+background:#0b1220;
+position:sticky;
+top:0;
+z-index:999;
+transition:0.35s ease;
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Header Scroll Effect */
+
+.elite-header.shrink{
+padding:6px 0;
+}
+
+/* Layout Wrapper */
+
+.header-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+padding:14px 0;
+}
+
+/* Branding Block */
+
+.brand-block{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.brand-block img{
+height:52px;
+width:auto;
+border-radius:8px;
+}
+
+.brand-text h1{
+color:white;
+margin:0;
+font-size:26px;
+}
+
+.brand-tag{
+font-size:13px;
+color:#94a3b8;
+}
+
+/* Portal Navigation */
+
+.portal-nav{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+justify-content:center;
+flex:1;
+}
+
+.portal-nav a{
+padding:10px 18px;
+border-radius:6px;
+background:rgba(255,255,255,0.06);
+color:#e2e8f0;
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+transition:0.3s;
+}
+
+.portal-nav a:hover{
+background:#00b4d8;
+color:white;
+}
+
+/* Mobile Optimization */
+
+@media(max-width:768px){
+
+.header-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.portal-nav{
+justify-content:center;
+}
+
+}
