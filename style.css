@@ -411,73 +411,55 @@ align-items:center;
 justify-content:space-between;
 }
 
-/* ===== FOREXEDU HEADER FIX ===== */
+/* ===== FOREXEDU HEADER MASTER FIX ===== */
 
 header{
 background:#0d1b2a;
-padding:12px 0;
+padding:0;
 }
 
-header .container{
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+}
+
+.logo-container{
 display:flex;
 align-items:center;
-justify-content:space-between;
+gap:12px;
 }
 
-header img{
+.logo-container img{
 height:50px;
 width:auto;
 display:block;
 }
 
-header h1{
-font-size:28px;
+.logo-text h1{
 margin:0;
+font-size:26px;
 color:white;
 }
 
-header p{
+.logo-text p{
 margin:0;
 font-size:13px;
 color:#9ca3af;
 }
 
-/* ===== LOGO + HEADER REFINEMENT ===== */
-
-header {
-  padding: 8px 0; /* reduce vertical space */
+nav{
+margin:0;
 }
 
-header .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+nav a{
+color:#ccc;
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
 }
 
-header .logo-container img {
-  width: 120px; /* make logo larger */
-  height: auto; /* maintain aspect ratio */
-  object-fit: contain;
-}
-
-header .logo-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-header .logo-text h1 {
-  font-size: 26px;
-  margin: 0;
-  color: #fff;
-}
-
-header .logo-text p {
-  font-size: 12px;
-  margin: 0;
-  color: #ccc;
-}
-
-nav {
-  margin-top: 6px; /* tighten nav spacing */
+nav a:hover{
+color:#00b4d8;
 }
