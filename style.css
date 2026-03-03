@@ -441,3 +441,43 @@ margin:0;
 font-size:13px;
 color:#9ca3af;
 }
+
+/* ===== LOGO + HEADER REFINEMENT ===== */
+
+header {
+  padding: 8px 0; /* reduce vertical space */
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .logo-container img {
+  width: 120px; /* make logo larger */
+  height: auto; /* maintain aspect ratio */
+  object-fit: contain;
+}
+
+header .logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .logo-text h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #fff;
+}
+
+header .logo-text p {
+  font-size: 12px;
+  margin: 0;
+  color: #ccc;
+}
+
+nav {
+  margin-top: 6px; /* tighten nav spacing */
+}
