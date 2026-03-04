@@ -1017,3 +1017,60 @@ color:#cbd5e1;
 font-size:18px;
 margin-bottom:30px;
 }
+
+
+/* =============================
+   BILLION DOLLAR PORTAL TRUST BAR
+============================= */
+
+.billion-trust-strip{
+background:#020617;
+color:#cbd5e1;
+padding:16px 0;
+font-size:14px;
+}
+
+.billion-trust-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:20px;
+text-align:center;
+}
+
+/* =============================
+   BILLION LEVEL HERO POLISH
+============================= */
+
+#hero{
+border-bottom-left-radius:60px;
+border-bottom-right-radius:60px;
+box-shadow:0 25px 70px rgba(0,0,0,0.18);
+}
+
+/* =============================
+   BILLION LEVEL CARD POLISH
+============================= */
+
+.broker-card,
+.feature-card,
+.quantum-card{
+border-radius:24px;
+transition:0.4s ease;
+}
+
+.broker-card:hover,
+.feature-card:hover,
+.quantum-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* =============================
+   BILLION LEVEL FOOTER AUTHORITY
+============================= */
+
+footer{
+background:linear-gradient(135deg,#0a1f44,#020617);
+padding:60px 20px;
+}
