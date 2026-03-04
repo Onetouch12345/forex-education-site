@@ -1074,3 +1074,52 @@ footer{
 background:linear-gradient(135deg,#0a1f44,#020617);
 padding:60px 20px;
 }
+/* ===== HEADER FIXED PROFESSIONAL BRAND BAR ===== */
+
+.portal-header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.portal-brand{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.portal-brand img{
+    height:85px;
+    width:auto;
+    border-radius:14px;
+    display:block;
+}
+
+.portal-brand-text h1{
+    margin:0;
+    color:white;
+    font-size:32px;
+}
+
+.portal-brand-text small{
+    color:#cfd8dc;
+    font-size:14px;
+}
+
+.portal-nav-clean{
+    margin-top:15px;
+}
+
+.portal-nav-clean a{
+    color:#cfd8dc;
+    margin:0 18px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.portal-nav-clean a:hover{
+    color:#00b4d8;
+}
