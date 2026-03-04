@@ -5,28 +5,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ForexEdu Institutional Intelligence Portal</title>
+<title>ForexEdu | Global Institutional Trading Education Portal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===============================
-GLOBAL LUXURY FINTECH STYLE
-================================ */
+/* GLOBAL MASTER STYLE */
 
 body{
     margin:0;
-    font-family:Inter, sans-serif;
-    background: linear-gradient(135deg,#020617,#0f172a,#020617);
+    font-family:Inter,sans-serif;
+    background: radial-gradient(circle at top,#020617,#0f172a,#020617);
     color:white;
 }
 
-/* Container */
+/* CONTAINER */
 
 .container{
-    width:90%;
-    max-width:1200px;
+    width:92%;
+    max-width:1280px;
     margin:auto;
 }
 
@@ -39,57 +37,60 @@ body{
 }
 
 .portal-logo img{
-    height:55px;
-    border-radius:12px;
+    height:60px;
+    border-radius:14px;
 }
 
-.portal-platform-title{
-    font-size:22px;
+.portal-title{
+    font-size:24px;
     font-weight:700;
     margin-top:10px;
 }
 
-.portal-nav-row{
+.portal-nav{
     margin-top:25px;
 }
 
-.portal-nav-row a{
+.portal-nav a{
     color:#cbd5f5;
     text-decoration:none;
     margin-right:25px;
-    font-size:15px;
     transition:.3s;
+    font-size:15px;
 }
 
-.portal-nav-row a:hover{
+.portal-nav a:hover{
     color:#60a5fa;
 }
 
-/* HERO LUXURY BANNER */
+/* HERO CINEMATIC BANNER */
 
-.hero-god-banner{
-    padding:120px 0;
+.hero-section{
+    padding:140px 0;
+    text-align:left;
 }
 
-.hero-text h1{
-    font-size:52px;
+.hero-section h1{
+    font-size:60px;
     font-weight:700;
     background: linear-gradient(90deg,#60a5fa,#a5b4fc);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    line-height:1.1;
 }
 
-.hero-text p{
-    max-width:600px;
+.hero-section p{
+    max-width:650px;
     color:#cbd5f5;
+    font-size:18px;
     line-height:1.7;
 }
 
 /* BUTTONS */
 
 .btn{
-    padding:15px 28px;
-    border-radius:12px;
+    padding:16px 32px;
+    border-radius:14px;
     text-decoration:none;
     font-weight:600;
     display:inline-block;
@@ -104,112 +105,76 @@ body{
 .btn-outline{
     border:1px solid rgba(255,255,255,.2);
     color:white;
-    margin-left:15px;
+    margin-left:18px;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
-/* TRUST STRIP */
+/* TRUST INTELLIGENCE STRIP */
 
-.billion-trust-strip{
+.trust-strip{
     border-top:1px solid rgba(255,255,255,.05);
     border-bottom:1px solid rgba(255,255,255,.05);
-    padding:25px 0;
-}
-
-.billion-trust-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    padding:30px 0;
     text-align:center;
-    color:#cbd5f5;
+    color:#94a3b8;
 }
 
-/* SECTIONS */
+/* EDUCATION GRID */
 
-.section-block{
-    padding:90px 0;
-}
-
-.section-title{
-    font-size:38px;
-    font-weight:700;
-    margin-bottom:60px;
-    text-align:center;
-}
-
-/* FEATURE CARDS */
-
-.feature-grid{
+.education-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    padding:100px 0;
 }
 
-.feature-card{
-    padding:35px;
-    border-radius:24px;
+.card{
+    padding:40px;
+    border-radius:26px;
     background:rgba(255,255,255,.03);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(22px);
     border:1px solid rgba(255,255,255,.05);
     transition:.4s;
 }
 
-.feature-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 25px 60px rgba(0,0,0,.4);
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
 
-.feature-card h3{
+.card h3{
     color:#93c5fd;
 }
 
-/* BROKER REFERENCES */
+/* BROKER PANEL */
 
 .broker-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
-}
-
-.broker-card{
-    padding:35px;
-    border-radius:24px;
-    background:rgba(255,255,255,.03);
-    backdrop-filter: blur(20px);
-    border:1px solid rgba(255,255,255,.05);
-}
-
-.broker-card h3{
-    color:#60a5fa;
-}
-
-.broker-btn{
-    display:inline-block;
-    margin-top:25px;
-    color:#93c5fd;
-    text-decoration:none;
+    gap:40px;
+    padding-bottom:100px;
 }
 
 /* FOOTER */
 
-.portal-footer{
-    padding:60px 0;
-    border-top:1px solid rgba(255,255,255,.05);
+footer{
+    padding:70px 0;
     text-align:center;
+    border-top:1px solid rgba(255,255,255,.05);
 }
 
-.portal-footer a{
+footer a{
     color:#60a5fa;
     text-decoration:none;
-    margin:0 8px;
+    margin:0 10px;
 }
 
 .footer-note{
     color:#64748b;
-    margin-top:20px;
+    margin-top:25px;
     font-size:14px;
 }
 
@@ -224,11 +189,11 @@ body{
 <img src="images/fx-logo.jpg">
 </div>
 
-<div class="portal-platform-title">
-ForexEdu Institutional Intelligence Portal
+<div class="portal-title">
+ForexEdu Global Institutional Education Portal
 </div>
 
-<nav class="portal-nav-row">
+<nav class="portal-nav">
 <a href="index.html">Home</a>
 <a href="learn.html">Learn Forex</a>
 <a href="brokers.html">Brokers</a>
@@ -240,106 +205,72 @@ ForexEdu Institutional Intelligence Portal
 
 </header>
 
-<!-- HERO -->
+<section class="hero-section container">
 
-<section class="hero-god-banner container">
-
-<div class="hero-text">
-
-<h1>Professional Financial Trading Education</h1>
+<h1>Institutional Grade Financial Trading Education</h1>
 
 <p>
-Independent research-based learning platform designed for serious traders.
-Explore market psychology, execution quality analysis and structured trading knowledge.
+Build professional trading knowledge using research-based market education,
+behavioral psychology science, and independent broker execution analysis.
 </p>
 
 <div style="margin-top:40px">
 
-<a href="learn.html" class="btn btn-primary">
-Start Institutional Learning
+<a class="btn btn-primary" href="learn.html">
+Start Professional Learning
 </a>
 
-<a href="brokers.html" class="btn btn-outline">
-Compare Trading Brokers
+<a class="btn btn-outline" href="brokers.html">
+Compare Trusted Brokers
 </a>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- TRUST STRIP -->
-
-<div class="billion-trust-strip">
-
-<div class="container billion-trust-grid">
-
-<span>🎓 Professional Trading Education</span>
-<span>📊 Market Intelligence Research</span>
-<span>🧠 Trading Psychology Science</span>
-<span>🔒 Affiliate Transparency Policy</span>
-
+<div class="trust-strip">
+🎓 Professional Trading Education &nbsp; | &nbsp;
+📊 Market Intelligence Research &nbsp; | &nbsp;
+🧠 Trading Psychology Science &nbsp; | &nbsp;
+🔒 Transparent Affiliate Policy
 </div>
 
-</div>
+<section class="container education-grid">
 
-<!-- FEATURES -->
-
-<section class="container section-block">
-
-<h2 class="section-title">
-ForexEdu Learning Intelligence System
-</h2>
-
-<div class="feature-grid">
-
-<div class="feature-card">
+<div class="card">
 <h3>Free Forex Education</h3>
-<p>Beginner → Advanced structured financial learning.</p>
+<p>Structured beginner → advanced financial trading learning system.</p>
 </div>
 
-<div class="feature-card">
-
-<h3>Market Analysis Research</h3>
-
+<div class="card">
+<h3>Market Analysis Intelligence</h3>
 <p>
-Independent insights covering
+Independent execution research of
 :contentReference[oaicite:0]{index=0} and
-:contentReference[oaicite:1]{index=1} execution ecosystem.
+:contentReference[oaicite:1]{index=1}.
 </p>
-
 </div>
 
-<div class="feature-card">
-<h3>Trading Psychology Training</h3>
-<p>Risk management and professional discipline system.</p>
-</div>
-
+<div class="card">
+<h3>Trading Psychology Mastery</h3>
+<p>Risk control science and professional discipline training.</p>
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
-<footer class="portal-footer">
-
-<div class="container">
+<footer>
 
 <p>
 © 2026 ForexEdu Institutional Portal |
 <a href="privacy-policy.html">Privacy Policy</a> |
-<a href="terms-and-conditions.html">Terms of Use</a> |
+<a href="terms.html">Terms of Use</a> |
 <a href="disclaimer.html">Risk Disclaimer</a> |
-<a href="contact.html">Contact</a> |
-<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </p>
 
 <p class="footer-note">
-Forex trading involves high financial risk. ForexEdu is an educational portal only.
+Forex trading involves significant financial risk. Educational content only.
 </p>
-
-</div>
 
 </footer>
 
