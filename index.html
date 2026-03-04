@@ -5,26 +5,227 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ForexEdu | Professional Forex Education Portal</title>
+<title>ForexEdu Institutional Intelligence Portal</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<style>
+
+/* ===============================
+GLOBAL LUXURY FINTECH STYLE
+================================ */
+
+body{
+    margin:0;
+    font-family:Inter, sans-serif;
+    background: linear-gradient(135deg,#020617,#0f172a,#020617);
+    color:white;
+}
+
+/* Container */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.portal-header{
+    padding:25px 0;
+    backdrop-filter: blur(20px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.portal-logo img{
+    height:55px;
+    border-radius:12px;
+}
+
+.portal-platform-title{
+    font-size:22px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.portal-nav-row{
+    margin-top:25px;
+}
+
+.portal-nav-row a{
+    color:#cbd5f5;
+    text-decoration:none;
+    margin-right:25px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.portal-nav-row a:hover{
+    color:#60a5fa;
+}
+
+/* HERO LUXURY BANNER */
+
+.hero-god-banner{
+    padding:120px 0;
+}
+
+.hero-text h1{
+    font-size:52px;
+    font-weight:700;
+    background: linear-gradient(90deg,#60a5fa,#a5b4fc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-text p{
+    max-width:600px;
+    color:#cbd5f5;
+    line-height:1.7;
+}
+
+/* BUTTONS */
+
+.btn{
+    padding:15px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#3b82f6,#6366f1);
+    color:white;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+    margin-left:15px;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* TRUST STRIP */
+
+.billion-trust-strip{
+    border-top:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.05);
+    padding:25px 0;
+}
+
+.billion-trust-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    text-align:center;
+    color:#cbd5f5;
+}
+
+/* SECTIONS */
+
+.section-block{
+    padding:90px 0;
+}
+
+.section-title{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:60px;
+    text-align:center;
+}
+
+/* FEATURE CARDS */
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.feature-card{
+    padding:35px;
+    border-radius:24px;
+    background:rgba(255,255,255,.03);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.05);
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.4);
+}
+
+.feature-card h3{
+    color:#93c5fd;
+}
+
+/* BROKER REFERENCES */
+
+.broker-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.broker-card{
+    padding:35px;
+    border-radius:24px;
+    background:rgba(255,255,255,.03);
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.broker-card h3{
+    color:#60a5fa;
+}
+
+.broker-btn{
+    display:inline-block;
+    margin-top:25px;
+    color:#93c5fd;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+.portal-footer{
+    padding:60px 0;
+    border-top:1px solid rgba(255,255,255,.05);
+    text-align:center;
+}
+
+.portal-footer a{
+    color:#60a5fa;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+.footer-note{
+    color:#64748b;
+    margin-top:20px;
+    font-size:14px;
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header class="portal-header">
-
-<div class="container">
+<header class="portal-header container">
 
 <div class="portal-logo">
-<img src="images/fx-logo.jpg" alt="ForexEdu Logo">
+<img src="images/fx-logo.jpg">
 </div>
 
 <div class="portal-platform-title">
-ForexEdu Institutional Education Portal
+ForexEdu Institutional Intelligence Portal
 </div>
 
 <nav class="portal-nav-row">
@@ -37,36 +238,30 @@ ForexEdu Institutional Education Portal
 <a href="contact.html">Contact</a>
 </nav>
 
-</div>
-
 </header>
 
-<!-- HERO INTELLIGENCE BANNER -->
+<!-- HERO -->
 
-<section class="hero-god-banner">
-
-<div class="container hero-flex">
+<section class="hero-god-banner container">
 
 <div class="hero-text">
 
-<h1>Professional Forex Education Intelligence Platform</h1>
+<h1>Professional Financial Trading Education</h1>
 
 <p>
-Build real trading discipline using structured market education,
-independent broker research, and psychology-based learning.
+Independent research-based learning platform designed for serious traders.
+Explore market psychology, execution quality analysis and structured trading knowledge.
 </p>
 
-<div style="margin-top:30px">
+<div style="margin-top:40px">
 
 <a href="learn.html" class="btn btn-primary">
-Start Professional Learning
+Start Institutional Learning
 </a>
 
 <a href="brokers.html" class="btn btn-outline">
-Compare Trusted Brokers
+Compare Trading Brokers
 </a>
-
-</div>
 
 </div>
 
@@ -74,168 +269,51 @@ Compare Trusted Brokers
 
 </section>
 
-<!-- TRUST ECOSYSTEM STRIP -->
+<!-- TRUST STRIP -->
 
 <div class="billion-trust-strip">
 
 <div class="container billion-trust-grid">
 
 <span>🎓 Professional Trading Education</span>
-<span>📊 Independent Market Research</span>
-<span>🧠 Trading Psychology System</span>
-<span>🔒 Transparent Affiliate Policy</span>
+<span>📊 Market Intelligence Research</span>
+<span>🧠 Trading Psychology Science</span>
+<span>🔒 Affiliate Transparency Policy</span>
 
 </div>
 
 </div>
 
-<!-- CORE EDUCATION FEATURES -->
+<!-- FEATURES -->
 
 <section class="container section-block">
 
-<h2 class="section-title center">
+<h2 class="section-title">
 ForexEdu Learning Intelligence System
 </h2>
 
-<div class="feature-grid small-card-grid">
+<div class="feature-grid">
 
-<div class="feature-card small">
-<h3>📚 Structured Forex Education</h3>
-<p>Beginner → Advanced professional trading knowledge.</p>
+<div class="feature-card">
+<h3>Free Forex Education</h3>
+<p>Beginner → Advanced structured financial learning.</p>
 </div>
 
-<div class="feature-card small">
-<h3>📊 Market Analysis Research</h3>
-<p>Forex, Gold and Crypto market intelligence insights.</p>
-</div>
+<div class="feature-card">
 
-<div class="feature-card small">
-<h3>🏛 Broker Execution Review</h3>
+<h3>Market Analysis Research</h3>
 
 <p>
-Independent research of
-:contentReference[oaicite:0]{index=0},
-:contentReference[oaicite:1]{index=1},
-and other regulated platforms.
+Independent insights covering
+:contentReference[oaicite:0]{index=0} and
+:contentReference[oaicite:1]{index=1} execution ecosystem.
 </p>
 
 </div>
 
-<div class="feature-card small">
-<h3>🧠 Trading Psychology Mastery</h3>
-<p>Risk control and professional trading mindset training.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- KNOWLEDGE HUB -->
-
-<section class="container section-block dashboard-hub">
-
-<h2 class="section-title center">
-ForexEdu Knowledge Intelligence Hub
-</h2>
-
-<div class="quantum-trust-grid">
-
-<div class="quantum-trust-item">📘 Professional Blog Research</div>
-<div class="quantum-trust-item">📊 Broker Market Execution Study</div>
-<div class="quantum-trust-item">🧠 Behavioral Trading Science</div>
-<div class="quantum-trust-item">🔒 Affiliate Transparency Disclosure</div>
-
-</div>
-
-<p class="quantum-description center">
-Trading is a professional financial discipline requiring structured learning,
-risk management and psychological control. Explore research-based educational content.
-</p>
-
-<div class="center" style="margin-top:50px">
-<a href="blog.html" class="btn btn-primary">
-Explore More Educational Articles →
-</a>
-</div>
-
-</section>
-
-<!-- LATEST EDUCATIONAL ARTICLES -->
-
-<section class="container section-block">
-
-<h2 class="section-title center">
-Latest Educational Intelligence Articles
-</h2>
-
-<div class="broker-grid">
-
-<div class="broker-card">
-<h3>Best Forex Broker 2026</h3>
-<p>Independent broker research and execution analysis.</p>
-<a href="blog/best-forex-broker-2026.html">
-Read Article →
-</a>
-</div>
-
-<div class="broker-card">
-<h3>Common Trading Mistakes</h3>
-<p>Psychology and risk management errors traders make.</p>
-<a href="common-trading-mistakes-to-avoid.html">
-Read Article →
-</a>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:40px">
-
-<a href="blog.html" class="btn btn-outline">
-📖 More Professional Educational Content
-</a>
-
-</div>
-
-</section>
-
-<!-- BROKER RESEARCH PANEL -->
-
-<section class="recommended-brokers container section-block">
-
-<h2 class="section-title center">
-Recommended Trading Platforms
-</h2>
-
-<div class="broker-grid">
-
-<div class="broker-card">
-
-<h3>XM Global</h3>
-
-<p>
-Institutional trading conditions from
-:contentReference[oaicite:2]{index=2}.
-</p>
-
-<a href="https://affs.click/ryTLn" target="_blank" class="broker-btn">
-Open Account
-</a>
-
-</div>
-
-<div class="broker-card">
-
-<h3>IC Markets</h3>
-
-<p>
-Raw spread execution trading environment from
-:contentReference[oaicite:3]{index=3}.
-</p>
-
-<a href="https://icmarkets.com/?camp=90095" target="_blank" class="broker-btn">
-Open Account
-</a>
-
+<div class="feature-card">
+<h3>Trading Psychology Training</h3>
+<p>Risk management and professional discipline system.</p>
 </div>
 
 </div>
@@ -246,7 +324,7 @@ Open Account
 
 <footer class="portal-footer">
 
-<div class="container footer-core">
+<div class="container">
 
 <p>
 © 2026 ForexEdu Institutional Portal |
@@ -258,7 +336,7 @@ Open Account
 </p>
 
 <p class="footer-note">
-Forex trading involves risk. ForexEdu is an educational platform and does not guarantee financial returns.
+Forex trading involves high financial risk. ForexEdu is an educational portal only.
 </p>
 
 </div>
