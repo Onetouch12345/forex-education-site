@@ -1,22 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact Us - ForexEdu</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+
+<title>Contact ForexEdu | Professional Support</title>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style>
+
+/* ===============================
+ENTERPRISE GRADIENT BACKGROUND
+================================ */
+
+body{
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(-45deg,#0f172a,#1e3a8a,#312e81,#0f172a);
+    background-size:400% 400%;
+    animation:gradientMove 15s ease infinite;
+    padding:40px;
+    color:white;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* ===============================
+CONTACT CONTAINER
+================================ */
+
+.contact-container{
+    max-width:720px;
+    margin:auto;
+    padding:60px;
+    border-radius:24px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.08);
+    box-shadow:0 40px 80px rgba(0,0,0,0.4);
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+.contact-container h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+/* ===============================
+FORM FIELDS
+================================ */
+
+.form-group{
+    position:relative;
+    margin-bottom:35px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+/* Floating Labels */
+
+.form-group label{
+    position:absolute;
+    left:18px;
+    top:18px;
+    color:rgba(255,255,255,.6);
+    transition:.3s;
+    pointer-events:none;
+    padding:0 6px;
+    background:transparent;
+}
+
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label{
+    top:-10px;
+    font-size:12px;
+    background:#1e3a8a;
+    border-radius:6px;
+    color:#60a5fa;
+}
+
+/* Character Counter */
+
+.char-counter{
+    text-align:right;
+    font-size:12px;
+    color:rgba(255,255,255,0.6);
+}
+
+/* Button */
+
+button{
+    width:100%;
+    padding:16px;
+    border-radius:14px;
+    border:none;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    background:linear-gradient(90deg,#3b82f6,#6366f1);
+    color:white;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(59,130,246,.5);
+}
+
+/* Spinner */
+
+.spinner{
+    display:none;
+    width:20px;
+    height:20px;
+    border:3px solid white;
+    border-top:3px solid transparent;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:auto;
+}
+
+@keyframes spin{
+    100%{transform:rotate(360deg)}
+}
+
+/* Success Popup */
+
+.success-popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    background:linear-gradient(135deg,#1e3a8a,#312e81);
+    padding:50px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 40px 100px rgba(0,0,0,.6);
+    transition:.3s;
+}
+
+.success-popup.active{
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.success-popup button{
+    margin-top:20px;
+    background:linear-gradient(90deg,#22c55e,#16a34a);
+}
+
+</style>
 </head>
+
 <body>
-<header class="main-header">
-<h1>Contact Us</h1>
-</header>
 
-<main class="container">
-<p>Email: moiznmaiz@gmail.com</p>
-<p>Instagram: <a href="https://instagram.com/trust4thebest">trust4thebest</a></p>
-</main>
+<div class="contact-container">
+<h2>Let Us Know!</h2>
 
-<footer class="main-footer">
-<p>© 2026 ForexEdu</p>
-</footer>
+<form id="contactForm"
+action="https://formspree.io/f/mdalqrdg"
+method="POST">
+
+<div class="form-group">
+<input type="text" name="name" placeholder=" " required>
+<label>Name</label>
+</div>
+
+<div class="form-group">
+<input type="email" name="email" placeholder=" " required>
+<label>Email</label>
+</div>
+
+<div class="form-group">
+<select name="subject" required>
+<option value="" disabled selected>Select Subject</option>
+<option>Website Feedback</option>
+<option>Feature Request</option>
+<option>Help Request</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<textarea name="message" id="message" maxlength="500" placeholder=" " required></textarea>
+<label>Message</label>
+
+<div class="char-counter">
+<span id="charCount">0</span>/500
+</div>
+</div>
+
+<!-- Honeypot Spam Protection -->
+<input type="text" name="_gotcha" style="display:none">
+
+<!-- Google reCAPTCHA -->
+<div class="g-recaptcha"
+data-sitekey="6Le08n8sAAAAAMBaNrs7ffZhNznNBTZoXQLDRXNl"></div>
+
+<button type="submit">Submit Message</button>
+
+</form>
+</div>
+
+<!-- Success Popup -->
+<div class="success-popup" id="successPopup">
+<h3>✅ Message Sent!</h3>
+<p>We will respond within 24–48 hours.</p>
+<button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+
+/* Character Counter */
+const message=document.getElementById("message");
+const charCount=document.getElementById("charCount");
+
+message.addEventListener("input",()=>{
+charCount.textContent=message.value.length;
+});
+
+/* Form Submit Logic */
+const form=document.getElementById("contactForm");
+const popup=document.getElementById("successPopup");
+
+form.addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+const response=await fetch(form.action,{
+method:form.method,
+body:new FormData(form),
+headers:{'Accept':'application/json'}
+});
+
+if(response.ok){
+form.reset();
+popup.classList.add("active");
+}
+
+});
+
+function closePopup(){
+popup.classList.remove("active");
+}
+
+</script>
+
 </body>
 </html>
