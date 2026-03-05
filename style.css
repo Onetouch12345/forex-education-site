@@ -50,10 +50,12 @@ gap:10px;
 
 /* LOGO FIX */
 .brand img{
-height:24px;
+height:28px;   /* balanced with title */
 width:auto;
+display:block;
 border-radius:6px;
 }
+
 
 /* BRAND TEXT */
 
@@ -293,3 +295,4 @@ font-size:30px;
 }
 
 }
+
