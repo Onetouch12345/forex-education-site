@@ -1,27 +1,35 @@
+/* =====================================================
+   ForexEdu Global Design System
+   Stable Multi-Page Layout Version
+   ===================================================== */
+
+
 /* ===============================
-   GLOBAL STYLES
+   RESET
 ================================ */
 
-body{
+*{
 margin:0;
-font-family:'Segoe UI',sans-serif;
-background:#f4f6f9;
-color:#222;
+padding:0;
+box-sizing:border-box;
 }
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#0c0f1a;
+color:#e6ecff;
+line-height:1.6;
+}
+
+
+/* ===============================
+   CONTAINER
+================================ */
 
 .container{
+width:90%;
 max-width:1200px;
 margin:auto;
-padding:0 20px;
-}
-
-h1,h2,h3{
-margin-bottom:15px;
-}
-
-section{
-padding:80px 20px;
-text-align:center;
 }
 
 
@@ -30,71 +38,67 @@ text-align:center;
 ================================ */
 
 header{
-background:#0d1b2a;
-padding:10px 0;
-border-bottom:1px solid rgba(255,255,255,0.05);
+background:#0e1425;
+border-bottom:1px solid #1e2747;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header .container{
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar{
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+padding:15px 0;
 flex-wrap:wrap;
 }
 
-.brand{
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo{
 display:flex;
 align-items:center;
-gap:12px;
-}
-
-/* ===== FOREXEDU HEADER LOGO FIX ===== */
-
-header h1{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:28px;
+font-size:26px;
 font-weight:700;
-color:white;
+color:#ffffff;
+letter-spacing:1px;
 }
 
-header h1 img{
-height:40px;
+.logo img{
+height:34px;
 width:auto;
-vertical-align:middle;
-}
-/* BRAND TEXT */
-
-.portal-brand-text h1{
-font-size:36px;
-margin:0;
-color:white;
-font-weight:700;
+margin-right:10px;
+object-fit:contain;
 }
 
-.brand-text span{
-font-size:10px;
-color:#bbb;
-}
 
-/* NAVIGATION */
+/* ===============================
+   NAVIGATION LINKS
+================================ */
 
-nav{
+.nav-links{
 display:flex;
-gap:20px;
 flex-wrap:wrap;
+gap:20px;
 }
 
-nav a{
-color:#ccc;
+.nav-links a{
 text-decoration:none;
-font-weight:600;
-font-size:14px;
+color:#cfd6ff;
+font-size:15px;
+transition:0.3s;
 }
 
-nav a:hover{
-color:#00b4d8;
+.nav-links a:hover{
+color:#4ea1ff;
 }
 
 
@@ -102,161 +106,226 @@ color:#00b4d8;
    HERO SECTION
 ================================ */
 
-#hero{
-background:linear-gradient(120deg,#0d6efd,#001f3f);
-color:white;
-padding:110px 20px;
+.hero{
+padding:80px 0;
+text-align:center;
 }
 
-#hero h2{
-font-size:42px;
-font-weight:700;
+.hero h1{
+font-size:38px;
+margin-bottom:20px;
 }
 
-#hero p{
-font-size:18px;
+.hero p{
 max-width:700px;
-margin:20px auto;
+margin:auto;
+margin-bottom:30px;
+font-size:18px;
+color:#aab2d6;
 }
+
+
+/* ===============================
+   BUTTONS
+================================ */
 
 .btn{
-padding:14px 28px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
 display:inline-block;
-margin:10px;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+background:#2b72ff;
+color:#fff;
 transition:0.3s;
 }
 
-.btn-primary{
-background:#28a745;
-color:white;
-}
-
-.btn-primary:hover{
-background:#1e7e34;
-}
-
-.btn-outline{
-border:2px solid white;
-color:white;
-}
-
-.btn-outline:hover{
-background:white;
-color:#001f3f;
+.btn:hover{
+background:#1f57cc;
 }
 
 
 /* ===============================
-   TRUST BAR
+   SECTION
 ================================ */
 
-.trust-bar{
-background:#001f3f;
-color:white;
-padding:18px;
-font-size:14px;
+.section{
+padding:70px 0;
+}
+
+.section-title{
+font-size:30px;
+margin-bottom:40px;
+text-align:center;
 }
 
 
 /* ===============================
-   BROKER SECTION
+   CARD GRID
 ================================ */
 
-.recommended-brokers{
-background:white;
-}
-
-.broker-grid{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-margin-top:50px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.broker-card{
-background:#fff;
-padding:35px;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+.card{
+background:#12172b;
+padding:25px;
+border-radius:8px;
+border:1px solid #1e2747;
 transition:0.3s;
 }
 
-.broker-card:hover{
-transform:translateY(-6px);
+.card:hover{
+transform:translateY(-5px);
+border-color:#2b72ff;
 }
 
-.broker-card h3{
+.card h3{
 margin-bottom:10px;
 }
 
+.card p{
+font-size:14px;
+color:#aab2d6;
+}
+
+
+/* ===============================
+   BLOG GRID
+================================ */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.blog-card{
+background:#12172b;
+border-radius:8px;
+overflow:hidden;
+border:1px solid #1e2747;
+}
+
+.blog-content{
+padding:20px;
+}
+
+.blog-content h3{
+margin-bottom:10px;
+}
+
+.blog-content p{
+font-size:14px;
+color:#aab2d6;
+}
+
+
+/* ===============================
+   TABLES
+================================ */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+th{
+background:#1b2140;
+padding:12px;
+text-align:left;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #1e2747;
+}
+
+tr:hover{
+background:#12172b;
+}
+
+
+/* ===============================
+   BROKER TABLE
+================================ */
+
+.broker-table{
+overflow-x:auto;
+}
+
 .broker-btn{
-margin-top:20px;
-display:inline-block;
-padding:12px 22px;
-background:#0d6efd;
-color:white;
-border-radius:6px;
+background:#2b72ff;
+padding:8px 15px;
+border-radius:5px;
 text-decoration:none;
-font-weight:600;
+color:#fff;
+font-size:14px;
 }
 
 .broker-btn:hover{
-background:#084298;
+background:#1f57cc;
 }
 
 
 /* ===============================
-   FEATURES
+   ROADMAP SECTION
 ================================ */
 
-#features{
-background:#f4f6f9;
-}
-
-.feature-grid{
+.roadmap{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-.feature-card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-transition:0.25s;
+.roadmap-step{
+background:#12172b;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e2747;
 }
 
-.feature-card:hover{
-transform:translateY(-5px);
+.roadmap-step h4{
+margin-bottom:10px;
 }
 
 
 /* ===============================
-   BLOG SECTION
+   FEATURE LIST
 ================================ */
 
-.blog-preview{
-background:white;
-padding:25px;
-margin:20px auto;
-max-width:800px;
-border-radius:10px;
-text-align:left;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
-.blog-preview a{
-color:#0d6efd;
-text-decoration:none;
+.feature{
+background:#12172b;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e2747;
+text-align:center;
 }
 
-.blog-preview a:hover{
-text-decoration:underline;
+
+/* ===============================
+   CTA SECTION
+================================ */
+
+.cta{
+background:#111633;
+padding:60px 20px;
+text-align:center;
+border-top:1px solid #1e2747;
+border-bottom:1px solid #1e2747;
+}
+
+.cta h2{
+margin-bottom:20px;
 }
 
 
@@ -265,21 +334,38 @@ text-decoration:underline;
 ================================ */
 
 footer{
-background:#111;
-color:#bbb;
-padding:40px 20px;
-font-size:14px;
-text-align:center;
+background:#0e1425;
+padding:40px 0;
+margin-top:60px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+footer h4{
+margin-bottom:15px;
 }
 
 footer a{
-color:#ffc107;
+display:block;
+color:#aab2d6;
 text-decoration:none;
-margin:0 8px;
+margin-bottom:8px;
+font-size:14px;
 }
 
 footer a:hover{
-text-decoration:underline;
+color:#4ea1ff;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+font-size:13px;
+color:#8a92b8;
 }
 
 
@@ -287,145 +373,62 @@ text-decoration:underline;
    RESPONSIVE
 ================================ */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-header .container{
+.navbar{
 flex-direction:column;
-align-items:flex-start;
+gap:10px;
 }
 
-nav{
-margin-top:10px;
-}
-
-#hero h2{
+.hero h1{
 font-size:30px;
 }
 
+.section-title{
+font-size:24px;
 }
 
-/* BROKER COMPARISON TABLE */
-
-.broker-comparison{
-background:#f4f6f9;
-padding:80px 20px;
 }
 
-.broker-table{
-width:100%;
-border-collapse:collapse;
-margin-top:40px;
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+
+@media(max-width:600px){
+
+.logo{
+font-size:22px;
 }
 
-.broker-table th{
-background:#0d1b2a;
-color:white;
-padding:14px;
-font-size:14px;
+.logo img{
+height:28px;
 }
 
-.broker-table td{
-padding:14px;
-border-bottom:1px solid #eee;
-font-size:14px;
+.hero{
+padding:50px 10px;
 }
 
-.broker-table tr:hover{
-background:#f9fbfd;
+.hero p{
+font-size:16px;
 }
 
-.table-btn{
-background:#0d6efd;
-color:white;
-padding:8px 14px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
+.btn{
+padding:10px 18px;
 }
 
-.table-btn:hover{
-background:#084298;
 }
+
 
 /* ===============================
-FOREX BEGINNER LEARNING ROADMAP
+   SMALL VISUAL IMPROVEMENTS
 ================================ */
 
-.learning-roadmap{
-background:#ffffff;
-padding:90px 20px;
-text-align:center;
+img{
+max-width:100%;
+height:auto;
 }
 
-.roadmap-intro{
-max-width:700px;
-margin:auto;
-color:#475569;
-font-size:17px;
-margin-bottom:50px;
+a{
+transition:0.3s;
 }
 
-.roadmap-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+ul{
+list-style:none;
 }
-
-.roadmap-step{
-background:#f8fafc;
-padding:35px;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:0.35s;
-}
-
-.roadmap-step:hover{
-transform:translateY(-6px);
-}
-
-.roadmap-step span{
-display:inline-block;
-background:#0d6efd;
-color:white;
-padding:6px 12px;
-border-radius:6px;
-font-size:13px;
-margin-bottom:15px;
-}
-
-.roadmap-step h3{
-margin-bottom:10px;
-}
-
-.roadmap-step a{
-display:inline-block;
-margin-top:15px;
-color:#0d6efd;
-font-weight:600;
-text-decoration:none;
-}
-
-.roadmap-step a:hover{
-text-decoration:underline;
-}
-/* ===== FOREXEDU HEADER LOGO FIX ===== */
-
-header h1{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:28px;
-font-weight:700;
-color:white;
-}
-
-header h1 img{
-height:40px;
-width:auto;
-vertical-align:middle;
-}
-
