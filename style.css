@@ -61,8 +61,10 @@ border-radius:6px;
 
 .brand-text h1{
 margin:0;
-font-size:20px;
+font-size:26px;
 color:white;
+font-weight:700;
+}
 }
 
 .brand-text span{
@@ -74,7 +76,7 @@ color:#bbb;
 
 nav{
 display:flex;
-gap:18px;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -295,4 +297,5 @@ font-size:30px;
 }
 
 }
+
 
