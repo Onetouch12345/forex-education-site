@@ -1077,8 +1077,8 @@ padding:60px 20px;
 /* ---- PREMIUM HEADER LOGO FIX ---- */
 
 .portal-brand img {
-    height: 60px; /* balanced visibility */
-    max-width: 240px; /* prevents oversize */
+    height: 20px; /* balanced visibility */
+    max-width: 80px; /* prevents oversize */
     width: auto;
     border-radius: 8px;
     transition: 0.3s ease;
@@ -1100,3 +1100,4 @@ padding:60px 20px;
     color: #cfd8dc;
     font-size: 13px;
 }
+
