@@ -1170,5 +1170,123 @@ width:45%;
 }
 
 }
+/* ================================
+FOREXEDU BILLION DOLLAR HEADER
+================================ */
+
+.forexedu-header{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:linear-gradient(90deg,#0a0f1c,#0f1b34);
+
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+
+transition:all .3s ease;
+}
+
+/* Container */
+
+.header-container{
+max-width:1250px;
+margin:auto;
+padding:12px 20px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+/* Logo */
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+height:34px;
+width:auto;
+}
+
+.brand-text h1{
+margin:0;
+font-size:22px;
+color:white;
+font-weight:700;
+}
+
+.brand-text span{
+font-size:11px;
+color:#94a3b8;
+}
+
+/* Navigation */
+
+.main-nav{
+display:flex;
+gap:18px;
+flex:1;
+justify-content:center;
+}
+
+.main-nav a{
+text-decoration:none;
+color:#cbd5e1;
+font-size:14px;
+font-weight:600;
+padding:8px 14px;
+border-radius:6px;
+transition:all .25s ease;
+}
+
+/* Hover */
+
+.main-nav a:hover{
+background:#00e5ff;
+color:#000;
+}
+
+/* CTA Button */
+
+.header-cta .cta-btn{
+
+background:linear-gradient(135deg,#00e5ff,#00b4ff);
+
+color:#000;
+font-weight:700;
+
+padding:10px 16px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+transition:.25s;
+}
+
+.cta-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 5px 15px rgba(0,229,255,.4);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.header-container{
+flex-direction:column;
+}
+
+.main-nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
 
 
