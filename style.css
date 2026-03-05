@@ -45,26 +45,26 @@ flex-wrap:wrap;
 .brand{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
-/* LOGO FIX */
-.brand img{
-height:28px;   /* balanced with title */
+/* ===== FOREXEDU LOGO FINAL FIX ===== */
+
+.portal-brand img{
+height:36px;           /* equal visual height to ForexEdu title */
 width:auto;
+max-width:none;        /* remove restriction */
 display:block;
-border-radius:6px;
+object-fit:contain;
 }
-
 
 /* BRAND TEXT */
 
-.brand-text h1{
+.portal-brand-text h1{
+font-size:36px;
 margin:0;
-font-size:26px;
 color:white;
 font-weight:700;
-}
 }
 
 .brand-text span{
@@ -344,4 +344,5 @@ font-weight:600;
 .table-btn:hover{
 background:#084298;
 }
+
 
