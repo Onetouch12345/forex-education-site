@@ -1074,31 +1074,101 @@ footer{
 background:linear-gradient(135deg,#0a1f44,#020617);
 padding:60px 20px;
 }
-/* ---- PREMIUM HEADER LOGO FIX ---- */
+/* =================================
+   FOREXEDU FINAL HEADER FIX
+================================= */
 
-.portal-brand img {
-    height: 20px; /* balanced visibility */
-    max-width: 80px; /* prevents oversize */
-    width: auto;
-    border-radius: 8px;
-    transition: 0.3s ease;
+header{
+background:#0d1b2a;
+padding:12px 0;
 }
 
-.portal-brand img:hover {
-    transform: scale(1.05);
+/* Header Layout */
+
+.portal-header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1200px;
+margin:auto;
+gap:20px;
+flex-wrap:nowrap;
 }
 
-/* brand text refinement */
-.portal-brand-text h1 {
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    font-weight: 100;
+/* Logo + Title */
+
+.portal-brand{
+display:flex;
+align-items:center;
+gap:10px;
+flex-shrink:0;
 }
 
-.portal-brand-text small {
-    color: #cfd8dc;
-    font-size: 13px;
+.portal-brand img{
+height:32px;        /* SMALL CLEAN LOGO */
+width:auto;
+}
+
+.portal-brand-text h1{
+margin:0;
+font-size:24px;
+color:white;
+}
+
+.portal-brand-text small{
+color:#cbd5e1;
+font-size:12px;
+}
+
+/* Navigation Row */
+
+.portal-nav-clean{
+display:flex;
+flex:1;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+
+/* Navigation Buttons */
+
+.portal-nav-clean a{
+flex:1;
+text-align:center;
+padding:12px 10px;
+background:rgba(255,255,255,0.08);
+color:#e2e8f0;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+font-size:15px;
+transition:0.25s ease;
+}
+
+/* Hover */
+
+.portal-nav-clean a:hover{
+background:#00e5ff;
+color:#000;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.portal-header-inner{
+flex-direction:column;
+}
+
+.portal-nav-clean{
+flex-wrap:wrap;
+}
+
+.portal-nav-clean a{
+flex:unset;
+width:45%;
+}
+
 }
 
 
