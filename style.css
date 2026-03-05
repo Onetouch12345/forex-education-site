@@ -406,4 +406,25 @@ text-decoration:none;
 .roadmap-step a:hover{
 text-decoration:underline;
 }
+/* =========================================================
+   FOREXEDU LOGO FINAL FIX
+   ========================================================= */
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-container img{
+height:40px;   /* same visual height as ForexEdu title */
+width:auto;
+object-fit:contain;
+}
+
+.logo-container span{
+font-size:40px;
+font-weight:800;
+letter-spacing:1px;
+}
 
