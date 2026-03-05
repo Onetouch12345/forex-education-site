@@ -48,16 +48,22 @@ align-items:center;
 gap:12px;
 }
 
-/* ===== FOREXEDU LOGO FINAL FIX ===== */
+/* ===== FOREXEDU HEADER LOGO FIX ===== */
 
-.portal-brand img{
-height:36px;           /* equal visual height to ForexEdu title */
-width:auto;
-max-width:none;        /* remove restriction */
-display:block;
-object-fit:contain;
+header h1{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:28px;
+font-weight:700;
+color:white;
 }
 
+header h1 img{
+height:40px;
+width:auto;
+vertical-align:middle;
+}
 /* BRAND TEXT */
 
 .portal-brand-text h1{
@@ -406,52 +412,4 @@ text-decoration:none;
 .roadmap-step a:hover{
 text-decoration:underline;
 }
-/* =========================================================
-   FOREXEDU LOGO FINAL FIX
-   ========================================================= */
-
-.logo-container{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo-container img{
-height:40px;   /* same visual height as ForexEdu title */
-width:auto;
-object-fit:contain;
-}
-
-.logo-container span{
-font-size:40px;
-font-weight:800;
-letter-spacing:1px;
-}
-/* ===== FOREXEDU PREMIUM LOGO SYSTEM ===== */
-
-.logo-container{
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-/* LOGO IMAGE */
-.logo-container img{
-height:68px;   /* perfect readable size */
-width:auto;
-object-fit:contain;
-}
-
-/* FOREXEDU TEXT */
-.logo-container span{
-font-size:34px;
-font-weight:800;
-letter-spacing:0.5px;
-
-/* Premium fintech gradient */
-background:linear-gradient(90deg,#00c6ff,#0072ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
 
