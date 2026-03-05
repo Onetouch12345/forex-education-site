@@ -412,4 +412,20 @@ text-decoration:none;
 .roadmap-step a:hover{
 text-decoration:underline;
 }
+/* ===== FOREXEDU HEADER LOGO FIX ===== */
+
+header h1{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:28px;
+font-weight:700;
+color:white;
+}
+
+header h1 img{
+height:40px;
+width:auto;
+vertical-align:middle;
+}
 
