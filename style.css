@@ -437,7 +437,7 @@ gap:12px;
 
 /* LOGO IMAGE */
 .logo-container img{
-height:48px;   /* perfect readable size */
+height:68px;   /* perfect readable size */
 width:auto;
 object-fit:contain;
 }
@@ -453,4 +453,5 @@ background:linear-gradient(90deg,#00c6ff,#0072ff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
+
 
