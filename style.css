@@ -427,4 +427,30 @@ font-size:40px;
 font-weight:800;
 letter-spacing:1px;
 }
+/* ===== FOREXEDU PREMIUM LOGO SYSTEM ===== */
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+/* LOGO IMAGE */
+.logo-container img{
+height:48px;   /* perfect readable size */
+width:auto;
+object-fit:contain;
+}
+
+/* FOREXEDU TEXT */
+.logo-container span{
+font-size:34px;
+font-weight:800;
+letter-spacing:0.5px;
+
+/* Premium fintech gradient */
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
