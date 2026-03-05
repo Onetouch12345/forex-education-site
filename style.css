@@ -1,434 +1,317 @@
-/* =====================================================
-   ForexEdu Global Design System
-   Stable Multi-Page Layout Version
-   ===================================================== */
+/* ================= GLOBAL RESET ================= */
 
-
-/* ===============================
-   RESET
-================================ */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0c0f1a;
-color:#e6ecff;
-line-height:1.6;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1f2937;
+  line-height: 1.6;
 }
 
-
-/* ===============================
-   CONTAINER
-================================ */
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
+a {
+  text-decoration: none;
 }
 
+/* ================= HEADER ================= */
 
-/* ===============================
-   HEADER
-================================ */
-
-header{
-background:#0e1425;
-border-bottom:1px solid #1e2747;
-position:sticky;
-top:0;
-z-index:1000;
+header {
+  background: #0a1f44;
+  color: #ffffff;
+  padding: 28px;
+  text-align: center;
 }
 
-
-/* ===============================
-   NAVBAR
-================================ */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 0;
-flex-wrap:wrap;
+.apex-nav {
+  margin-top: 12px;
 }
 
-
-/* ===============================
-   LOGO
-================================ */
-
-.logo{
-display:flex;
-align-items:center;
-font-size:26px;
-font-weight:700;
-color:#ffffff;
-letter-spacing:1px;
+.apex-nav a {
+  color: #ffffff;
+  margin: 0 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.logo img{
-height:34px;
-width:auto;
-margin-right:10px;
-object-fit:contain;
+.apex-nav a:hover {
+  color: #00e5ff;
 }
 
+/* ================= PORTAL GRID ================= */
 
-/* ===============================
-   NAVIGATION LINKS
-================================ */
-
-.nav-links{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+.portal-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 240px;
+  gap: 30px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  align-items: start;
 }
 
-.nav-links a{
-text-decoration:none;
-color:#cfd6ff;
-font-size:15px;
-transition:0.3s;
+/* ================= SIDEBARS ================= */
+
+.sidebar {
+  position: sticky;
+  top: 30px;
+  height: fit-content;
 }
 
-.nav-links a:hover{
-color:#4ea1ff;
+/* Banner Cards */
+
+.banner-card {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
 }
 
-
-/* ===============================
-   HERO SECTION
-================================ */
-
-.hero{
-padding:80px 0;
-text-align:center;
+.banner-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
-.hero h1{
-font-size:38px;
-margin-bottom:20px;
+.banner-card:hover {
+  transform: translateY(-5px);
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
-margin-bottom:30px;
-font-size:18px;
-color:#aab2d6;
+/* ================= MAIN PANEL ================= */
+
+.main-panel {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 28px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.06);
+  min-width: 0;
 }
 
+/* ================= BROKER CARDS ================= */
 
-/* ===============================
-   BUTTONS
-================================ */
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
-background:#2b72ff;
-color:#fff;
-transition:0.3s;
+.broker-banner-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.btn:hover{
-background:#1f57cc;
+.broker-banner {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 22px;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-
-/* ===============================
-   SECTION
-================================ */
-
-.section{
-padding:70px 0;
+.broker-banner:hover {
+  transform: translateY(-6px);
 }
 
-.section-title{
-font-size:30px;
-margin-bottom:40px;
-text-align:center;
+/* Buttons */
+
+.btn-blue {
+  display: inline-block;
+  background: linear-gradient(135deg, #0a58ca, #084298);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-
-/* ===============================
-   CARD GRID
-================================ */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.btn-blue:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
-.card{
-background:#12172b;
-padding:25px;
-border-radius:8px;
-border:1px solid #1e2747;
-transition:0.3s;
+/* ================= TABLE ================= */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 40px;
 }
 
-.card:hover{
-transform:translateY(-5px);
-border-color:#2b72ff;
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
 }
 
-.card h3{
-margin-bottom:10px;
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  font-size: 14px;
+  text-align: center;
 }
 
-.card p{
-font-size:14px;
-color:#aab2d6;
+.comparison-table th {
+  background: #0a1f44;
+  color: #ffffff;
 }
 
-
-/* ===============================
-   BLOG GRID
-================================ */
-
-.blog-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+.comparison-table tr:nth-child(even) {
+  background: #f2f6ff;
 }
 
-.blog-card{
-background:#12172b;
-border-radius:8px;
-overflow:hidden;
-border:1px solid #1e2747;
+.comparison-table tr:hover {
+  background: #eef4ff;
 }
 
-.blog-content{
-padding:20px;
+/* ================= UNDER REVIEW ================= */
+
+.under-review-section {
+  margin-top: 70px;
+  padding: 60px 40px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #0a1f44, #020617);
+  color: #ffffff;
+  text-align: center;
 }
 
-.blog-content h3{
-margin-bottom:10px;
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.blog-content p{
-font-size:14px;
-color:#aab2d6;
+.review-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 20px;
+  border-radius: 18px;
+  font-size: 14px;
 }
 
+/* ================= ZENITH ================= */
 
-/* ===============================
-   TABLES
-================================ */
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:30px;
+.zenith-layer {
+  margin-top: 60px;
+  padding: 60px 40px;
+  border-radius: 50px;
+  background: radial-gradient(circle at top, #020617, #000814, #0a1f44);
+  color: #ffffff;
+  text-align: center;
 }
 
-th{
-background:#1b2140;
-padding:12px;
-text-align:left;
+.zenith-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
 }
 
-td{
-padding:12px;
-border-bottom:1px solid #1e2747;
+.zenith-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 28px;
+  transition: 0.3s ease;
 }
 
-tr:hover{
-background:#12172b;
+.zenith-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
 }
 
-
-/* ===============================
-   BROKER TABLE
-================================ */
-
-.broker-table{
-overflow-x:auto;
+.zenith-index {
+  margin-top: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00e5ff;
 }
 
-.broker-btn{
-background:#2b72ff;
-padding:8px 15px;
-border-radius:5px;
-text-decoration:none;
-color:#fff;
-font-size:14px;
+/* ================= SINGULARITY ================= */
+
+.singularity-layer {
+  margin-top: 60px;
+  padding: 70px 40px;
+  border-radius: 60px;
+  background: radial-gradient(circle at center, #000814, #020617, #0a1f44);
+  color: #ffffff;
+  text-align: center;
 }
 
-.broker-btn:hover{
-background:#1f57cc;
+.singularity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-
-/* ===============================
-   ROADMAP SECTION
-================================ */
-
-.roadmap{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+.singularity-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 20px;
 }
 
-.roadmap-step{
-background:#12172b;
-padding:20px;
-border-radius:8px;
-border:1px solid #1e2747;
+/* ================= RISK DISCLAIMER ================= */
+
+.risk-disclaimer {
+  margin-top: 60px;
+  padding: 50px 30px;
+  background: #111827;
+  color: #d1d5db;
+  border-radius: 25px;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-.roadmap-step h4{
-margin-bottom:10px;
+.risk-disclaimer h2 {
+  color: #00e5ff;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+/* ================= FOOTER ================= */
 
-/* ===============================
-   FEATURE LIST
-================================ */
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+footer {
+  background: #0a1f44;
+  color: #ffffff;
+  text-align: center;
+  padding: 45px;
+  margin-top: 70px;
+  letter-spacing: 1px;
 }
 
-.feature{
-background:#12172b;
-padding:20px;
-border-radius:8px;
-border:1px solid #1e2747;
-text-align:center;
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-panel {
+    padding: 35px;
+  }
 }
 
+@media (max-width: 768px) {
 
-/* ===============================
-   CTA SECTION
-================================ */
+  .apex-nav a {
+    display: inline-block;
+    margin: 8px;
+  }
 
-.cta{
-background:#111633;
-padding:60px 20px;
-text-align:center;
-border-top:1px solid #1e2747;
-border-bottom:1px solid #1e2747;
-}
-
-.cta h2{
-margin-bottom:20px;
-}
-
-
-/* ===============================
-   FOOTER
-================================ */
-
-footer{
-background:#0e1425;
-padding:40px 0;
-margin-top:60px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
-
-footer h4{
-margin-bottom:15px;
-}
-
-footer a{
-display:block;
-color:#aab2d6;
-text-decoration:none;
-margin-bottom:8px;
-font-size:14px;
-}
-
-footer a:hover{
-color:#4ea1ff;
-}
-
-.footer-bottom{
-text-align:center;
-margin-top:30px;
-font-size:13px;
-color:#8a92b8;
-}
-
-
-/* ===============================
-   RESPONSIVE
-================================ */
-
-@media(max-width:900px){
-
-.navbar{
-flex-direction:column;
-gap:10px;
-}
-
-.hero h1{
-font-size:30px;
-}
-
-.section-title{
-font-size:24px;
-}
-
-}
-
-
-@media(max-width:600px){
-
-.logo{
-font-size:22px;
-}
-
-.logo img{
-height:28px;
-}
-
-.hero{
-padding:50px 10px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.btn{
-padding:10px 18px;
-}
-
-}
-
-
-/* ===============================
-   SMALL VISUAL IMPROVEMENTS
-================================ */
-
-img{
-max-width:100%;
-height:auto;
-}
-
-a{
-transition:0.3s;
-}
-
-ul{
-list-style:none;
+  .main-panel {
+    padding: 25px;
+    border-radius: 18px;
+  }
 }
