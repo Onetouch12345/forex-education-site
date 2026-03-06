@@ -731,3 +731,44 @@ font-weight:600;
 .read-more-btn:hover{
 background:#1e7e34;
 }
+
+/* Neutral Broker Comparison CTA */
+
+.broker-cta{
+background:#0d1b2a;
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.broker-cta h2{
+color:white;
+margin-bottom:15px;
+}
+
+.broker-cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:35px;
+color:#d0d6e0;
+}
+
+.broker-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.broker-btn-neutral{
+background:#0d6efd;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.broker-btn-neutral:hover{
+background:#084298;
+}
