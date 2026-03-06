@@ -523,3 +523,31 @@ color:#111;
 .feature-card p{
 color:#555;
 }
+.broker-card,
+.roadmap-step,
+.feature-card{
+transition: all 0.25s ease;
+}
+
+.broker-card:hover,
+.roadmap-step:hover,
+.feature-card:hover{
+transform: translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+section h2{
+font-size:34px;
+font-weight:700;
+margin-bottom:10px;
+color:#0d1b2a;
+}
+
+section p{
+color:#555;
+font-size:16px;
+}
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
