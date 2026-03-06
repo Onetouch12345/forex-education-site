@@ -172,6 +172,21 @@ nav a:hover {color:#00b4d8;}
   padding:20px;
   font-size:14px;
 }
+/* Fix broker section visibility */
+.recommended-brokers{
+position: relative;
+z-index: 1;
+}
+
+.broker-grid{
+position: relative;
+z-index: 2;
+}
+
+/* Ensure sections are not hidden behind header */
+section{
+position: relative;
+}
 
 /* ===== FOOTER ===== */
 footer {
@@ -388,19 +403,3 @@ Each step builds the foundation for long-term success in the global forex market
 
 </body>
 </html>
-
-/* Fix broker section visibility */
-.recommended-brokers{
-position: relative;
-z-index: 1;
-}
-
-.broker-grid{
-position: relative;
-z-index: 2;
-}
-
-/* Ensure sections are not hidden behind header */
-section{
-position: relative;
-}
