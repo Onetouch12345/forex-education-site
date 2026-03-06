@@ -600,3 +600,13 @@ font-weight:700;
 text-align:center;
 margin-bottom:20px;
 }
+/* Latest Articles title fix */
+
+.latest-articles h2,
+#latest-articles h2,
+#blog h2{
+color:#ffffff !important;
+font-weight:700;
+text-align:center;
+margin-bottom:30px;
+}
