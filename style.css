@@ -407,3 +407,79 @@ transition:0.25s;
 .cta-btn:hover{
 background:#0096c7;
 }
+/* Learning roadmap cards - max 2 rows desktop */
+
+.roadmap-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.roadmap-step{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+min-height:180px;
+}
+
+/* Responsive roadmap */
+@media(max-width:1024px){
+.roadmap-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.roadmap-grid{
+grid-template-columns:1fr;
+}
+}
+
+/* Broker section visibility fix */
+
+.recommended-brokers{
+background:white;
+padding:80px 20px;
+}
+
+.recommended-brokers h2,
+.recommended-brokers p{
+color:#111;
+}
+
+/* Broker cards clean professional look */
+
+.broker-card{
+background:white;
+color:#111;
+padding:30px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:200px;
+}
+
+/* Limit brokers grid rows */
+
+.broker-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+/* Responsive brokers */
+
+@media(max-width:1200px){
+.broker-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:768px){
+.broker-grid{
+grid-template-columns:1fr;
+}
+}
