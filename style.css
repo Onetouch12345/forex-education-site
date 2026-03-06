@@ -1605,3 +1605,136 @@ grid-template-columns:1fr;
 }
 
 }
+
+/* =====================================================
+FOREXEDU QUANTUM ELITE PORTAL ENGINE
+===================================================== */
+
+.quantum-portal-engine{
+width:100%;
+}
+
+/* Section Base */
+
+.quantum-portal-engine section{
+padding:110px 20px;
+}
+
+/* Quantum Title System */
+
+.quantum-portal-engine h2{
+font-size:38px;
+font-weight:800;
+text-align:center;
+color:#0d1b2a;
+margin-bottom:55px;
+letter-spacing:0.4px;
+}
+
+/* Hero Intelligence Block */
+
+.learn-hero{
+background:linear-gradient(135deg,#0d6efd,#001f3f);
+color:white;
+text-align:center;
+padding:140px 20px;
+}
+
+.learn-hero h1{
+font-size:56px;
+font-weight:900;
+}
+
+/* Quantum Education Cards */
+
+.education-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+max-width:1250px;
+margin:auto;
+}
+
+/* Core Card Engine */
+
+.edu-card{
+background:white;
+padding:40px;
+border-radius:22px;
+box-shadow:0 22px 60px rgba(0,0,0,0.08);
+transition:0.4s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* Hover Intelligence */
+
+.edu-card:hover{
+transform:translateY(-10px);
+box-shadow:0 35px 80px rgba(0,0,0,0.14);
+}
+
+/* Card Content */
+
+.edu-card h3{
+font-size:24px;
+color:#0d1b2a;
+margin-bottom:18px;
+}
+
+.edu-card p,
+.edu-card li{
+color:#444;
+line-height:1.8;
+}
+
+/* Quantum Button Engine */
+
+.edu-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:#0d6efd;
+color:white;
+border-radius:12px;
+text-decoration:none;
+font-weight:800;
+transition:0.3s;
+}
+
+.edu-btn:hover{
+background:#00e5ff;
+color:black;
+}
+
+/* CTA Block */
+
+.cta-section{
+background:#020617;
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.cta-section h2{
+color:white;
+font-size:42px;
+}
+
+/* Responsive Engine */
+
+@media(max-width:768px){
+
+.learn-hero h1{
+font-size:38px;
+}
+
+.quantum-portal-engine h2{
+font-size:30px;
+}
+
+.education-grid{
+grid-template-columns:1fr;
+}
+
+}
