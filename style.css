@@ -833,3 +833,71 @@ font-weight:600;
 .compare-all-btn:hover{
 background:#1e7e34;
 }
+
+/* ===== TRADING TOOLS SECTION ===== */
+
+.trading-tools-home{
+background:#f4f6f9;
+padding:80px 20px;
+text-align:center;
+}
+
+.trading-tools-home h2{
+font-size:32px;
+color:#0d1b2a;
+margin-bottom:15px;
+}
+
+.tools-intro{
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+color:#555;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.tool-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.tool-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.tool-card h3{
+color:#0d1b2a;
+margin-bottom:10px;
+}
+
+.tool-card p{
+color:#666;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.tool-card a{
+display:inline-block;
+padding:8px 14px;
+background:#0d6efd;
+color:white;
+border-radius:5px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+}
+
+.tool-card a:hover{
+background:#084298;
+}
