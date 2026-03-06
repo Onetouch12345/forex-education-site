@@ -1343,3 +1343,134 @@ color:white;
 padding:80px 20px;
 text-align:center;
 }
+
+
+/* =========================================
+FOREXEDU LEGENDARY MASTER PORTAL LAYER
+========================================= */
+
+.legendary-portal{
+width:100%;
+}
+
+/* Portal Section Base */
+
+.legendary-portal section{
+padding:90px 20px;
+}
+
+/* Section Titles */
+
+.legendary-portal h2{
+font-size:36px;
+font-weight:800;
+text-align:center;
+color:#0d1b2a;
+margin-bottom:50px;
+}
+
+/* Hero Intelligence Block */
+
+.learn-hero{
+background:linear-gradient(135deg,#0d6efd,#001f3f);
+color:white;
+text-align:center;
+padding:120px 20px;
+}
+
+.learn-hero h1{
+font-size:52px;
+font-weight:800;
+}
+
+/* Education Card Engine */
+
+.education-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+max-width:1200px;
+margin:auto;
+}
+
+.edu-card{
+background:white;
+padding:35px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,0.07);
+transition:0.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.edu-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* Card Title */
+
+.edu-card h3{
+font-size:22px;
+color:#0d1b2a;
+margin-bottom:15px;
+}
+
+/* Card Text */
+
+.edu-card p,
+.edu-card li{
+color:#444;
+line-height:1.6;
+}
+
+/* Learning Button */
+
+.edu-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 22px;
+background:#0d6efd;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.edu-btn:hover{
+background:#00e5ff;
+color:black;
+}
+
+/* CTA Portal Block */
+
+.cta-section{
+background:#020617;
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.cta-section h2{
+color:white;
+font-size:38px;
+}
+
+/* Responsive Engine */
+
+@media(max-width:768px){
+
+.learn-hero h1{
+font-size:36px;
+}
+
+.legendary-portal h2{
+font-size:28px;
+}
+
+.education-grid{
+grid-template-columns:1fr;
+}
+
+}
