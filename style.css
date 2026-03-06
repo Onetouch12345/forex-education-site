@@ -1037,3 +1037,17 @@ transform:translateY(-6px);
 .forexedu-home *{
 box-sizing:border-box;
 }
+
+/* Roadmap title visibility */
+
+.learning-roadmap h2{
+color:#0d1b2a !important;
+font-weight:700;
+text-align:center;
+}
+
+/* Roadmap section background safety */
+
+.learning-roadmap{
+background:#f4f6f9;
+}
