@@ -996,3 +996,44 @@ grid-template-columns:repeat(2,1fr);
 grid-template-columns:1fr;
 }
 }
+
+/* ================= FOREXEDU ELITE ARCHITECTURE ================= */
+
+.forexedu-home section{
+padding:80px 20px;
+position:relative;
+}
+
+.forexedu-home h2{
+font-size:32px;
+font-weight:700;
+text-align:center;
+margin-bottom:40px;
+color:#0d1b2a;
+}
+
+/* Card safety isolation */
+
+.forexedu-home .article-card,
+.forexedu-home .roadmap-step,
+.forexedu-home .feature-card,
+.forexedu-home .broker-card,
+.forexedu-home .tool-card{
+transition:0.3s ease;
+}
+
+/* Hover animation */
+
+.forexedu-home .article-card:hover,
+.forexedu-home .roadmap-step:hover,
+.forexedu-home .feature-card:hover,
+.forexedu-home .broker-card:hover,
+.forexedu-home .tool-card:hover{
+transform:translateY(-6px);
+}
+
+/* Prevent global CSS leakage */
+
+.forexedu-home *{
+box-sizing:border-box;
+}
