@@ -901,3 +901,98 @@ font-weight:600;
 .tool-card a:hover{
 background:#084298;
 }
+
+/* ================= Latest Articles Section ================= */
+
+.latest-articles{
+padding:70px 20px;
+background:#020617;
+}
+
+.section-title{
+color:#ffffff;
+font-size:32px;
+text-align:center;
+margin-bottom:40px;
+font-weight:700;
+}
+
+.articles-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.article-card{
+background:#ffffff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+text-align:left;
+transition:0.3s;
+}
+
+.article-card:hover{
+transform:translateY(-5px);
+}
+
+.article-card h3{
+color:#0a1f44;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.article-card p{
+font-size:14px;
+color:#555;
+margin-bottom:15px;
+}
+
+.article-btn{
+display:inline-block;
+padding:8px 14px;
+background:#0a1f44;
+color:#fff;
+border-radius:6px;
+font-size:13px;
+text-decoration:none;
+}
+
+.article-btn:hover{
+background:#00e5ff;
+color:#000;
+}
+
+.blog-more{
+text-align:center;
+margin-top:40px;
+}
+
+.main-blog-btn{
+padding:12px 26px;
+background:#00e5ff;
+color:#000;
+font-weight:600;
+border-radius:8px;
+text-decoration:none;
+}
+
+.main-blog-btn:hover{
+background:#fff;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+.articles-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.articles-grid{
+grid-template-columns:1fr;
+}
+}
