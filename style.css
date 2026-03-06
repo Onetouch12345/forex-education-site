@@ -1051,3 +1051,15 @@ text-align:center;
 .learning-roadmap{
 background:#f4f6f9;
 }
+
+/* Broker trust section title fix */
+
+.broker-trust-section h2{
+color:#ffffff !important;
+font-weight:700;
+text-align:center;
+}
+
+.broker-trust-section p{
+color:#cbd5e1;
+}
