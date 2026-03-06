@@ -1063,3 +1063,126 @@ text-align:center;
 .broker-trust-section p{
 color:#cbd5e1;
 }
+
+/* =====================================================
+   FOREXEDU FINAL PRODUCTION CSS LAYER
+   (DO NOT PLACE ABOVE EXISTING STYLES)
+===================================================== */
+
+/* ===== Global Section Safety ===== */
+
+section{
+position:relative;
+overflow:hidden;
+}
+
+/* ===== Homepage Wrapper Protection ===== */
+
+.forexedu-home{
+width:100%;
+}
+
+/* ===== Roadmap Section ===== */
+
+.learning-roadmap{
+background:#f4f6f9 !important;
+}
+
+.learning-roadmap h2{
+color:#0d1b2a !important;
+font-weight:700;
+text-align:center;
+}
+
+/* Roadmap cards */
+
+.roadmap-step{
+background:#ffffff;
+color:#111;
+}
+
+/* Roadmap links */
+
+.roadmap-step a{
+background:#0d6efd;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+display:inline-block;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ===== Broker Trust Section ===== */
+
+.broker-trust-section{
+background:#0d1b2a !important;
+}
+
+.broker-trust-section h2{
+color:#ffffff !important;
+font-weight:700;
+}
+
+.broker-trust-section p{
+color:#cbd5e1 !important;
+}
+
+/* Broker quick buttons */
+
+.broker-quick-btn{
+background:#0d6efd;
+color:white;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* ===== Latest Articles Section ===== */
+
+.latest-articles{
+background:#020617 !important;
+}
+
+.section-title{
+color:#ffffff !important;
+}
+
+/* Article cards */
+
+.article-card{
+background:white;
+color:#0a1f44;
+}
+
+/* Article buttons */
+
+.article-btn{
+background:#0d6efd;
+color:white;
+padding:8px 14px;
+border-radius:6px;
+text-decoration:none;
+}
+
+/* ===== Footer ===== */
+
+.site-footer{
+background:#111827;
+color:#cbd5e1;
+padding:40px 20px;
+text-align:center;
+}
+
+/* Responsive Safety */
+
+@media(max-width:768px){
+
+.articles-grid,
+.tools-grid,
+.broker-grid{
+grid-template-columns:1fr !important;
+}
+
+}
