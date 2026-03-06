@@ -590,3 +590,13 @@ transition:0.25s;
 .roadmap-step a:hover{
 background:#084298;
 }
+/* ===== FIX SECTION TITLES VISIBILITY ===== */
+
+.learning-roadmap h2,
+#features h2,
+#blog h2{
+color:#ffffff !important;
+font-weight:700;
+text-align:center;
+margin-bottom:20px;
+}
