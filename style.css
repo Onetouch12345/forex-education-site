@@ -656,3 +656,78 @@ transform:translateY(-5px);
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
+/* ===== HOMEPAGE ARTICLES SECTION (SAFE - NO OTHER PAGE EFFECT) ===== */
+
+.homepage-articles{
+background:#0d1b2a;
+padding:80px 20px;
+}
+
+.articles-title{
+color:#ffffff;
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+}
+
+.articles-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.article-card{
+background:#ffffff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.article-card h3{
+font-size:18px;
+margin-bottom:10px;
+color:#0d1b2a;
+}
+
+.article-card p{
+font-size:14px;
+color:#555;
+margin-bottom:15px;
+}
+
+.article-card a{
+display:inline-block;
+padding:8px 14px;
+background:#0d6efd;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+font-size:13px;
+font-weight:600;
+}
+
+.article-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.articles-button{
+text-align:center;
+margin-top:40px;
+}
+
+.read-more-btn{
+background:#28a745;
+color:white;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.read-more-btn:hover{
+background:#1e7e34;
+}
