@@ -1808,3 +1808,86 @@ grid-template-columns:1fr;
 .btn.btn-primary:hover {
     background: #0056a3;
 }
+
+/* ================= BLOG FINAL DISPLAY ENGINE ================= */
+
+/* Blog container safety wrapper */
+.blog-cards-container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Blog grid stable layout */
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Blog card compact design */
+.blog-card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+}
+
+/* Image safety (prevent blank white box) */
+.blog-card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    display:block;
+}
+
+/* If image is missing → remove white void space */
+.blog-card:not(:has(img)){
+    padding-top:20px;
+}
+
+/* Card content compact spacing */
+.blog-card .card-content{
+    padding:18px;
+}
+
+/* Heading size control */
+.blog-card h2{
+    font-size:18px;
+    line-height:1.4;
+}
+
+/* Paragraph compact mode */
+.blog-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Button engine */
+.blog-card .btn{
+    display:inline-block;
+    padding:8px 14px;
+    font-size:13px;
+    border-radius:6px;
+    font-weight:600;
+    background:#0a1f44;
+    color:white;
+    text-align:center;
+}
+
+.blog-card .btn:hover{
+    background:#00e5ff;
+    color:black;
+}
+
+/* More blogs coming card */
+.blog-coming-soon{
+    background:#0a1f44;
+    color:white;
+    text-align:center;
+    padding:40px;
+    border-radius:14px;
+}
