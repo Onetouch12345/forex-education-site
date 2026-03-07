@@ -1891,3 +1891,20 @@ grid-template-columns:1fr;
     padding:40px;
     border-radius:14px;
 }
+
+/* Prevent broken image white boxes */
+
+.blog-card img{
+    background:#f4f6f9;
+}
+
+.blog-card img:not([src]),
+.blog-card img[src=""],
+.blog-card img[src="#"]{
+    display:none;
+}
+
+/* Optional placeholder protection */
+.blog-card{
+    min-height:120px;
+}
