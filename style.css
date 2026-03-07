@@ -1908,3 +1908,91 @@ grid-template-columns:1fr;
 .blog-card{
     min-height:120px;
 }
+
+/* =========================================
+FOREXEDU BULLETPROOF BLOG ENGINE
+========================================= */
+
+/* Lazy loading image safety */
+
+.blog-card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    background:#f4f6f9;
+}
+
+/* Broken image auto hide */
+
+.blog-card img:not([src]),
+.blog-card img[src=""],
+.blog-card img[src="#"]{
+    display:none;
+}
+
+/* Blog card structure protection */
+
+.blog-card{
+    min-height:260px;
+}
+
+/* Content spacing engine */
+
+.blog-card .card-content{
+    padding:20px;
+}
+
+/* Title readability */
+
+.blog-card h2{
+    font-size:18px;
+    line-height:1.45;
+    color:#0a1f44;
+}
+
+/* Paragraph optimization */
+
+.blog-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Button CTR engine */
+
+.blog-card .btn,
+.blog-card .article-btn{
+    display:inline-block;
+    padding:8px 15px;
+    background:#0a1f44;
+    color:white;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+    transition:0.3s;
+}
+
+.blog-card .btn:hover,
+.blog-card .article-btn:hover{
+    background:#00e5ff;
+    color:black;
+}
+
+/* Coming soon blog placeholder */
+
+.blog-coming-soon{
+    background:#0a1f44;
+    color:white;
+    padding:50px;
+    border-radius:14px;
+    text-align:center;
+}
+
+/* AdSense safe zone */
+
+.adsense-block{
+    margin:60px auto;
+    text-align:center;
+    max-width:970px;
+}
