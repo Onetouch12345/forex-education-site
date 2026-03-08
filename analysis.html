@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <title>ForexEdu Pro Trading Terminal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9420471464780576" crossorigin="anonymous"></script>
+
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXX');
+gtag('config', 'G-MDWZ227DT4');
 </script>
 
-<!-- Google Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-crossorigin="anonymous"></script>
-
-<!-- TwelveData API -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://s3.tradingview.com/tv.js"></script>
 
 <style>
 
 body{
+margin:0;
 font-family:Arial;
 background:#0b0f19;
 color:white;
-margin:0;
 }
 
 .header{
 background:#111827;
-padding:15px;
-text-align:center;
+padding:18px;
 font-size:26px;
 font-weight:bold;
+text-align:center;
 }
 
 .section{
-padding:30px;
+padding:25px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
@@ -47,6 +49,10 @@ background:#111827;
 padding:20px;
 border-radius:10px;
 margin-bottom:25px;
+}
+
+h2{
+margin-top:0;
 }
 
 table{
@@ -67,26 +73,27 @@ background:#1f2937;
 .buy{color:#00ff9d;}
 .sell{color:#ff4d4d;}
 
+select,input{
+padding:8px;
+border-radius:5px;
+border:none;
+}
+
 .btn{
-padding:10px 15px;
 background:#2563eb;
 border:none;
-color:white;
+padding:10px 16px;
 border-radius:6px;
+color:white;
 cursor:pointer;
 }
 
-.strategy-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-}
-
-input,select{
-padding:8px;
-width:100%;
+.broker-btn{
+background:#16a34a;
+padding:6px 12px;
 border-radius:5px;
-border:none;
+color:white;
+text-decoration:none;
 }
 
 </style>
@@ -100,84 +107,64 @@ ForexEdu Pro Trading Terminal
 
 <div class="section">
 
-<!-- Global Forex Overview -->
+<!-- GLOBAL FOREX OVERVIEW -->
 
 <div class="card">
 
 <h2>🌍 Global Forex Market Overview</h2>
 
 <p>
-The Forex market is the world's largest financial market with over
-<strong>$7 trillion daily volume</strong>. It operates 24 hours across major
-trading sessions including:
+The foreign exchange market is the largest financial market in the world
+with more than <b>$7 trillion daily trading volume</b>.
+Currencies move based on central bank policies, interest rates,
+economic indicators and global risk sentiment.
 </p>
 
 <ul>
-<li>Tokyo Session – Asian market activity</li>
-<li>London Session – highest liquidity</li>
-<li>New York Session – major USD movements</li>
+<li><b>Tokyo Session</b> – Asian liquidity</li>
+<li><b>London Session</b> – Highest volume</li>
+<li><b>New York Session</b> – USD volatility</li>
 </ul>
-
-<p>
-Currency prices move based on economic data, central bank policy,
-inflation reports, and geopolitical events.
-</p>
 
 </div>
 
-<!-- Live Market Charts -->
+
+<!-- MULTI PAIR LIVE CHART -->
 
 <div class="card">
 
 <h2>📊 Live Market Charts</h2>
 
-<div class="tradingview-widget-container">
-<div id="tradingview_chart"></div>
-<script src="https://s3.tradingview.com/tv.js"></script>
+<select id="pairSelect" onchange="changePair()">
 
-<script>
-new TradingView.widget({
-width:"100%",
-height:500,
-symbol:"FX:EURUSD",
-interval:"60",
-timezone:"Etc/UTC",
-theme:"dark",
-style:"1",
-container_id:"tradingview_chart"
-});
-</script>
+<option value="FX:EURUSD">EUR/USD</option>
+<option value="FX:GBPUSD">GBP/USD</option>
+<option value="FX:USDJPY">USD/JPY</option>
+<option value="OANDA:XAUUSD">Gold</option>
+<option value="BITSTAMP:BTCUSD">Bitcoin</option>
+
+</select>
+
+<div id="chart" style="margin-top:15px;"></div>
 
 </div>
 
-</div>
 
-<!-- Economic Calendar -->
-
-<div class="card">
-
-<h2>📅 Economic Calendar</h2>
-
-<iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&importance=1,2,3"
-width="100%" height="500" frameborder="0"></iframe>
-
-</div>
-
-<!-- Live Forex Signals -->
+<!-- LIVE FOREX SIGNALS -->
 
 <div class="card">
 
 <h2>📡 Live Forex Signals</h2>
 
-<table id="signalsTable">
+<table>
 
 <thead>
 <tr>
 <th>Pair</th>
-<th>Price</th>
+<th>Live Price</th>
 <th>Signal</th>
-<th>SL</th>
-<th>TP</th>
+<th>Stop Loss</th>
+<th>Take Profit</th>
 </tr>
 </thead>
 
@@ -207,37 +194,47 @@ width="100%" height="500" frameborder="0"></iframe>
 <td>150.00</td>
 </tr>
 
+<tr>
+<td>XAU/USD</td>
+<td id="xauusd">Loading...</td>
+<td class="sell">SELL</td>
+<td>2180</td>
+<td>2120</td>
+</tr>
+
 </tbody>
 
 </table>
 
 </div>
 
-<!-- AI Strategy Lab -->
+
+<!-- ECONOMIC CALENDAR -->
+
+<div class="card">
+
+<h2>📅 Economic Calendar</h2>
+
+<iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous"
+width="100%" height="500" frameborder="0"></iframe>
+
+</div>
+
+
+<!-- AI STRATEGY LAB -->
 
 <div class="card">
 
 <h2>🤖 AI Trading Strategy Lab</h2>
 
-<div class="strategy-box">
-
-<div>
-<label>Pair</label>
 <select id="pair">
 <option>EUR/USD</option>
 <option>GBP/USD</option>
 <option>USD/JPY</option>
+<option>XAU/USD</option>
 </select>
-</div>
 
-<div>
-<label>Risk %</label>
 <input type="number" id="risk" value="2">
-</div>
-
-</div>
-
-<br>
 
 <button class="btn" onclick="generateStrategy()">Generate Strategy</button>
 
@@ -245,7 +242,8 @@ width="100%" height="500" frameborder="0"></iframe>
 
 </div>
 
-<!-- Recommended Brokers -->
+
+<!-- RECOMMENDED BROKERS -->
 
 <div class="card">
 
@@ -260,41 +258,55 @@ width="100%" height="500" frameborder="0"></iframe>
 <th>Platform</th>
 <th>Leverage</th>
 <th>Features</th>
+<th>Trade</th>
 </tr>
 </thead>
 
 <tbody>
 
 <tr>
-<td>IC Markets</td>
-<td>0.0 pip</td>
-<td>MT4 / MT5</td>
-<td>1:500</td>
-<td>Fast execution, Raw spreads</td>
-</tr>
-
-<tr>
-<td>Pepperstone</td>
-<td>0.1 pip</td>
-<td>MT4 / MT5 / cTrader</td>
-<td>1:500</td>
-<td>Low latency trading</td>
-</tr>
-
-<tr>
 <td>XM</td>
 <td>0.6 pip</td>
 <td>MT4 / MT5</td>
 <td>1:888</td>
-<td>Beginner friendly</td>
+<td>Beginner friendly, bonus promotions</td>
+<td><a class="broker-btn" href="https://affs.click/ryTLn">Open Account</a></td>
 </tr>
 
 <tr>
-<td>Exness</td>
-<td>0.3 pip</td>
+<td>Vantage</td>
+<td>0.0 pip</td>
 <td>MT4 / MT5</td>
-<td>Unlimited</td>
-<td>Instant withdrawals</td>
+<td>1:500</td>
+<td>Raw spreads, fast execution</td>
+<td><a class="broker-btn" href="        ">Open Account</a></td>
+</tr>
+
+<tr>
+<td>IC Markets</td>
+<td>0.0 pip</td>
+<td>MT4 / MT5 / cTrader</td>
+<td>1:500</td>
+<td>Ultra low latency</td>
+<td><a class="broker-btn" href="https://icmarkets.com/?camp=90095">Open Account</a></td>
+</tr>
+
+<tr>
+<td>HFM</td>
+<td>0.1 pip</td>
+<td>MT4 / MT5</td>
+<td>1:1000</td>
+<td>Strong global regulation</td>
+<td><a class="broker-btn" href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342">Open Account</a></td>
+</tr>
+
+<tr>
+<td>PrimeXBT</td>
+<td>0.1%</td>
+<td>Pro Platform</td>
+<td>1:200</td>
+<td>Crypto + Forex trading</td>
+<td><a class="broker-btn" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt">Open Account</a></td>
 </tr>
 
 </tbody>
@@ -305,54 +317,78 @@ width="100%" height="500" frameborder="0"></iframe>
 
 </div>
 
+
 <script>
 
-/* TWELVEDATA LIVE PRICE FIX */
+const API="https://api.twelvedata.com/price?apikey=252a3bd10a2a440e884552e549c73629&symbol="
 
-const api="https://api.twelvedata.com/price?apikey=YOUR_API_KEY&symbol="
 
 function loadPrices(){
 
-axios.get(api+"EUR/USD")
-.then(r=>{
+axios.get(API+"EUR/USD").then(r=>{
 document.getElementById("eurusd").innerText=r.data.price
 })
 
-axios.get(api+"GBP/USD")
-.then(r=>{
+axios.get(API+"GBP/USD").then(r=>{
 document.getElementById("gbpusd").innerText=r.data.price
 })
 
-axios.get(api+"USD/JPY")
-.then(r=>{
+axios.get(API+"USD/JPY").then(r=>{
 document.getElementById("usdjpy").innerText=r.data.price
+})
+
+axios.get(API+"XAU/USD").then(r=>{
+document.getElementById("xauusd").innerText=r.data.price
 })
 
 }
 
 loadPrices()
-setInterval(loadPrices,15000)
+setInterval(loadPrices,10000)
 
 
-/* AI Strategy Generator */
 
 function generateStrategy(){
 
 let pair=document.getElementById("pair").value
 let risk=document.getElementById("risk").value
 
-let text=
-
-"AI Strategy for "+pair+
-": Trade during London session. "+
-"Risk "+risk+"% per trade. "+
-"Use RSI + Support/Resistance confirmation."
-
-document.getElementById("strategyResult").innerText=text
+document.getElementById("strategyResult").innerText=
+"Strategy for "+pair+
+": Trade London & NY sessions. Risk "+risk+
+"%. Confirm with RSI + Support/Resistance."
 
 }
+
+
+
+let widget
+
+function changePair(){
+
+let pair=document.getElementById("pairSelect").value
+
+document.getElementById("chart").innerHTML=""
+
+widget=new TradingView.widget({
+
+width:"100%",
+height:500,
+symbol:pair,
+interval:"60",
+timezone:"Etc/UTC",
+theme:"dark",
+style:"1",
+container_id:"chart"
+
+})
+
+}
+
+changePair()
 
 </script>
 
 </body>
 </html>
+```
