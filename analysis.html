@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 <meta charset="UTF-8">
-<title>ForexEdu Market Analysis</title>
+<title>ForexEdu Institutional Trading Terminal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Google AdSense -->
@@ -32,16 +33,16 @@ color:white;
 
 .header{
 background:#111827;
-padding:18px;
-font-size:26px;
-font-weight:bold;
+padding:20px;
+font-size:28px;
 text-align:center;
+font-weight:bold;
 }
 
 .section{
-padding:25px;
 max-width:1200px;
 margin:auto;
+padding:25px;
 }
 
 .card{
@@ -53,6 +54,7 @@ margin-bottom:25px;
 
 h2{
 margin-top:0;
+color:#3b82f6;
 }
 
 table{
@@ -77,12 +79,13 @@ select,input{
 padding:8px;
 border-radius:5px;
 border:none;
+margin-top:5px;
 }
 
 .btn{
 background:#2563eb;
-border:none;
 padding:10px 16px;
+border:none;
 border-radius:6px;
 color:white;
 cursor:pointer;
@@ -96,53 +99,64 @@ color:white;
 text-decoration:none;
 }
 
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+footer a{
+color:#3b82f6;
+text-decoration:none;
+margin:0 6px;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="header">
-ForexEdu Pro Trading Terminal
+ForexEdu Institutional Trading Terminal
 </div>
 
 <div class="section">
 
-<!-- GLOBAL FOREX OVERVIEW -->
+<!-- MARKET OVERVIEW -->
 
 <div class="card">
 
 <h2>🌍 Global Forex Market Overview</h2>
 
 <p>
-The foreign exchange market is the largest financial market in the world
-with more than <b>$7 trillion daily trading volume</b>.
-Currencies move based on central bank policies, interest rates,
-economic indicators and global risk sentiment.
+The Forex market is the largest financial market in the world with
+over <b>$7 trillion daily trading volume</b>. Currency prices move
+based on central bank policy, inflation data, employment reports,
+and global macroeconomic sentiment.
 </p>
 
 <ul>
-<li><b>Tokyo Session</b> – Asian liquidity</li>
-<li><b>London Session</b> – Highest volume</li>
-<li><b>New York Session</b> – USD volatility</li>
+<li>Tokyo Session – Asian liquidity</li>
+<li>London Session – highest volume</li>
+<li>New York Session – USD volatility</li>
 </ul>
 
 </div>
 
 
-<!-- MULTI PAIR LIVE CHART -->
+<!-- LIVE CHART -->
 
 <div class="card">
 
-<h2>📊 Live Market Charts</h2>
+<h2>📊 Multi-Pair Live Charts</h2>
 
 <select id="pairSelect" onchange="changePair()">
-
 <option value="FX:EURUSD">EUR/USD</option>
 <option value="FX:GBPUSD">GBP/USD</option>
 <option value="FX:USDJPY">USD/JPY</option>
 <option value="OANDA:XAUUSD">Gold</option>
 <option value="BITSTAMP:BTCUSD">Bitcoin</option>
-
 </select>
 
 <div id="chart" style="margin-top:15px;"></div>
@@ -150,7 +164,55 @@ economic indicators and global risk sentiment.
 </div>
 
 
-<!-- LIVE FOREX SIGNALS -->
+<!-- FOREX HEATMAP -->
+
+<div class="card">
+
+<h2>🔥 Forex Heatmap</h2>
+
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+{
+"width": "100%",
+"height": "400",
+"currencies": ["EUR","USD","GBP","JPY","AUD","CAD","CHF","NZD"],
+"isTransparent": false,
+"colorTheme": "dark"
+}
+</script>
+
+</div>
+
+
+<!-- CURRENCY STRENGTH -->
+
+<div class="card">
+
+<h2>💪 Currency Strength Meter</h2>
+
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+{
+"width": "100%",
+"height": "350",
+"symbolsGroups": [
+{
+"name": "Major Forex",
+"symbols": [
+{"name":"FX:EURUSD"},
+{"name":"FX:GBPUSD"},
+{"name":"FX:USDJPY"},
+{"name":"FX:AUDUSD"},
+{"name":"FX:USDCAD"}
+]
+}
+],
+"colorTheme":"dark"
+}
+</script>
+
+</div>
+
+
+<!-- LIVE SIGNALS -->
 
 <div class="card">
 
@@ -158,21 +220,17 @@ economic indicators and global risk sentiment.
 
 <table>
 
-<thead>
 <tr>
 <th>Pair</th>
 <th>Live Price</th>
 <th>Signal</th>
-<th>Stop Loss</th>
-<th>Take Profit</th>
+<th>SL</th>
+<th>TP</th>
 </tr>
-</thead>
-
-<tbody>
 
 <tr>
 <td>EUR/USD</td>
-<td id="eurusd">Loading...</td>
+<td id="eurusd">Loading</td>
 <td class="buy">BUY</td>
 <td>1.0780</td>
 <td>1.0900</td>
@@ -180,7 +238,7 @@ economic indicators and global risk sentiment.
 
 <tr>
 <td>GBP/USD</td>
-<td id="gbpusd">Loading...</td>
+<td id="gbpusd">Loading</td>
 <td class="sell">SELL</td>
 <td>1.2750</td>
 <td>1.2600</td>
@@ -188,7 +246,7 @@ economic indicators and global risk sentiment.
 
 <tr>
 <td>USD/JPY</td>
-<td id="usdjpy">Loading...</td>
+<td id="usdjpy">Loading</td>
 <td class="buy">BUY</td>
 <td>148.20</td>
 <td>150.00</td>
@@ -196,13 +254,11 @@ economic indicators and global risk sentiment.
 
 <tr>
 <td>XAU/USD</td>
-<td id="xauusd">Loading...</td>
+<td id="xauusd">Loading</td>
 <td class="sell">SELL</td>
 <td>2180</td>
 <td>2120</td>
 </tr>
-
-</tbody>
 
 </table>
 
@@ -216,12 +272,12 @@ economic indicators and global risk sentiment.
 <h2>📅 Economic Calendar</h2>
 
 <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous"
-width="100%" height="500" frameborder="0"></iframe>
+width="100%" height="500"></iframe>
 
 </div>
 
 
-<!-- AI STRATEGY LAB -->
+<!-- AI STRATEGY -->
 
 <div class="card">
 
@@ -243,34 +299,30 @@ width="100%" height="500" frameborder="0"></iframe>
 </div>
 
 
-<!-- RECOMMENDED BROKERS -->
+<!-- BROKERS -->
 
 <div class="card">
 
-<h2>🏆 Recommended Forex Brokers</h2>
+<h2>🏆 Recommended Brokers</h2>
 
 <table>
 
-<thead>
 <tr>
 <th>Broker</th>
 <th>Spread</th>
 <th>Platform</th>
 <th>Leverage</th>
 <th>Features</th>
-<th>Trade</th>
+<th>Open</th>
 </tr>
-</thead>
-
-<tbody>
 
 <tr>
 <td>XM</td>
 <td>0.6 pip</td>
 <td>MT4 / MT5</td>
 <td>1:888</td>
-<td>Beginner friendly, bonus promotions</td>
-<td><a class="broker-btn" href="https://affs.click/ryTLn">Open Account</a></td>
+<td>Beginner friendly, bonuses</td>
+<td><a class="broker-btn" href="#">Open Account</a></td>
 </tr>
 
 <tr>
@@ -279,7 +331,7 @@ width="100%" height="500" frameborder="0"></iframe>
 <td>MT4 / MT5</td>
 <td>1:500</td>
 <td>Raw spreads, fast execution</td>
-<td><a class="broker-btn" href="https://www.vantagemarkets.com/open-live-account/?affid=MjY0NjA0MDI=&invitecode=rg5M6bG4">Open Account</a></td>
+<td><a class="broker-btn" href="#">Open Account</a></td>
 </tr>
 
 <tr>
@@ -287,8 +339,8 @@ width="100%" height="500" frameborder="0"></iframe>
 <td>0.0 pip</td>
 <td>MT4 / MT5 / cTrader</td>
 <td>1:500</td>
-<td>Ultra low latency</td>
-<td><a class="broker-btn" href="https://icmarkets.com/?camp=90095">Open Account</a></td>
+<td>Institutional liquidity</td>
+<td><a class="broker-btn" href="#">Open Account</a></td>
 </tr>
 
 <tr>
@@ -296,8 +348,8 @@ width="100%" height="500" frameborder="0"></iframe>
 <td>0.1 pip</td>
 <td>MT4 / MT5</td>
 <td>1:1000</td>
-<td>Strong global regulation</td>
-<td><a class="broker-btn" href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342">Open Account</a></td>
+<td>Strong regulation</td>
+<td><a class="broker-btn" href="#">Open Account</a></td>
 </tr>
 
 <tr>
@@ -306,10 +358,8 @@ width="100%" height="500" frameborder="0"></iframe>
 <td>Pro Platform</td>
 <td>1:200</td>
 <td>Crypto + Forex trading</td>
-<td><a class="broker-btn" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt">Open Account</a></td>
+<td><a class="broker-btn" href="#">Open Account</a></td>
 </tr>
-
-</tbody>
 
 </table>
 
@@ -318,28 +368,26 @@ width="100%" height="500" frameborder="0"></iframe>
 </div>
 
 
+<footer>
+© 2026 ForexEdu Institutional Portal |
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms-and-conditions.html">Terms of Use</a> |
+<a href="disclaimer.html">Risk Disclaimer</a> |
+<a href="contact.html">Contact</a> |
+<a href="about.html">About</a>
+</footer>
+
+
 <script>
 
 const API="https://api.twelvedata.com/price?apikey=252a3bd10a2a440e884552e549c73629&symbol="
 
-
 function loadPrices(){
 
-axios.get(API+"EUR/USD").then(r=>{
-document.getElementById("eurusd").innerText=r.data.price
-})
-
-axios.get(API+"GBP/USD").then(r=>{
-document.getElementById("gbpusd").innerText=r.data.price
-})
-
-axios.get(API+"USD/JPY").then(r=>{
-document.getElementById("usdjpy").innerText=r.data.price
-})
-
-axios.get(API+"XAU/USD").then(r=>{
-document.getElementById("xauusd").innerText=r.data.price
-})
+axios.get(API+"EUR/USD").then(r=>{document.getElementById("eurusd").innerText=r.data.price})
+axios.get(API+"GBP/USD").then(r=>{document.getElementById("gbpusd").innerText=r.data.price})
+axios.get(API+"USD/JPY").then(r=>{document.getElementById("usdjpy").innerText=r.data.price})
+axios.get(API+"XAU/USD").then(r=>{document.getElementById("xauusd").innerText=r.data.price})
 
 }
 
@@ -347,22 +395,17 @@ loadPrices()
 setInterval(loadPrices,10000)
 
 
-
 function generateStrategy(){
 
 let pair=document.getElementById("pair").value
 let risk=document.getElementById("risk").value
 
-document.getElementById("strategyResult").innerText=
-"Strategy for "+pair+
-": Trade London & NY sessions. Risk "+risk+
-"%. Confirm with RSI + Support/Resistance."
+document.getElementById("strategyResult").innerText =
+"AI Strategy for "+pair+
+": Trade London and NY session breakouts. Risk "+
+risk+"% per trade. Confirm with RSI and support/resistance."
 
 }
-
-
-
-let widget
 
 function changePair(){
 
@@ -370,24 +413,12 @@ let pair=document.getElementById("pairSelect").value
 
 document.getElementById("chart").innerHTML=""
 
-widget=new TradingView.widget({
-
+new TradingView.widget({
 width:"100%",
 height:500,
 symbol:pair,
 interval:"60",
-timezone:"Etc/UTC",
 theme:"dark",
 style:"1",
-container_id:"chart"
-
-})
-
-}
-
-changePair()
-
-</script>
-
-</body>
-</html>
+container_id:"cha_
+```
