@@ -285,74 +285,102 @@ async>
 
 </section>
 
-<!-- FOREX SIGNALS DASHBOARD -->
 <section id="signals">
-    <h2>📡 Live Forex Signals</h2>
+<h2>📡 Live Forex Signals</h2>
 
-    <table id="signalsTable">
-        <thead>
-            <tr>
-                <th>Pair</th>
-                <th>Price</th>
-                <th>Signal</th>
-                <th>Strength</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+<table id="signalsTable">
+<thead>
+<tr>
+<th>Pair</th>
+<th>Price</th>
+<th>Signal</th>
+<th>Strength</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
 </section>
 
 <script>
 
-const API_KEY = "YOUR_API_KEY"; 
-const pairs = ["EUR/USD","GBP/USD","USD/JPY","AUD/USD","USD/CAD"];
+const API_KEY = "252a3bd10a2a440e884552e549c73629";
 
-async function getForexPrices(){
+const pairs = [
+"EUR/USD",
+"GBP/USD",
+"USD/JPY",
+"AUD/USD",
+"USD/CAD",
+"USD/CHF",
+"NZD/USD"
+];
 
-    const tbody = document.querySelector("#signalsTable tbody");
-    tbody.innerHTML = "";
+async function loadSignals(){
 
-    for (let pair of pairs){
+const table = document.querySelector("#signalsTable tbody");
+table.innerHTML = "";
 
-        let [base,quote] = pair.split("/");
+for (let pair of pairs){
 
-        let url = `https://api.exchangerate.host/latest?base=${base}&symbols=${quote}`;
+let symbol = pair.replace("/","");
 
-        const response = await fetch(url);
-        const data = await response.json();
+let url = `https://api.twelvedata.com/price?symbol=${symbol}&apikey=${API_KEY}`;
 
-        let price = data.rates[quote];
+try{
 
-        let signal = "HOLD";
-        let strength = "Neutral";
+const response = await fetch(url);
+const data = await response.json();
 
-        if(price > 1.2){
-            signal = "BUY";
-            strength = "Strong";
-        }
-        else if(price < 0.9){
-            signal = "SELL";
-            strength = "Weak";
-        }
+let price = parseFloat(data.price);
 
-        tbody.innerHTML += `
-        <tr>
-            <td>${pair}</td>
-            <td>${price}</td>
-            <td>${signal}</td>
-            <td>${strength}</td>
-        </tr>
-        `;
-    }
+let signal = "HOLD";
+let strength = "Neutral";
+
+/* basic signal logic */
+
+if(price > 1.15){
+signal = "BUY";
+strength = "Strong";
 }
 
-getForexPrices();
+if(price < 1.00){
+signal = "SELL";
+strength = "Weak";
+}
 
-/* refresh every 10 seconds */
-setInterval(getForexPrices,10000);
+table.innerHTML += `
+<tr>
+<td>${pair}</td>
+<td>${price}</td>
+<td>${signal}</td>
+<td>${strength}</td>
+</tr>
+`;
+
+}catch(error){
+
+table.innerHTML += `
+<tr>
+<td>${pair}</td>
+<td>Error</td>
+<td>-</td>
+<td>-</td>
+</tr>
+`;
+
+}
+
+}
+
+}
+
+loadSignals();
+
+/* refresh prices every 5 seconds */
+
+setInterval(loadSignals,5000);
 
 </script>
-
 
 <section>
 
@@ -462,4 +490,5 @@ loadChart("usdjpy","FX:USDJPY");
 
 </body>
 </html>
+
 
