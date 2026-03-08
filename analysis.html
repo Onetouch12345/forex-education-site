@@ -375,62 +375,56 @@ changePair()
 </script>
 
 <script>
+const API_KEY = "252a3bd10a2a440e884552e549c73629";
 
-const API_KEY="252a3bd10a2a440e884552e549c73629"
-
-const pairs=[
-{symbol:"EURUSD",type:"buy"},
-{symbol:"GBPUSD",type:"sell"},
-{symbol:"USDJPY",type:"buy"},
-{symbol:"XAUUSD",type:"sell"}
-]
+const pairs = [
+{symbol:"EUR/USD",action:"BUY"},
+{symbol:"GBP/USD",action:"SELL"},
+{symbol:"USD/JPY",action:"BUY"},
+{symbol:"XAU/USD",action:"SELL"}
+];
 
 async function loadSignals(){
 
-for(let pair of pairs){
+for(const pair of pairs){
+
+let symbol = pair.symbol.replace("/","");
 
 try{
 
-let url=`https://api.twelvedata.com/price?symbol=${pair.symbol}&apikey=${API_KEY}`
+const res = await fetch(`https://api.twelvedata.com/price?symbol=${symbol}&apikey=${API_KEY}`);
+const data = await res.json();
 
-let res=await fetch(url)
-let data=await res.json()
+if(!data.price) continue;
 
-let price=parseFloat(data.price)
+let price = parseFloat(data.price);
 
-document.getElementById("price_"+pair.symbol).innerText=price.toFixed(5)
+let sl,tp;
 
-let sl,tp
-
-if(pair.type==="buy"){
-
-sl=price-(price*0.002)
-tp=price+(price*0.004)
-
+if(pair.action==="BUY"){
+sl = price - price*0.003;
+tp = price + price*0.006;
 }else{
-
-sl=price+(price*0.002)
-tp=price-(price*0.004)
-
+sl = price + price*0.003;
+tp = price - price*0.006;
 }
 
-document.getElementById("sl_"+pair.symbol).innerText=sl.toFixed(5)
-document.getElementById("tp_"+pair.symbol).innerText=tp.toFixed(5)
+document.getElementById(symbol+"price").innerText = price.toFixed(5);
+document.getElementById(symbol+"sl").innerText = sl.toFixed(5);
+document.getElementById(symbol+"tp").innerText = tp.toFixed(5);
 
 }catch(e){
-console.log("Signal error",e)
+console.log("Error loading "+symbol);
 }
 
 }
 
 }
 
-loadSignals()
-
-setInterval(loadSignals,8000)
-
+setInterval(loadSignals,10000);
+loadSignals();
 </script>
-
 </body>
 </html> 
+
 
