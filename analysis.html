@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Forex Market Analysis Dashboard | ForexEdu</title>
-
-<meta name="description" content="Professional forex market analysis dashboard with live charts, economic calendar, currency strength tools and educational trading signals.">
+<meta name="description" content="Professional forex market analysis dashboard with live charts, economic calendar, AI signals, educational content and broker intelligence center.">
 
 <link rel="canonical" href="https://onetouch12345.github.io/forex-education-site/analysis.html">
 
-<!-- Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9420471464780576" crossorigin="anonymous"></script>
+<!-- Google AdSense -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9420471464780576"
+crossorigin="anonymous"></script>
 
-<!-- Analytics -->
+<!-- Google Analytics / gtag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -23,104 +22,108 @@ gtag('js', new Date());
 gtag('config', 'G-MDWZ227DT4');
 </script>
 
+<!-- TradingView -->
 <script src="https://s3.tradingview.com/tv.js"></script>
 
 <style>
-
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#f4f7fb;
 color:#1a1a1a;
 line-height:1.8;
 }
 
+/* Sticky Navbar */
 .navbar{
 position:sticky;
 top:0;
 background:#0a1f44;
 padding:18px;
 text-align:center;
+z-index:1000;
 }
-
 .navbar a{
 color:white;
 margin:0 18px;
 text-decoration:none;
 font-weight:bold;
 }
+.navbar a:hover{text-decoration:underline;}
 
+/* Header */
 header{
 background:linear-gradient(135deg,#020024,#0a1f44);
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 }
 
+/* Container & Sections */
 .container{
 max-width:1200px;
 margin:auto;
-padding:50px 25px;
+padding:60px 30px;
 }
-
 section{
 background:white;
-padding:45px;
-border-radius:24px;
-margin-top:50px;
-box-shadow:0 10px 40px rgba(0,0,0,0.08);
+padding:50px;
+border-radius:28px;
+box-shadow:0 12px 50px rgba(0,0,0,0.08);
+margin-top:70px;
 }
-
 .chart-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:35px;
-margin-top:30px;
+gap:40px;
+margin-top:40px;
 }
-
-.chart-box{
-padding:20px;
-}
-
 .trade-link{
-background:#0a58ca;
-padding:12px 28px;
+display:inline-block;
+margin-top:20px;
+padding:14px 32px;
 border-radius:40px;
+background:#0a58ca;
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
-
+/* Signals Table */
+.buy{color:#00c27a;font-weight:bold;}
+.sell{color:#ff4d4d;font-weight:bold;}
+.hold{color:#e6b800;font-weight:bold;}
 table{
 width:100%;
 border-collapse:collapse;
 margin-top:20px;
 }
-
 th,td{
 padding:14px;
 border-bottom:1px solid #ddd;
 }
-
 th{
 background:#0a1f44;
 color:white;
 }
-
+/* Adsense Responsive */
+.adsbygoogle{
+display:block;
+margin:20px auto;
+text-align:center;
+}
 footer{
-margin-top:100px;
+margin-top:120px;
 background:#0a1f44;
 color:white;
 text-align:center;
-padding:60px;
+padding:70px;
 }
-
 </style>
 
 </head>
-
 <body>
 
+<!-- Navbar -->
 <div class="navbar">
 <a href="index.html">Home</a>
 <a href="learn.html">Learn Forex</a>
@@ -130,119 +133,71 @@ padding:60px;
 <a href="blog.html">Blog</a>
 </div>
 
+<!-- Header -->
 <header>
-
 <h1>Forex Market Analysis Dashboard</h1>
-<p>Institutional Market Research • Educational Signals • Trading Tools</p>
-
+<p>Institutional Research • Educational Signals • Broker Intelligence Center</p>
 </header>
 
 <div class="container">
 
+<!-- Market Overview Section -->
 <section>
-
 <h2>Global Forex Market Overview</h2>
-
-<p>
-The foreign exchange market processes over $7 trillion in daily trading volume.
-Professional traders analyze macroeconomic data, price structure and global capital flows
-to evaluate currency movements.
-</p>
-
+<p>The forex market is the largest in the world. Traders analyze technical, fundamental, and sentiment data to plan trades.</p>
 <ul>
-
-<li>Technical Analysis</li>
-<li>Fundamental Analysis</li>
-<li>Market Sentiment</li>
-
+<li>Technical Market Structure</li>
+<li>Fundamental Economic Drivers</li>
+<li>Liquidity & Capital Flow</li>
 </ul>
 
+<!-- AdSense placement inside content for maximum CTR -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="pub-9420471464780576"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </section>
 
+<!-- Live Charts Section -->
 <section>
-
-<h2>Live Forex Market Charts</h2>
-
+<h2>Live Market Charts</h2>
 <div class="chart-grid">
-
-<div class="chart-box">
+<div>
 <h3>EURUSD</h3>
-<div id="eurusd"></div>
+<div id="chart-eurusd"></div>
 </div>
-
-<div class="chart-box">
-<h3>Gold</h3>
-<div id="gold"></div>
+<div>
+<h3>Gold (XAUUSD)</h3>
+<div id="chart-gold"></div>
 </div>
-
-<div class="chart-box">
-<h3>Bitcoin</h3>
-<div id="btc"></div>
+<div>
+<h3>Bitcoin (BTCUSDT)</h3>
+<div id="chart-btc"></div>
 </div>
-
-<div class="chart-box">
+<div>
 <h3>USDJPY</h3>
-<div id="usdjpy"></div>
+<div id="chart-usdjpy"></div>
+</div>
 </div>
 
-</div>
-
+<!-- Another AdSense -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="pub-9420471464780576"
+     data-ad-slot="1234567891"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </section>
 
+<!-- Economic Calendar -->
 <section>
-
-<h2>Global Market Dashboard</h2>
-
-<div class="tradingview-widget-container">
-
-<div class="tradingview-widget-container__widget"></div>
-
-<script type="text/javascript"
-src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
-async>
-{
-"colorTheme":"light",
-"dateRange":"12M",
-"showChart":true,
-"locale":"en",
-"width":"100%",
-"height":"600",
-"tabs":[
-{
-"title":"Forex",
-"symbols":[
-{"s":"FX:EURUSD"},
-{"s":"FX:GBPUSD"},
-{"s":"FX:USDJPY"},
-{"s":"FX:AUDUSD"}
-]
-},
-{
-"title":"Crypto",
-"symbols":[
-{"s":"BINANCE:BTCUSDT"},
-{"s":"BINANCE:ETHUSDT"}
-]
-}
-]
-}
-</script>
-
-</div>
-
-</section>
-
-<section>
-
 <h2>Economic Calendar</h2>
-
 <div class="tradingview-widget-container">
-
-<div class="tradingview-widget-container__widget"></div>
-
-<script type="text/javascript"
-src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
-async>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
 {
 "colorTheme":"light",
 "width":"100%",
@@ -250,224 +205,77 @@ async>
 "locale":"en"
 }
 </script>
-
 </div>
-
 </section>
 
+<!-- Forex Signals Section -->
 <section>
-
-<h2>Currency Strength (Cross Rates)</h2>
-
-<div class="tradingview-widget-container">
-
-<div class="tradingview-widget-container__widget"></div>
-
-<script type="text/javascript"
-src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js"
-async>
-{
-"width":"100%",
-"height":"500",
-"currencies":[
-"EUR",
-"USD",
-"GBP",
-"JPY",
-"AUD",
-"CAD"
-],
-"colorTheme":"light"
-}
-</script>
-
-</div>
-
-</section>
-
-<section id="signals">
 <h2>📡 Live Forex Signals</h2>
-
 <table id="signalsTable">
 <thead>
-<tr>
-<th>Pair</th>
-<th>Price</th>
-<th>Signal</th>
-<th>Strength</th>
-</tr>
+<tr><th>Pair</th><th>Price</th><th>Signal</th><th>Strength</th></tr>
 </thead>
 <tbody></tbody>
 </table>
 </section>
 
-<script>
-
-const API_KEY = "252a3bd10a2a440e884552e549c73629";
-
-const pairs = [
-"EUR/USD",
-"GBP/USD",
-"USD/JPY",
-"AUD/USD",
-"USD/CAD",
-"USD/CHF",
-"NZD/USD"
-];
-
-async function loadSignals(){
-
-const table = document.querySelector("#signalsTable tbody");
-table.innerHTML = "";
-
-for (let pair of pairs){
-
-let symbol = pair.replace("/","");
-
-let url = `https://api.twelvedata.com/price?symbol=${symbol}&apikey=${API_KEY}`;
-
-try{
-
-const response = await fetch(url);
-const data = await response.json();
-
-let price = parseFloat(data.price);
-
-let signal = "HOLD";
-let strength = "Neutral";
-
-/* basic signal logic */
-
-if(price > 1.15){
-signal = "BUY";
-strength = "Strong";
-}
-
-if(price < 1.00){
-signal = "SELL";
-strength = "Weak";
-}
-
-table.innerHTML += `
-<tr>
-<td>${pair}</td>
-<td>${price}</td>
-<td>${signal}</td>
-<td>${strength}</td>
-</tr>
-`;
-
-}catch(error){
-
-table.innerHTML += `
-<tr>
-<td>${pair}</td>
-<td>Error</td>
-<td>-</td>
-<td>-</td>
-</tr>
-`;
-
-}
-
-}
-
-}
-
-loadSignals();
-
-/* refresh prices every 5 seconds */
-
-setInterval(loadSignals,5000);
-
-</script>
-
+<!-- AI Strategy / Educational Section -->
 <section>
-
 <h2>AI Trading Strategy Lab</h2>
-
 <ul>
-
 <li>Trend Following Strategies</li>
 <li>Breakout Momentum Systems</li>
-<li>Moving Average Trend Filters</li>
-<li>Volatility Breakout Trading</li>
-
+<li>Risk Management Models</li>
+<li>Technical Confirmation Systems</li>
 </ul>
-
-<p>
-Strategies should always be tested on demo accounts before live trading.
-</p>
-
+<p>All strategies are educational and require testing before live trading.</p>
 </section>
 
+<!-- Broker Intelligence Center -->
 <section>
+<h2>Recommended Brokers</h2>
 
-<h2>Broker Intelligence Center</h2>
+<p>Top broker platforms with affiliate links:</p>
 
-<table>
+<p>XM:<br>
+<a class="trade-link" href="https://affs.click/ryTLn" target="_blank">Start Trading with XM</a></p>
 
-<tr>
-<th>Broker</th>
-<th>Strength</th>
-<th>Platform</th>
-<th>Start</th>
-</tr>
+<p>HFM:<br>
+<a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">Start Trading with HFM</a></p>
 
-<tr>
-<td>XM</td>
-<td>Beginner Friendly</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="https://affs.click/ryTLn" target="_blank">Open</a></td>
-</tr>
+<p>PrimeXBT:<br>
+<a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">Start Trading with PrimeXBT</a></p>
 
-<tr>
-<td>HFM</td>
-<td>Low Spreads</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">Open</a></td>
-</tr>
+<p>Vantage:<br>
+<a class="trade-link" href="#">Start Trading with Vantage</a></p>
 
-<tr>
-<td>PrimeXBT</td>
-<td>Crypto Trading</td>
-<td>Web</td>
-<td><a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">Open</a></td>
-</tr>
+<p>IC Markets:<br>
+<a class="trade-link" href="https://icmarkets.com/?camp=90095" target="_blank">Start Trading with IC Markets</a></p>
 
-<tr>
-<td>Vantage</td>
-<td>ECN Execution</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="#">Open</a></td>
-</tr>
-
-<tr>
-<td>IC Markets</td>
-<td>Institutional Liquidity</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="https://icmarkets.com/?camp=90095" target="_blank">Open</a></td>
-</tr>
-
-</table>
+<!-- AdSense Banner for Brokers Section -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="pub-9420471464780576"
+     data-ad-slot="1234567892"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 </section>
 
 </div>
 
 <footer>
-
-© 2026 ForexEdu |
+© 2026 ForexEdu Institutional Portal |
 <a href="privacy-policy.html">Privacy Policy</a> |
-<a href="terms-and-conditions.html">Terms</a> |
-<a href="disclaimer.html">Risk Disclaimer</a>
-
+<a href="terms-and-conditions.html">Terms of Use</a> |
+<a href="disclaimer.html">Risk Disclaimer</a> |
+<a href="contact.html">Contact</a>
 </footer>
 
 <script>
-
+/* TradingView Charts */
 function loadChart(id,symbol){
-
 new TradingView.widget({
 container_id:id,
 width:"100%",
@@ -476,19 +284,45 @@ symbol:symbol,
 interval:"D",
 theme:"light",
 style:"1",
-locale:"en"
+locale:"en",
+allow_symbol_change:true
 });
-
 }
+loadChart("chart-eurusd","FX:EURUSD");
+loadChart("chart-gold","OANDA:XAUUSD");
+loadChart("chart-btc","BINANCE:BTCUSDT");
+loadChart("chart-usdjpy","FX:USDJPY");
 
-loadChart("eurusd","FX:EURUSD");
-loadChart("gold","OANDA:XAUUSD");
-loadChart("btc","BINANCE:BTCUSDT");
-loadChart("usdjpy","FX:USDJPY");
+/* TwelveData Live Forex Signals */
+const API_KEY="252a3bd10a2a440e884552e549c73629";
+const pairs=["EUR/USD","GBP/USD","USD/JPY","AUD/USD","USD/CAD","USD/CHF","NZD/USD"];
 
+async function loadSignals(){
+const tbody=document.querySelector("#signalsTable tbody");
+tbody.innerHTML="";
+for(let pair of pairs){
+let symbol=pair.replace("/","");
+try{
+let res=await fetch(`https://api.twelvedata.com/price?symbol=${symbol}&apikey=${API_KEY}`);
+let data=await res.json();
+let price=parseFloat(data.price)||0;
+let signal="HOLD",strength="Neutral",css="hold";
+if(price>1.15){signal="BUY";strength="Strong";css="buy";}
+if(price<1.0){signal="SELL";strength="Weak";css="sell";}
+tbody.innerHTML+=`<tr>
+<td>${pair}</td>
+<td>${price.toFixed(5)}</td>
+<td class="${css}">${signal}</td>
+<td>${strength}</td>
+</tr>`;
+}catch{
+tbody.innerHTML+=`<tr><td>${pair}</td><td>Error</td><td>-</td><td>-</td></tr>`;
+}
+}
+}
+loadSignals();
+setInterval(loadSignals,5000);
 </script>
 
 </body>
 </html>
-
-
