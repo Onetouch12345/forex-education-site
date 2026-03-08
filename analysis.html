@@ -7,16 +7,15 @@
 
 <title>Forex Market Analysis Dashboard | ForexEdu</title>
 
-<meta name="description" content="Professional forex market analysis dashboard with live charts, macro insights, trading education and institutional market research.">
+<meta name="description" content="Professional forex market analysis dashboard with live charts, economic calendar, currency strength tools and educational trading signals.">
 
 <link rel="canonical" href="https://onetouch12345.github.io/forex-education-site/analysis.html">
 
-<!-- Google AdSense -->
+<!-- Adsense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9420471464780576" crossorigin="anonymous"></script>
 
-<!-- Google Analytics -->
+<!-- Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDWZ227DT4"></script>
-
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -24,30 +23,13 @@ gtag('js', new Date());
 gtag('config', 'G-MDWZ227DT4');
 </script>
 
-<!-- TradingView -->
 <script src="https://s3.tradingview.com/tv.js"></script>
-
-<!-- SEO Schema -->
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"WebPage",
-"name":"Forex Market Analysis Dashboard",
-"description":"Professional forex analysis dashboard with live charts and educational trading insights.",
-"url":"https://onetouch12345.github.io/forex-education-site/analysis.html",
-"publisher":{
- "@type":"Organization",
- "name":"ForexEdu"
-}
-}
-</script>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#f4f7fb;
 color:#1a1a1a;
 line-height:1.8;
@@ -59,7 +41,6 @@ top:0;
 background:#0a1f44;
 padding:18px;
 text-align:center;
-z-index:1000;
 }
 
 .navbar a{
@@ -73,42 +54,38 @@ header{
 background:linear-gradient(135deg,#020024,#0a1f44);
 color:white;
 text-align:center;
-padding:90px 20px;
+padding:80px 20px;
 }
 
 .container{
 max-width:1200px;
 margin:auto;
-padding:60px 30px;
+padding:50px 25px;
 }
 
 section{
 background:white;
-padding:50px;
+padding:45px;
 border-radius:24px;
-box-shadow:0 10px 45px rgba(0,0,0,0.08);
-margin-top:60px;
+margin-top:50px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
 .chart-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-gap:40px;
-margin-top:40px;
+gap:35px;
+margin-top:30px;
 }
 
 .chart-box{
 padding:20px;
-border-radius:20px;
-box-shadow:0 6px 20px rgba(0,0,0,0.05);
 }
 
 .trade-link{
-display:inline-block;
-margin-top:10px;
-padding:14px 30px;
+background:#0a58ca;
+padding:12px 28px;
 border-radius:40px;
-background:linear-gradient(45deg,#0a58ca,#00d4ff);
 color:white;
 text-decoration:none;
 font-weight:bold;
@@ -131,7 +108,7 @@ color:white;
 }
 
 footer{
-margin-top:120px;
+margin-top:100px;
 background:#0a1f44;
 color:white;
 text-align:center;
@@ -156,8 +133,7 @@ padding:60px;
 <header>
 
 <h1>Forex Market Analysis Dashboard</h1>
-
-<p>Institutional Style Market Research & Trading Education</p>
+<p>Institutional Market Research • Educational Signals • Trading Tools</p>
 
 </header>
 
@@ -168,39 +144,34 @@ padding:60px;
 <h2>Global Forex Market Overview</h2>
 
 <p>
-The foreign exchange market is the largest financial market in the world with over $7 trillion traded daily.
-Professional traders analyze the market using three primary methods:
+The foreign exchange market processes over $7 trillion in daily trading volume.
+Professional traders analyze macroeconomic data, price structure and global capital flows
+to evaluate currency movements.
 </p>
 
 <ul>
 
-<li><b>Technical analysis</b> – chart patterns, indicators and price structure</li>
-
-<li><b>Fundamental analysis</b> – interest rates, inflation and economic data</li>
-
-<li><b>Market sentiment</b> – investor risk appetite and capital flow</li>
+<li>Technical Analysis</li>
+<li>Fundamental Analysis</li>
+<li>Market Sentiment</li>
 
 </ul>
-
-<p>
-Successful traders combine these approaches to develop a probability-based trading strategy.
-</p>
 
 </section>
 
 <section>
 
-<h2>Live Forex & Crypto Market Charts</h2>
+<h2>Live Forex Market Charts</h2>
 
 <div class="chart-grid">
 
 <div class="chart-box">
-<h3>EUR/USD</h3>
+<h3>EURUSD</h3>
 <div id="eurusd"></div>
 </div>
 
 <div class="chart-box">
-<h3>Gold (XAUUSD)</h3>
+<h3>Gold</h3>
 <div id="gold"></div>
 </div>
 
@@ -210,7 +181,7 @@ Successful traders combine these approaches to develop a probability-based tradi
 </div>
 
 <div class="chart-box">
-<h3>USD/JPY</h3>
+<h3>USDJPY</h3>
 <div id="usdjpy"></div>
 </div>
 
@@ -220,286 +191,216 @@ Successful traders combine these approaches to develop a probability-based tradi
 
 <section>
 
-<h2>Technical Analysis Basics</h2>
+<h2>Global Market Dashboard</h2>
 
-<p>
-Technical analysis studies price behavior using charts and indicators.
-Professional traders typically analyze:
-</p>
+<div class="tradingview-widget-container">
 
-<ul>
+<div class="tradingview-widget-container__widget"></div>
 
-<li>Support and resistance levels</li>
+<script type="text/javascript"
+src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+async>
+{
+"colorTheme":"light",
+"dateRange":"12M",
+"showChart":true,
+"locale":"en",
+"width":"100%",
+"height":"600",
+"tabs":[
+{
+"title":"Forex",
+"symbols":[
+{"s":"FX:EURUSD"},
+{"s":"FX:GBPUSD"},
+{"s":"FX:USDJPY"},
+{"s":"FX:AUDUSD"}
+]
+},
+{
+"title":"Crypto",
+"symbols":[
+{"s":"BINANCE:BTCUSDT"},
+{"s":"BINANCE:ETHUSDT"}
+]
+}
+]
+}
+</script>
 
-<li>Trend structure (higher highs / lower lows)</li>
-
-<li>Moving averages</li>
-
-<li>Momentum indicators such as RSI and MACD</li>
-
-</ul>
-
-<p>
-Indicators should be used as confirmation tools rather than trading signals.
-Risk management is the most important factor in long-term trading success.
-</p>
-
-</section>
-
-<section>
-
-<h2>Risk Management Principles</h2>
-
-<ul>
-
-<li>Never risk more than 1-2% of account per trade</li>
-
-<li>Always use stop losses</li>
-
-<li>Avoid overtrading</li>
-
-<li>Focus on consistency rather than quick profits</li>
-
-</ul>
-
-<p>
-Professional trading success depends more on discipline and capital protection than prediction accuracy.
-</p>
+</div>
 
 </section>
 
 <section>
 
-<h2>Recommended Trading Platforms</h2>
+<h2>Economic Calendar</h2>
 
-<p>Below are globally recognized brokers used by retail and professional traders.</p>
+<div class="tradingview-widget-container">
+
+<div class="tradingview-widget-container__widget"></div>
+
+<script type="text/javascript"
+src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+async>
+{
+"colorTheme":"light",
+"width":"100%",
+"height":"600",
+"locale":"en"
+}
+</script>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Currency Strength (Cross Rates)</h2>
+
+<div class="tradingview-widget-container">
+
+<div class="tradingview-widget-container__widget"></div>
+
+<script type="text/javascript"
+src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js"
+async>
+{
+"width":"100%",
+"height":"500",
+"currencies":[
+"EUR",
+"USD",
+"GBP",
+"JPY",
+"AUD",
+"CAD"
+],
+"colorTheme":"light"
+}
+</script>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Forex Signals Dashboard</h2>
+
+<p>
+ForexEdu signals are educational examples demonstrating how traders identify potential opportunities.
+Signals should never be followed blindly and must be combined with personal risk management.
+</p>
 
 <table>
 
 <tr>
-<th>Broker</th>
-<th>Key Advantage</th>
-<th>Platform</th>
-<th>Open Account</th>
+<th>Pair</th>
+<th>Direction</th>
+<th>Entry Zone</th>
+<th>Stop Loss</th>
+<th>Target</th>
+
 </tr>
 
 <tr>
-<td>XM</td>
-<td>Beginner friendly & global regulation</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="https://affs.click/ryTLn" target="_blank">Start</a></td>
+<td>EURUSD</td>
+<td>Buy</td>
+<td>1.0800</td>
+<td>1.0760</td>
+<td>1.0900</td>
 </tr>
 
 <tr>
-<td>HFM</td>
-<td>Low spreads & strong research</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">Start</a></td>
+<td>GBPUSD</td>
+<td>Sell</td>
+<td>1.2700</td>
+<td>1.2760</td>
+<td>1.2600</td>
 </tr>
 
 <tr>
-<td>PrimeXBT</td>
-<td>Crypto & CFD trading</td>
-<td>Web Platform</td>
-<td><a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">Start</a></td>
-</tr>
-
-<tr>
-<td>Vantage</td>
-<td>ECN execution speed</td>
-<td>MT4 / MT5</td>
-<td><a class="trade-link" href="#">Start</a></td>
-</tr>
-
-<tr>
-<td>IC Markets</td>
-<td>Institutional liquidity & tight spreads</td>
-<td>MT4 / MT5 / cTrader</td>
-<td><a class="trade-link" href="https://icmarkets.com/?camp=90095" target="_blank">Start</a></td>
+<td>Gold</td>
+<td>Buy</td>
+<td>2300</td>
+<td>2285</td>
+<td>2340</td>
 </tr>
 
 </table>
 
 </section>
+
 <section>
 
-<h2>Global Economic Calendar</h2>
+<h2>AI Trading Strategy Lab</h2>
+
+<ul>
+
+<li>Trend Following Strategies</li>
+<li>Breakout Momentum Systems</li>
+<li>Moving Average Trend Filters</li>
+<li>Volatility Breakout Trading</li>
+
+</ul>
 
 <p>
-Major economic events such as interest rate decisions, employment data and inflation reports can significantly impact currency markets.
+Strategies should always be tested on demo accounts before live trading.
 </p>
 
-<div class="tradingview-widget-container">
-<div class="tradingview-widget-container__widget"></div>
-
-<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-{
-  "colorTheme": "light",
-  "isTransparent": false,
-  "width": "100%",
-  "height": "600",
-  "locale": "en",
-  "importanceFilter": "-1,0,1"
-}
-</script>
-
-</div>
-
 </section>
 
 <section>
 
-<h2>Global Market Overview</h2>
+<h2>Broker Intelligence Center</h2>
 
-<div class="tradingview-widget-container">
+<table>
 
-<div class="tradingview-widget-container__widget"></div>
+<tr>
+<th>Broker</th>
+<th>Strength</th>
+<th>Platform</th>
+<th>Start</th>
+</tr>
 
-<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-{
-  "colorTheme": "light",
-  "dateRange": "12M",
-  "showChart": true,
-  "locale": "en",
-  "width": "100%",
-  "height": "600",
-  "tabs": [
-    {
-      "title": "Forex",
-      "symbols": [
-        {"s": "FX:EURUSD"},
-        {"s": "FX:GBPUSD"},
-        {"s": "FX:USDJPY"},
-        {"s": "FX:AUDUSD"}
-      ]
-    },
-    {
-      "title": "Crypto",
-      "symbols": [
-        {"s": "BINANCE:BTCUSDT"},
-        {"s": "BINANCE:ETHUSDT"}
-      ]
-    }
-  ]
-}
-</script>
+<tr>
+<td>XM</td>
+<td>Beginner Friendly</td>
+<td>MT4 / MT5</td>
+<td><a class="trade-link" href="https://affs.click/ryTLn" target="_blank">Open</a></td>
+</tr>
 
-</div>
+<tr>
+<td>HFM</td>
+<td>Low Spreads</td>
+<td>MT4 / MT5</td>
+<td><a class="trade-link" href="https://www.grouphfm.com/sv/en/?refid=30507342" target="_blank">Open</a></td>
+</tr>
 
-</section>
+<tr>
+<td>PrimeXBT</td>
+<td>Crypto Trading</td>
+<td>Web</td>
+<td><a class="trade-link" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt" target="_blank">Open</a></td>
+</tr>
 
- <section>
+<tr>
+<td>Vantage</td>
+<td>ECN Execution</td>
+<td>MT4 / MT5</td>
+<td><a class="trade-link" href="#">Open</a></td>
+</tr>
 
-<h2>Gold Market Technical Analysis</h2>
+<tr>
+<td>IC Markets</td>
+<td>Institutional Liquidity</td>
+<td>MT4 / MT5</td>
+<td><a class="trade-link" href="https://icmarkets.com/?camp=90095" target="_blank">Open</a></td>
+</tr>
 
-<div id="gold-analysis-chart"></div>
-
-<script>
-
-new TradingView.widget({
-"container_id":"gold-analysis-chart",
-"width":"100%",
-"height":500,
-"symbol":"OANDA:XAUUSD",
-"interval":"D",
-"theme":"light",
-"style":"1",
-"locale":"en",
-"toolbar_bg":"#f1f3f6"
-});
-
-</script>
-
-</section>
-
-<section>
-
-<h2>Gold Market Technical Analysis</h2>
-
-<div id="gold-analysis-chart"></div>
-
-<script>
-
-new TradingView.widget({
-"container_id":"gold-analysis-chart",
-"width":"100%",
-"height":500,
-"symbol":"OANDA:XAUUSD",
-"interval":"D",
-"theme":"light",
-"style":"1",
-"locale":"en",
-"toolbar_bg":"#f1f3f6"
-});
-
-</script>
-
-</section>
-
-<section>
-
-<h2>Cryptocurrency Market Chart</h2>
-
-<div id="crypto-chart"></div>
-
-<script>
-
-new TradingView.widget({
-"container_id":"crypto-chart",
-"width":"100%",
-"height":500,
-"symbol":"BINANCE:BTCUSDT",
-"interval":"D",
-"theme":"light",
-"style":"1",
-"locale":"en"
-});
-
-</script>
-
-</section>
- 
-<section>
-
-<h2>Forex Market Heatmap</h2>
-
-<p>
-This heatmap shows relative currency strength across major forex pairs.
-Green indicates strength while red indicates weakness.
-</p>
-
-<div class="tradingview-widget-container">
-  <div id="tv-heatmap"></div>
-
-<script type="text/javascript">
-new TradingView.widget({
-"width": "100%",
-"height": 500,
-"symbol": "FX:EURUSD",
-"interval": "60",
-"timezone": "Etc/UTC",
-"theme": "light",
-"style": "1",
-"locale": "en",
-"toolbar_bg": "#f1f3f6",
-"enable_publishing": false,
-"container_id": "tv-heatmap"
-});
-</script>
-
-</div>
-
-</section>
-<section>
-
-<h2>Educational Note</h2>
-
-<p>
-
-Forex trading involves substantial risk and may not be suitable for all investors.
-This analysis dashboard is provided for educational purposes only and should not be considered investment advice.
-
-</p>
+</table>
 
 </section>
 
@@ -507,11 +408,10 @@ This analysis dashboard is provided for educational purposes only and should not
 
 <footer>
 
-© 2026 ForexEdu Institutional Portal |
+© 2026 ForexEdu |
 <a href="privacy-policy.html">Privacy Policy</a> |
 <a href="terms-and-conditions.html">Terms</a> |
-<a href="disclaimer.html">Risk Disclaimer</a> |
-<a href="contact.html">Contact</a>
+<a href="disclaimer.html">Risk Disclaimer</a>
 
 </footer>
 
@@ -520,7 +420,6 @@ This analysis dashboard is provided for educational purposes only and should not
 function loadChart(id,symbol){
 
 new TradingView.widget({
-
 container_id:id,
 width:"100%",
 height:350,
@@ -528,9 +427,7 @@ symbol:symbol,
 interval:"D",
 theme:"light",
 style:"1",
-locale:"en",
-allow_symbol_change:true
-
+locale:"en"
 });
 
 }
@@ -544,4 +441,3 @@ loadChart("usdjpy","FX:USDJPY");
 
 </body>
 </html>
-
