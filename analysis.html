@@ -321,7 +321,175 @@ Professional trading success depends more on discipline and capital protection t
 </table>
 
 </section>
+<section>
 
+<h2>Global Economic Calendar</h2>
+
+<p>
+Major economic events such as interest rate decisions, employment data and inflation reports can significantly impact currency markets.
+</p>
+
+<div class="tradingview-widget-container">
+<div class="tradingview-widget-container__widget"></div>
+
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+{
+  "colorTheme": "light",
+  "isTransparent": false,
+  "width": "100%",
+  "height": "600",
+  "locale": "en",
+  "importanceFilter": "-1,0,1"
+}
+</script>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Global Market Overview</h2>
+
+<div class="tradingview-widget-container">
+
+<div class="tradingview-widget-container__widget"></div>
+
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+{
+  "colorTheme": "light",
+  "dateRange": "12M",
+  "showChart": true,
+  "locale": "en",
+  "width": "100%",
+  "height": "600",
+  "tabs": [
+    {
+      "title": "Forex",
+      "symbols": [
+        {"s": "FX:EURUSD"},
+        {"s": "FX:GBPUSD"},
+        {"s": "FX:USDJPY"},
+        {"s": "FX:AUDUSD"}
+      ]
+    },
+    {
+      "title": "Crypto",
+      "symbols": [
+        {"s": "BINANCE:BTCUSDT"},
+        {"s": "BINANCE:ETHUSDT"}
+      ]
+    }
+  ]
+}
+</script>
+
+</div>
+
+</section>
+
+ <section>
+
+<h2>Gold Market Technical Analysis</h2>
+
+<div id="gold-analysis-chart"></div>
+
+<script>
+
+new TradingView.widget({
+"container_id":"gold-analysis-chart",
+"width":"100%",
+"height":500,
+"symbol":"OANDA:XAUUSD",
+"interval":"D",
+"theme":"light",
+"style":"1",
+"locale":"en",
+"toolbar_bg":"#f1f3f6"
+});
+
+</script>
+
+</section>
+
+<section>
+
+<h2>Gold Market Technical Analysis</h2>
+
+<div id="gold-analysis-chart"></div>
+
+<script>
+
+new TradingView.widget({
+"container_id":"gold-analysis-chart",
+"width":"100%",
+"height":500,
+"symbol":"OANDA:XAUUSD",
+"interval":"D",
+"theme":"light",
+"style":"1",
+"locale":"en",
+"toolbar_bg":"#f1f3f6"
+});
+
+</script>
+
+</section>
+
+<section>
+
+<h2>Cryptocurrency Market Chart</h2>
+
+<div id="crypto-chart"></div>
+
+<script>
+
+new TradingView.widget({
+"container_id":"crypto-chart",
+"width":"100%",
+"height":500,
+"symbol":"BINANCE:BTCUSDT",
+"interval":"D",
+"theme":"light",
+"style":"1",
+"locale":"en"
+});
+
+</script>
+
+</section>
+ 
+<section>
+
+<h2>Forex Market Heatmap</h2>
+
+<p>
+This heatmap shows relative currency strength across major forex pairs.
+Green indicates strength while red indicates weakness.
+</p>
+
+<div class="tradingview-widget-container">
+  <div id="tv-heatmap"></div>
+
+<script type="text/javascript">
+new TradingView.widget({
+"width": "100%",
+"height": 500,
+"symbol": "FX:EURUSD",
+"interval": "60",
+"timezone": "Etc/UTC",
+"theme": "light",
+"style": "1",
+"locale": "en",
+"toolbar_bg": "#f1f3f6",
+"enable_publishing": false,
+"container_id": "tv-heatmap"
+});
+</script>
+
+</div>
+
+</section>
 <section>
 
 <h2>Educational Note</h2>
@@ -376,3 +544,4 @@ loadChart("usdjpy","FX:USDJPY");
 
 </body>
 </html>
+
