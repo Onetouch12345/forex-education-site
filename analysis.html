@@ -1,13 +1,12 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 <meta charset="UTF-8">
-<title>ForexEdu Institutional Trading Terminal</title>
+<title>ForexEdu Hedge Fund Terminal</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Google AdSense -->
+<!-- Adsense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9420471464780576" crossorigin="anonymous"></script>
 
 <!-- Google Analytics -->
@@ -34,13 +33,13 @@ color:white;
 .header{
 background:#111827;
 padding:20px;
-font-size:28px;
 text-align:center;
+font-size:28px;
 font-weight:bold;
 }
 
 .section{
-max-width:1200px;
+max-width:1300px;
 margin:auto;
 padding:25px;
 }
@@ -52,10 +51,7 @@ border-radius:10px;
 margin-bottom:25px;
 }
 
-h2{
-margin-top:0;
-color:#3b82f6;
-}
+h2{color:#3b82f6;}
 
 table{
 width:100%;
@@ -68,24 +64,15 @@ border-bottom:1px solid #333;
 text-align:center;
 }
 
-th{
-background:#1f2937;
-}
+th{background:#1f2937;}
 
 .buy{color:#00ff9d;}
 .sell{color:#ff4d4d;}
 
-select,input{
-padding:8px;
-border-radius:5px;
-border:none;
-margin-top:5px;
-}
-
 .btn{
 background:#2563eb;
-padding:10px 16px;
 border:none;
+padding:10px 15px;
 border-radius:6px;
 color:white;
 cursor:pointer;
@@ -103,7 +90,6 @@ footer{
 background:#111827;
 padding:20px;
 text-align:center;
-margin-top:40px;
 }
 
 footer a{
@@ -118,93 +104,46 @@ margin:0 6px;
 <body>
 
 <div class="header">
-ForexEdu Institutional Trading Terminal
+ForexEdu Hedge Fund Trading Terminal
 </div>
 
 <div class="section">
 
-<!-- MARKET OVERVIEW -->
-
 <div class="card">
-
 <h2>🌍 Global Forex Market Overview</h2>
-
 <p>
-The Forex market is the largest financial market in the world with
-over <b>$7 trillion daily trading volume</b>. Currency prices move
-based on central bank policy, inflation data, employment reports,
-and global macroeconomic sentiment.
+The foreign exchange market processes over $7 trillion daily volume.
+Currency movements are influenced by central bank policies,
+interest rates, employment reports, inflation, and geopolitical events.
 </p>
-
-<ul>
-<li>Tokyo Session – Asian liquidity</li>
-<li>London Session – highest volume</li>
-<li>New York Session – USD volatility</li>
-</ul>
-
 </div>
 
 
-<!-- LIVE CHART -->
-
 <div class="card">
-
-<h2>📊 Multi-Pair Live Charts</h2>
+<h2>📊 Multi Pair Live Chart</h2>
 
 <select id="pairSelect" onchange="changePair()">
 <option value="FX:EURUSD">EUR/USD</option>
 <option value="FX:GBPUSD">GBP/USD</option>
 <option value="FX:USDJPY">USD/JPY</option>
+<option value="FX:AUDUSD">AUD/USD</option>
+<option value="FX:USDCAD">USD/CAD</option>
 <option value="OANDA:XAUUSD">Gold</option>
-<option value="BITSTAMP:BTCUSD">Bitcoin</option>
 </select>
 
-<div id="chart" style="margin-top:15px;"></div>
+<div id="chart"></div>
 
 </div>
 
 
-<!-- FOREX HEATMAP -->
-
 <div class="card">
-
 <h2>🔥 Forex Heatmap</h2>
 
 <script src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
 {
 "width": "100%",
-"height": "400",
+"height": 400,
 "currencies": ["EUR","USD","GBP","JPY","AUD","CAD","CHF","NZD"],
-"isTransparent": false,
-"colorTheme": "dark"
-}
-</script>
-
-</div>
-
-
-<!-- CURRENCY STRENGTH -->
-
-<div class="card">
-
-<h2>💪 Currency Strength Meter</h2>
-
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
-{
-"width": "100%",
-"height": "350",
-"symbolsGroups": [
-{
-"name": "Major Forex",
-"symbols": [
-{"name":"FX:EURUSD"},
-{"name":"FX:GBPUSD"},
-{"name":"FX:USDJPY"},
-{"name":"FX:AUDUSD"},
-{"name":"FX:USDCAD"}
-]
-}
-],
 "colorTheme":"dark"
 }
 </script>
@@ -212,10 +151,7 @@ and global macroeconomic sentiment.
 </div>
 
 
-<!-- LIVE SIGNALS -->
-
 <div class="card">
-
 <h2>📡 Live Forex Signals</h2>
 
 <table>
@@ -265,44 +201,48 @@ and global macroeconomic sentiment.
 </div>
 
 
-<!-- ECONOMIC CALENDAR -->
+<div class="card">
+<h2>🧮 Position Size Calculator</h2>
+
+Account Balance
+<input id="balance" type="number">
+
+Risk %
+<input id="risk" type="number">
+
+Stop Loss (pips)
+<input id="sl" type="number">
+
+<button class="btn" onclick="calc()">Calculate Lot Size</button>
+
+<p id="lot"></p>
+
+</div>
+
 
 <div class="card">
-
 <h2>📅 Economic Calendar</h2>
 
-<iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous"
+<iframe src="https://sslecal2.forexprostools.com"
 width="100%" height="500"></iframe>
 
 </div>
 
 
-<!-- AI STRATEGY -->
-
 <div class="card">
+<h2>🏦 Central Bank Interest Rates</h2>
 
-<h2>🤖 AI Trading Strategy Lab</h2>
-
-<select id="pair">
-<option>EUR/USD</option>
-<option>GBP/USD</option>
-<option>USD/JPY</option>
-<option>XAU/USD</option>
-</select>
-
-<input type="number" id="risk" value="2">
-
-<button class="btn" onclick="generateStrategy()">Generate Strategy</button>
-
-<p id="strategyResult"></p>
+<ul>
+<li>Federal Reserve (USD): 5.25%</li>
+<li>ECB (EUR): 4.50%</li>
+<li>Bank of England (GBP): 5.25%</li>
+<li>Bank of Japan (JPY): -0.10%</li>
+</ul>
 
 </div>
 
 
-<!-- BROKERS -->
-
 <div class="card">
-
 <h2>🏆 Recommended Brokers</h2>
 
 <table>
@@ -312,44 +252,39 @@ width="100%" height="500"></iframe>
 <th>Spread</th>
 <th>Platform</th>
 <th>Leverage</th>
-<th>Features</th>
 <th>Open</th>
 </tr>
 
 <tr>
 <td>XM</td>
 <td>0.6 pip</td>
-<td>MT4 / MT5</td>
+<td>MT4/MT5</td>
 <td>1:888</td>
-<td>Beginner friendly, bonuses</td>
-<td><a class="broker-btn" href="#">Open Account</a></td>
+<td><a class="broker-btn" href="https://affs.click/ryTLn">Open</a></td>
 </tr>
 
 <tr>
 <td>Vantage</td>
 <td>0.0 pip</td>
-<td>MT4 / MT5</td>
+<td>MT4/MT5</td>
 <td>1:500</td>
-<td>Raw spreads, fast execution</td>
-<td><a class="broker-btn" href="#">Open Account</a></td>
+<td><a class="broker-btn" href="https://www.vantagemarkets.com/open-live-account/?affid=MjY0NjA0MDI=&invitecode=rg5M6bG4">Open</a></td>
 </tr>
 
 <tr>
 <td>IC Markets</td>
 <td>0.0 pip</td>
-<td>MT4 / MT5 / cTrader</td>
+<td>MT4/MT5</td>
 <td>1:500</td>
-<td>Institutional liquidity</td>
-<td><a class="broker-btn" href="#">Open Account</a></td>
+<td><a class="broker-btn" href="https://icmarkets.com/?camp=90095">Open</a></td>
 </tr>
 
 <tr>
 <td>HFM</td>
 <td>0.1 pip</td>
-<td>MT4 / MT5</td>
+<td>MT4/MT5</td>
 <td>1:1000</td>
-<td>Strong regulation</td>
-<td><a class="broker-btn" href="#">Open Account</a></td>
+<td><a class="broker-btn" href="https://register.grouphfm.com/sv/en/new-live-account/?refid=30507342">Open</a></td>
 </tr>
 
 <tr>
@@ -357,11 +292,23 @@ width="100%" height="500"></iframe>
 <td>0.1%</td>
 <td>Pro Platform</td>
 <td>1:200</td>
-<td>Crypto + Forex trading</td>
-<td><a class="broker-btn" href="#">Open Account</a></td>
+<td><a class="broker-btn" href="https://go.primexbt.direct/visit/?bta=49772&brand=primexbt">Open</a></td>
 </tr>
 
 </table>
+
+</div>
+
+
+<div class="card">
+<h2>⚠ Risk Disclaimer</h2>
+
+<p>
+Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors.
+Leverage can work against you as well as for you. Before deciding to trade foreign exchange,
+you should carefully consider your investment objectives, level of experience, and risk appetite.
+There is a possibility that you could sustain a loss of some or all of your initial investment.
+</p>
 
 </div>
 
@@ -384,26 +331,25 @@ const API="https://api.twelvedata.com/price?apikey=252a3bd10a2a440e884552e549c73
 
 function loadPrices(){
 
-axios.get(API+"EUR/USD").then(r=>{document.getElementById("eurusd").innerText=r.data.price})
-axios.get(API+"GBP/USD").then(r=>{document.getElementById("gbpusd").innerText=r.data.price})
-axios.get(API+"USD/JPY").then(r=>{document.getElementById("usdjpy").innerText=r.data.price})
-axios.get(API+"XAU/USD").then(r=>{document.getElementById("xauusd").innerText=r.data.price})
+axios.get(API+"EUR/USD").then(r=>{eurusd.innerText=r.data.price})
+axios.get(API+"GBP/USD").then(r=>{gbpusd.innerText=r.data.price})
+axios.get(API+"USD/JPY").then(r=>{usdjpy.innerText=r.data.price})
+axios.get(API+"XAU/USD").then(r=>{xauusd.innerText=r.data.price})
 
 }
 
-loadPrices()
 setInterval(loadPrices,10000)
+loadPrices()
 
+function calc(){
 
-function generateStrategy(){
-
-let pair=document.getElementById("pair").value
+let balance=document.getElementById("balance").value
 let risk=document.getElementById("risk").value
+let sl=document.getElementById("sl").value
 
-document.getElementById("strategyResult").innerText =
-"AI Strategy for "+pair+
-": Trade London and NY session breakouts. Risk "+
-risk+"% per trade. Confirm with RSI and support/resistance."
+let lot=(balance*risk/100)/sl
+
+document.getElementById("lot").innerText="Suggested lot size: "+lot.toFixed(2)
 
 }
 
@@ -414,11 +360,20 @@ let pair=document.getElementById("pairSelect").value
 document.getElementById("chart").innerHTML=""
 
 new TradingView.widget({
-width:"100%",
-height:500,
 symbol:pair,
 interval:"60",
 theme:"dark",
 style:"1",
-container_id:"cha_
-```
+width:"100%",
+height:500,
+container_id:"chart"
+})
+
+}
+
+changePair()
+
+</script>
+
+</body>
+</html> 
