@@ -285,53 +285,74 @@ async>
 
 </section>
 
-<section>
+<!-- FOREX SIGNALS DASHBOARD -->
+<section id="signals">
+    <h2>📡 Live Forex Signals</h2>
 
-<h2>Forex Signals Dashboard</h2>
-
-<p>
-ForexEdu signals are educational examples demonstrating how traders identify potential opportunities.
-Signals should never be followed blindly and must be combined with personal risk management.
-</p>
-
-<table>
-
-<tr>
-<th>Pair</th>
-<th>Direction</th>
-<th>Entry Zone</th>
-<th>Stop Loss</th>
-<th>Target</th>
-
-</tr>
-
-<tr>
-<td>EURUSD</td>
-<td>Buy</td>
-<td>1.0800</td>
-<td>1.0760</td>
-<td>1.0900</td>
-</tr>
-
-<tr>
-<td>GBPUSD</td>
-<td>Sell</td>
-<td>1.2700</td>
-<td>1.2760</td>
-<td>1.2600</td>
-</tr>
-
-<tr>
-<td>Gold</td>
-<td>Buy</td>
-<td>2300</td>
-<td>2285</td>
-<td>2340</td>
-</tr>
-
-</table>
-
+    <table id="signalsTable">
+        <thead>
+            <tr>
+                <th>Pair</th>
+                <th>Price</th>
+                <th>Signal</th>
+                <th>Strength</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 </section>
+
+<script>
+
+const API_KEY = "YOUR_API_KEY"; 
+const pairs = ["EUR/USD","GBP/USD","USD/JPY","AUD/USD","USD/CAD"];
+
+async function getForexPrices(){
+
+    const tbody = document.querySelector("#signalsTable tbody");
+    tbody.innerHTML = "";
+
+    for (let pair of pairs){
+
+        let [base,quote] = pair.split("/");
+
+        let url = `https://api.exchangerate.host/latest?base=${base}&symbols=${quote}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        let price = data.rates[quote];
+
+        let signal = "HOLD";
+        let strength = "Neutral";
+
+        if(price > 1.2){
+            signal = "BUY";
+            strength = "Strong";
+        }
+        else if(price < 0.9){
+            signal = "SELL";
+            strength = "Weak";
+        }
+
+        tbody.innerHTML += `
+        <tr>
+            <td>${pair}</td>
+            <td>${price}</td>
+            <td>${signal}</td>
+            <td>${strength}</td>
+        </tr>
+        `;
+    }
+}
+
+getForexPrices();
+
+/* refresh every 10 seconds */
+setInterval(getForexPrices,10000);
+
+</script>
+
 
 <section>
 
@@ -441,3 +462,4 @@ loadChart("usdjpy","FX:USDJPY");
 
 </body>
 </html>
+
