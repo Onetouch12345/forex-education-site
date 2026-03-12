@@ -2080,3 +2080,10 @@ font-size:13px;
 }
 
 }
+.table-wrapper{
+overflow-x:auto;
+}
+
+.comparison-table{
+min-width:800px;
+}
